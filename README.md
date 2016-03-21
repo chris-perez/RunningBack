@@ -7,25 +7,25 @@
 4. Someone else should review and accept the pull request
 
 ## Git Commands
-### Clone Repo
+#### Clone Repo
 git clone <GitHub url>
 
-### Checkout New Branch
+#### Checkout New Branch
 Create new branch on GitHub.
 git checkout -b dev
 git branch --set-upstream-to=origin/<branch_name> <branch_name>
 
-### Pull Remote Changes
+#### Pull Remote Changes
 git pull
 
-### Add New File to Branch Locally
+#### Add New File to Branch Locally
 git add <file_name>
 
-### Add All New Files to Branch Locally
+#### Add All New Files to Branch Locally
 git add -A
 
-### Commit Changes Locally
+#### Commit Changes Locally
 git commit -m "commit message"
 
-### Push Changes to Remote Branch
+#### Push Changes to Remote Branch
 git push
