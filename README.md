@@ -1,6 +1,6 @@
 # RunningBack
 
-##Workflow
+###Workflow###
 1. Create new branch
 2. Commit changes often to your branch
 3. Submit a pull request when all your changes are ready to be merged
