@@ -25,6 +25,7 @@ const FName ARunningBackPawn::LookRightBinding("LookRight");
 
 ARunningBackPawn::ARunningBackPawn()
 {
+	PrimaryActorTick.bCanEverTick = true;
 	// Car mesh
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/Sedan/Sedan_SkelMesh.Sedan_SkelMesh"));
 	GetMesh()->SetSkeletalMesh(CarMesh.Object);
@@ -55,26 +56,26 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create a spring arm component
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm0"));
-	SpringArm->TargetOffset = FVector(0.f, 0.f, 200.f);
+	SpringArm->TargetOffset = FVector(0.f, 0.f, 175.f);
 	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 	SpringArm->AttachTo(RootComponent);
-	SpringArm->TargetArmLength = 600.0f;
+	SpringArm->TargetArmLength = 100.0f;
 	SpringArm->bEnableCameraRotationLag = true;
 	SpringArm->CameraRotationLagSpeed = 7.f;
-	SpringArm->bInheritPitch = false;
-	SpringArm->bInheritRoll = false;
+	SpringArm->bInheritPitch = true;
+	SpringArm->bInheritRoll = true;
 
 	// Create camera component 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
 	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
-	Camera->bUsePawnControlRotation = false;
+	Camera->bUsePawnControlRotation = true;
 	Camera->FieldOfView = 90.f;
 
 	// Create In-Car camera component 
 	InternalCameraOrigin = FVector(8.0f, -40.0f, 130.0f);
 	InternalCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("InternalCamera"));
 	InternalCamera->AttachTo(SpringArm, USpringArmComponent::SocketName);
-	InternalCamera->bUsePawnControlRotation = false;
+	InternalCamera->bUsePawnControlRotation = true;
 	InternalCamera->FieldOfView = 90.f;
 	InternalCamera->SetRelativeLocation(InternalCameraOrigin);
 	InternalCamera->AttachTo(GetMesh());
@@ -88,11 +89,11 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create text render component for in car gear display
 	InCarGear = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarGear"));
-	InCarGear->SetRelativeLocation(FVector(66.0f, -9.0f, 95.0f));	
-	InCarGear->SetRelativeRotation(FRotator(25.0f, 180.0f,0.0f));
+	InCarGear->SetRelativeLocation(FVector(66.0f, -9.0f, 95.0f));
+	InCarGear->SetRelativeRotation(FRotator(25.0f, 180.0f, 0.0f));
 	InCarGear->SetRelativeScale3D(FVector(1.0f, 0.4f, 0.4f));
 	InCarGear->AttachTo(GetMesh());
-	
+
 	// Colors for the incar gear display. One for normal one for reverse
 	GearDisplayReverseColor = FColor(255, 0, 0, 255);
 	GearDisplayColor = FColor(255, 255, 255, 255);
@@ -102,6 +103,14 @@ ARunningBackPawn::ARunningBackPawn()
 	GearDisplayColor = FColor(255, 255, 255, 255);
 
 	bInReverseGear = false;
+
+
+	/*************************            Custom Code     *******************/
+
+	MaxLife = 2000.f;
+	LifePoints = 2000.f;
+
+	//CurrentWeapon = new AAttachable();
 }
 
 void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputComponent)
@@ -111,14 +120,14 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 
 	InputComponent->BindAxis("MoveForward", this, &ARunningBackPawn::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &ARunningBackPawn::MoveRight);
-	InputComponent->BindAxis("LookUp");
-	InputComponent->BindAxis("LookRight");
+	InputComponent->BindAxis("LookUp", this, &ARunningBackPawn::AddControllerPitchInput);
+	InputComponent->BindAxis("LookRight", this, &ARunningBackPawn::AddControllerYawInput);
 
 	InputComponent->BindAction("Handbrake", IE_Pressed, this, &ARunningBackPawn::OnHandbrakePressed);
 	InputComponent->BindAction("Handbrake", IE_Released, this, &ARunningBackPawn::OnHandbrakeReleased);
 	InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ARunningBackPawn::OnToggleCamera);
 
-	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR); 
+	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
 }
 
 void ARunningBackPawn::MoveForward(float Val)
@@ -148,10 +157,10 @@ void ARunningBackPawn::OnToggleCamera()
 
 void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
 {
-	if ((bState != bInCarCameraActive) || ( bForce == true ))
+	if ((bState != bInCarCameraActive) || (bForce == true))
 	{
 		bInCarCameraActive = bState;
-		
+
 		if (bState == true)
 		{
 			OnResetVR();
@@ -165,7 +174,7 @@ void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
 		}
 
 		APlayerController* PlayerController = Cast<APlayerController>(GetController());
-		if ( (PlayerController != nullptr) && (PlayerController->PlayerCameraManager != nullptr ) )
+		if ((PlayerController != nullptr) && (PlayerController->PlayerCameraManager != nullptr))
 		{
 			PlayerController->PlayerCameraManager->bFollowHmdOrientation = true;
 		}
@@ -180,12 +189,13 @@ void ARunningBackPawn::Tick(float Delta)
 {
 	// Setup the flag to say we are in reverse gear
 	bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;
-	
+
 	// Update the strings used in the hud (incar and onscreen)
 	UpdateHUDStrings();
 
 	// Set the string in the incar hud
 	SetupInCarHUD();
+
 
 	bool bHMDActive = false;
 #ifdef HMD_INTGERATION
@@ -196,7 +206,7 @@ void ARunningBackPawn::Tick(float Delta)
 #endif // HMD_INTGERATION
 	if (bHMDActive == false)
 	{
-		if ( (InputComponent) && (bInCarCameraActive == true ))
+		if ((InputComponent) && (bInCarCameraActive == true))
 		{
 			FRotator HeadRotation = InternalCamera->RelativeRotation;
 			HeadRotation.Pitch += InputComponent->GetAxisValue(LookUpBinding);
@@ -210,9 +220,9 @@ void ARunningBackPawn::BeginPlay()
 {
 	bool bEnableInCar = false;
 #ifdef HMD_INTGERATION
-	bEnableInCar = GEngine->HMDDevice.IsValid();	
+	bEnableInCar = GEngine->HMDDevice.IsValid();
 #endif // HMD_INTGERATION
-	EnableIncarView(bEnableInCar,true);
+	EnableIncarView(bEnableInCar, true);
 }
 
 void ARunningBackPawn::OnResetVR()
@@ -234,7 +244,7 @@ void ARunningBackPawn::UpdateHUDStrings()
 
 	// Using FText because this is display text that should be localizable
 	SpeedDisplayString = FText::Format(LOCTEXT("SpeedFormat", "{0} km/h"), FText::AsNumber(KPH_int));
-	
+
 	if (bInReverseGear == true)
 	{
 		GearDisplayString = FText(LOCTEXT("ReverseGear", "R"));
@@ -243,18 +253,18 @@ void ARunningBackPawn::UpdateHUDStrings()
 	{
 		int32 Gear = GetVehicleMovement()->GetCurrentGear();
 		GearDisplayString = (Gear == 0) ? LOCTEXT("N", "N") : FText::AsNumber(Gear);
-	}	
+	}
 }
 
 void ARunningBackPawn::SetupInCarHUD()
 {
 	APlayerController* PlayerController = Cast<APlayerController>(GetController());
-	if ((PlayerController != nullptr) && (InCarSpeed != nullptr) && (InCarGear != nullptr) )
+	if ((PlayerController != nullptr) && (InCarSpeed != nullptr) && (InCarGear != nullptr))
 	{
 		// Setup the text render component strings
 		InCarSpeed->SetText(SpeedDisplayString);
 		InCarGear->SetText(GearDisplayString);
-		
+
 		if (bInReverseGear == false)
 		{
 			InCarGear->SetTextRenderColor(GearDisplayColor);
@@ -264,6 +274,27 @@ void ARunningBackPawn::SetupInCarHUD()
 			InCarGear->SetTextRenderColor(GearDisplayReverseColor);
 		}
 	}
+}
+
+void ARunningBackPawn::LookUp()
+{
+	//CurrentWeapon->SetActorRotation(this->GetCamera()->GetComponentRotation());
+
+}
+
+void ARunningBackPawn::SetLifePoints(float NewLife)
+{
+	LifePoints = NewLife;
+}
+
+float ARunningBackPawn::GetLifePoints()
+{
+	return LifePoints;
+}
+
+float ARunningBackPawn::GetMaxLife()
+{
+	return MaxLife;
 }
 
 #undef LOCTEXT_NAMESPACE

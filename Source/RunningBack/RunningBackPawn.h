@@ -1,6 +1,7 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/WheeledVehicle.h"
+#include "Attachable.h"
 #include "RunningBackPawn.generated.h"
 
 class UCameraComponent;
@@ -90,6 +91,32 @@ public:
 
 	static const FName LookUpBinding;
 	static const FName LookRightBinding;
+
+
+	/***************************************************        custom code               *****************************/
+
+	// handle the lookUp for the attachables and whatnot
+	void LookUp();
+
+	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
+		float LifePoints;
+
+	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
+		float MaxLife;
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		float GetMaxLife();
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		void SetLifePoints(float NewLife);
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		float GetLifePoints();
+
+
+	//Control the Weapon on the car
+	UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
+	AAttachable *CurrentWeapon;
 
 private:
 	/** 
