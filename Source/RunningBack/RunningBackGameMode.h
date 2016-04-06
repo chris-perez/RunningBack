@@ -10,6 +10,14 @@ class ARunningBackGameMode : public AGameMode
 
 public:
 	ARunningBackGameMode();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
+	TSubclassOf <class UUserWidget> HUDWidgetClass;
+
+	UPROPERTY()
+	class UUserWidget *CurrentWidget;
+
+	virtual void BeginPlay() override;
 };
 
 

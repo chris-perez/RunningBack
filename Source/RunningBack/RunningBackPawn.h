@@ -1,7 +1,7 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/WheeledVehicle.h"
-#include "Attachable.h"
+#include "public/Attachable.h"
 #include "RunningBackPawn.generated.h"
 
 class UCameraComponent;
@@ -113,10 +113,21 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Health")
 		float GetLifePoints();
 
+	AAttachable* SpawnedWeapon;
+
 
 	//Control the Weapon on the car
-	UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
-	AAttachable *CurrentWeapon;
+	//UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
+	//AAttachable *CurrentWeapon;
+
+	void AddControllerPitchInput(float Val) override;
+
+	void AddControllerYawInput(float Val) override;
+
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	TSubclassOf<class AAttachable> WhatToSpawn;
+
+	void SpawnWeapon();
 
 private:
 	/** 

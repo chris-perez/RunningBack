@@ -25,7 +25,8 @@ public:
 
 	FORCEINLINE class UStaticMesh* GetMesh() const { return WeaponMesh; }
 
-	//TSubclassOf <class UStaticMeshComponent*> WeaponSubObj;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapons", meta = (AllowPrivateAccess = "true"))
+	class UStaticMeshComponent *WeaponSubObj;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapons", meta = (AllowPrivateAccess = "true"))
 	class UStaticMesh *WeaponMesh;

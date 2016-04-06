@@ -10,9 +10,14 @@ AAttachable::AAttachable()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> StaticMeshOb_AW2(TEXT("StaticMesh'/Game/StarterContent/Architecture/Pillar_50x500.Pillar_50x500'"));
+	//static ConstructorHelpers::FObjectFinder<UStaticMeshComponent> MeshComp(TEXT("'/Game/Assets/Meshes/SM_Statue.SM_Statue'"));
 	// Weapon Comp
-	WeaponMesh = StaticMeshOb_AW2.Object;
+
+	WeaponSubObj = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WeaponMesh"));
+	
+	//WeaponSubObj = MeshComp.Object;
+	
+	RootComponent = WeaponSubObj;
 
 
 }

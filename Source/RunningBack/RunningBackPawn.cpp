@@ -5,9 +5,11 @@
 #include "RunningBackWheelFront.h"
 #include "RunningBackWheelRear.h"
 #include "RunningBackHud.h"
+#include "Attachable.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "Components/InputComponent.h"
 #include "Vehicles/WheeledVehicleMovementComponent4W.h"
 #include "Engine/SkeletalMesh.h"
@@ -59,7 +61,7 @@ ARunningBackPawn::ARunningBackPawn()
 	SpringArm->TargetOffset = FVector(0.f, 0.f, 175.f);
 	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 	SpringArm->AttachTo(RootComponent);
-	SpringArm->TargetArmLength = 100.0f;
+	SpringArm->TargetArmLength = 125.0f;
 	SpringArm->bEnableCameraRotationLag = true;
 	SpringArm->CameraRotationLagSpeed = 7.f;
 	SpringArm->bInheritPitch = true;
@@ -69,7 +71,7 @@ ARunningBackPawn::ARunningBackPawn()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
 	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = true;
-	Camera->FieldOfView = 90.f;
+	Camera->FieldOfView = 180.f;
 
 	// Create In-Car camera component 
 	InternalCameraOrigin = FVector(8.0f, -40.0f, 130.0f);
@@ -218,6 +220,7 @@ void ARunningBackPawn::Tick(float Delta)
 
 void ARunningBackPawn::BeginPlay()
 {
+	SpawnWeapon();
 	bool bEnableInCar = false;
 #ifdef HMD_INTGERATION
 	bEnableInCar = GEngine->HMDDevice.IsValid();
@@ -296,5 +299,54 @@ float ARunningBackPawn::GetMaxLife()
 {
 	return MaxLife;
 }
+
+void ARunningBackPawn::SpawnWeapon() {
+	UWorld* const World = GetWorld();
+	if (World) {
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = Instigator;
+		FVector SpawnLocation = GetActorLocation();
+		SpawnLocation.Z += 20.f;
+		//SpawnLocation.X += 400.f;
+
+		FRotator SpawnRotation;
+		SpawnRotation.Yaw = 360.f;
+		SpawnRotation.Pitch = 360.f;
+		SpawnRotation.Roll = 360.f;
+
+		SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
+		SpawnedWeapon->AttachRootComponentTo(GetMesh());
+		SpawnLocation = GetActorLocation();
+		SpawnLocation.Z += 225.f;
+		
+		SpawnedWeapon->SetActorLocation(SpawnLocation);
+		SpawnedWeapon->SetActorRotation(GetActorRotation());
+		UE_LOG(LogClass, Log, TEXT("CHeguei aqui "));
+
+	}
+}
+
+void ARunningBackPawn::AddControllerPitchInput(float Val) {
+	Super::AddControllerPitchInput(Val);
+
+	if (SpawnedWeapon != nullptr)
+	{
+		FRotator NewRot = SpawnedWeapon->GetActorRotation();
+		NewRot.Pitch += -Val;
+		SpawnedWeapon->SetActorRotation(NewRot);
+	}
+}
+
+void ARunningBackPawn::AddControllerYawInput(float Val) {
+	Super::AddControllerYawInput(Val);
+	if (SpawnedWeapon != nullptr)
+	{
+		FRotator NewRot = SpawnedWeapon->GetActorRotation();
+		NewRot.Yaw += Val;
+		SpawnedWeapon->SetActorRotation(NewRot);
+	}
+}
+
 
 #undef LOCTEXT_NAMESPACE
