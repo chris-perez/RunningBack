@@ -17,12 +17,16 @@ void ARunningBackGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (HUDWidgetClass != nullptr)
+	/*if (HUDWidgetClass != nullptr)
 	{
 		CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), HUDWidgetClass); 
 		if (CurrentWidget != nullptr)
 		{
 			CurrentWidget->AddToViewport();
 		}
+		else
+			UE_LOG(LogClass, Log, TEXT("Failed to create widget "));
 	}
+	else
+		UE_LOG(LogClass, Log, TEXT("HUD widgetClass Is NULL "));*/
 }

@@ -2,6 +2,7 @@
 #pragma once
 #include "GameFramework/WheeledVehicle.h"
 #include "public/Attachable.h"
+#include "public/Projectile.h"
 #include "RunningBackPawn.generated.h"
 
 class UCameraComponent;
@@ -115,6 +116,9 @@ public:
 
 	AAttachable* SpawnedWeapon;
 
+	UPROPERTY(EditAnywhere, Category = "Projectile")
+		TSubclassOf<class AProjectile> ProjectileClass;
+
 
 	//Control the Weapon on the car
 	//UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
@@ -124,8 +128,15 @@ public:
 
 	void AddControllerYawInput(float Val) override;
 
+	void ShootStuff();
+
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TSubclassOf<class AAttachable> WhatToSpawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
+		FVector GunOffset;
+
+	float TurnRate;
 
 	void SpawnWeapon();
 

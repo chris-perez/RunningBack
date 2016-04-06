@@ -61,7 +61,7 @@ ARunningBackPawn::ARunningBackPawn()
 	SpringArm->TargetOffset = FVector(0.f, 0.f, 175.f);
 	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 	SpringArm->AttachTo(RootComponent);
-	SpringArm->TargetArmLength = 125.0f;
+	SpringArm->TargetArmLength = 600.0f;
 	SpringArm->bEnableCameraRotationLag = true;
 	SpringArm->CameraRotationLagSpeed = 7.f;
 	SpringArm->bInheritPitch = true;
@@ -71,7 +71,7 @@ ARunningBackPawn::ARunningBackPawn()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
 	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = true;
-	Camera->FieldOfView = 180.f;
+	Camera->FieldOfView = 90.f;
 
 	// Create In-Car camera component 
 	InternalCameraOrigin = FVector(8.0f, -40.0f, 130.0f);
@@ -111,8 +111,16 @@ ARunningBackPawn::ARunningBackPawn()
 
 	MaxLife = 2000.f;
 	LifePoints = 2000.f;
+	TurnRate = 25.f;
 
-	//CurrentWeapon = new AAttachable();
+	GunOffset = FVector(100.0f, 30.0f, 40.0f);
+
+	if (GetVehicleMovementComponent()->IsFlying() == false)
+	{
+		//set movement to fly
+		
+	}
+
 }
 
 void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputComponent)
@@ -128,8 +136,32 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 	InputComponent->BindAction("Handbrake", IE_Pressed, this, &ARunningBackPawn::OnHandbrakePressed);
 	InputComponent->BindAction("Handbrake", IE_Released, this, &ARunningBackPawn::OnHandbrakeReleased);
 	InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ARunningBackPawn::OnToggleCamera);
+	InputComponent->BindAction("Shoot", IE_Pressed, this, &ARunningBackPawn::ShootStuff);
 
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
+}
+
+void ARunningBackPawn::ShootStuff()
+{
+	// try and fire a projectile
+	if (ProjectileClass != NULL)
+	{
+		const FRotator SpawnRotation = GetControlRotation();
+		// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+		FVector SpawnLocation = GetActorLocation();
+		SpawnLocation.Z += 200.f;
+		SpawnLocation+= SpawnRotation.RotateVector(GunOffset);
+
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+		{
+			// spawn the projectile at the muzzle
+			World->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
+			
+		}
+	}
+	
+
 }
 
 void ARunningBackPawn::MoveForward(float Val)
@@ -140,6 +172,7 @@ void ARunningBackPawn::MoveForward(float Val)
 void ARunningBackPawn::MoveRight(float Val)
 {
 	GetVehicleMovementComponent()->SetSteeringInput(Val);
+	AddControllerYawInput(Val * GetWorld()->GetDeltaSeconds() * TurnRate);
 }
 
 void ARunningBackPawn::OnHandbrakePressed()
@@ -186,36 +219,67 @@ void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
 	}
 }
 
+#define COLLISION_WEAPON        ECC_GameTraceChannel1  
 
 void ARunningBackPawn::Tick(float Delta)
 {
-	// Setup the flag to say we are in reverse gear
-	bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;
+	//GetActorLocation();
 
-	// Update the strings used in the hud (incar and onscreen)
-	UpdateHUDStrings();
-
-	// Set the string in the incar hud
-	SetupInCarHUD();
-
-
-	bool bHMDActive = false;
-#ifdef HMD_INTGERATION
-	if ((GEngine->HMDDevice.IsValid() == true) && ((GEngine->HMDDevice->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
+	if (Controller && Controller->IsLocalPlayerController()) // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
 	{
-		bHMDActive = true;
-	}
-#endif // HMD_INTGERATION
-	if (bHMDActive == false)
-	{
-		if ((InputComponent) && (bInCarCameraActive == true))
+		FVector CamLoc;
+		FRotator CamRot;
+
+		Controller->GetActorEyesViewPoint(CamLoc, CamRot);
+		const FVector StartTrace = CamLoc; // trace start is the camera location
+		const FVector Direction = CamRot.Vector();
+		const FVector EndTrace = StartTrace + Direction * 1500; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
+
+																// Perform trace to retrieve hit info
+		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
+		TraceParams.bTraceAsyncScene = true;
+		TraceParams.bReturnPhysicalMaterial = true;
+
+		FHitResult Hit(ForceInit);
+		GetWorld()->LineTraceSingle(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
+
+		if (Hit.bBlockingHit)
 		{
-			FRotator HeadRotation = InternalCamera->RelativeRotation;
-			HeadRotation.Pitch += InputComponent->GetAxisValue(LookUpBinding);
-			HeadRotation.Yaw += InputComponent->GetAxisValue(LookRightBinding);
-			InternalCamera->RelativeRotation = HeadRotation;
+			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), false, -1, 0, 4);
+		}
+		else
+		{
+			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), false, -1, 0, 4);
 		}
 	}
+
+		// Setup the flag to say we are in reverse gear
+		bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;
+		// Update the strings used in the hud (incar and onscreen)
+		UpdateHUDStrings();
+
+		// Set the string in the incar hud
+		SetupInCarHUD();
+
+		bool bHMDActive = false;
+#ifdef HMD_INTGERATION
+		if ((GEngine->HMDDevice.IsValid() == true) && ((GEngine->HMDDevice->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
+		{
+			bHMDActive = true;
+		}
+#endif // HMD_INTGERATION
+		if (bHMDActive == false)
+		{
+			if ((InputComponent) && (bInCarCameraActive == true))
+			{
+				FRotator HeadRotation = InternalCamera->RelativeRotation;
+				HeadRotation.Pitch += InputComponent->GetAxisValue(LookUpBinding);
+				HeadRotation.Yaw += InputComponent->GetAxisValue(LookRightBinding);
+				InternalCamera->RelativeRotation = HeadRotation;
+			}
+		}
+
+
 }
 
 void ARunningBackPawn::BeginPlay()
@@ -322,7 +386,7 @@ void ARunningBackPawn::SpawnWeapon() {
 		
 		SpawnedWeapon->SetActorLocation(SpawnLocation);
 		SpawnedWeapon->SetActorRotation(GetActorRotation());
-		UE_LOG(LogClass, Log, TEXT("CHeguei aqui "));
+		UE_LOG(LogClass, Log, TEXT("Gun Mesh Spawned succesfully "));
 
 	}
 }
