@@ -105,19 +105,22 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
 		float MaxLife;
 
-	UFUNCTION(BlueprintCallable, Category = "Health")
+	UFUNCTION(BlueprintPure, Category = "Health")
 		float GetMaxLife();
 
 	UFUNCTION(BlueprintCallable, Category = "Health")
 		void SetLifePoints(float NewLife);
 
-	UFUNCTION(BlueprintCallable, Category = "Health")
+	UFUNCTION(BlueprintPure, Category = "Health")
 		float GetLifePoints();
 
 	AAttachable* SpawnedWeapon;
 
 	UPROPERTY(EditAnywhere, Category = "Projectile")
 		TSubclassOf<class AProjectile> ProjectileClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
+		float fRate;
 
 
 	//Control the Weapon on the car
@@ -130,6 +133,10 @@ public:
 
 	void ShootStuff();
 
+	void ShootStop();
+
+	bool IsCar();
+
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TSubclassOf<class AAttachable> WhatToSpawn;
 
@@ -139,6 +146,8 @@ public:
 	float TurnRate;
 
 	void SpawnWeapon();
+
+	FTimerHandle FireRate;
 
 private:
 	/** 
