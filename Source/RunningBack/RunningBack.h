@@ -4,5 +4,6 @@
 #define __RUNNINGBACK_H__
 
 #include "CoreUObject.h"
+#include "Engine.h"
 
 #endif

@@ -15,7 +15,7 @@ git clone <GitHub url>
 Checkout New Branch
 ```
 Create new branch on GitHub.
-git checkout -b dev                                                     // Creates new branch locally
+git checkout -b <branch_name>                                            // Creates new branch locally
 git branch --set-upstream-to=origin/<branch_name> <branch_name>         //links local branch to remote branch
 ```
 
