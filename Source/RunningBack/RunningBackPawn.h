@@ -1,6 +1,8 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/WheeledVehicle.h"
+#include "public/Attachable.h"
+#include "public/Projectile.h"
 #include "RunningBackPawn.generated.h"
 
 class UCameraComponent;
@@ -90,6 +92,53 @@ public:
 
 	static const FName LookUpBinding;
 	static const FName LookRightBinding;
+
+
+	/***************************************************        custom code               *****************************/
+
+	// handle the lookUp for the attachables and whatnot
+	void LookUp();
+
+	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
+		float LifePoints;
+
+	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
+		float MaxLife;
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		float GetMaxLife();
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		void SetLifePoints(float NewLife);
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		float GetLifePoints();
+
+	AAttachable* SpawnedWeapon;
+
+	UPROPERTY(EditAnywhere, Category = "Projectile")
+		TSubclassOf<class AProjectile> ProjectileClass;
+
+
+	//Control the Weapon on the car
+	//UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
+	//AAttachable *CurrentWeapon;
+
+	void AddControllerPitchInput(float Val) override;
+
+	void AddControllerYawInput(float Val) override;
+
+	void ShootStuff();
+
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	TSubclassOf<class AAttachable> WhatToSpawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
+		FVector GunOffset;
+
+	float TurnRate;
+
+	void SpawnWeapon();
 
 private:
 	/** 
