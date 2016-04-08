@@ -1,0 +1,318 @@
+commit a16f95ee5030b3d0c8dcac709b51bfe7b0bb13cd
+Merge: cf411e5 3efc774
+Author: Igor <igorcuei@yahoo.com.br>
+Date:   Fri Apr 8 00:57:58 2016 -0400
+
+    Merge pull request #9 from cperez3/ui-igor
+    
+    shooting done
+
+commit 3efc7747a6ac6ea03f02cf754894194acc974e13
+Author: Igor S <Igor S>
+Date:   Fri Apr 8 00:55:56 2016 -0400
+
+    shooting done
+
+commit cf411e59636538f126d4a361e238e384c775376d
+Merge: 8bc28c8 79bb46e
+Author: Igor <igorcuei@yahoo.com.br>
+Date:   Thu Apr 7 16:18:18 2016 -0400
+
+    Merge pull request #8 from cperez3/ui-igor
+    
+    Ui igor
+
+commit 79bb46e913efd6c930dde1e1417c58835b282da3
+Merge: 9a7ccd2 8bc28c8
+Author: Igor S <Igor S>
+Date:   Thu Apr 7 16:02:48 2016 -0400
+
+    merge
+
+commit 9a7ccd23e4c8a005a718218b9d061e188f94dc01
+Author: Igor S <Igor S>
+Date:   Thu Apr 7 15:55:16 2016 -0400
+
+    gun mesh changed and shooting logic improoved
+
+commit 8bc28c8aa72f088c097ccb3a9016e03016bd88ef
+Merge: 7aa6e23 5492996
+Author: Bernardo Simões Lage Gomes Duarte <bernardolageduarte@gmail.com>
+Date:   Thu Apr 7 14:29:31 2016 -0400
+
+    Merge pull request #7 from cperez3/map-bernie
+    
+    Map bernie
+
+commit 5492996f6f582d3437db8b0f6d72f4776099a07f
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Thu Apr 7 14:28:15 2016 -0400
+
+    fix conf shit i mesfucked up
+
+commit f22af865bbb2aaa1af76952be66e665ed4604810
+Merge: e0fb161 7aa6e23
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Thu Apr 7 14:08:16 2016 -0400
+
+    Merge branch 'dev' into map-bernie
+
+commit e0fb16155ca0c009fab72c6c861f80a032188620
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Thu Apr 7 13:32:15 2016 -0400
+
+    same
+
+commit 134230333b56f850dc846778edcd37e5bb2f2829
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Thu Apr 7 13:26:35 2016 -0400
+
+    Car mesh, orientation, and texture fixed
+
+commit 755dcf2bb09aa4bb1623787bdefd8012a0390c65
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Thu Apr 7 10:46:21 2016 -0400
+
+    Hover car added
+
+commit 7aa6e23a121a659d05c005756b2ebebe7d7a8e64
+Merge: 9011a1f 3f2b68e
+Author: Igor <igorcuei@yahoo.com.br>
+Date:   Wed Apr 6 20:22:30 2016 -0400
+
+    Merge pull request #6 from cperez3/ui-igor
+    
+    Ui igor
+
+commit 3f2b68e93d3c6aec33bc02eeb9ee930d064366c9
+Merge: 02ffe03 9011a1f
+Author: Igor S <Igor S>
+Date:   Wed Apr 6 19:59:43 2016 -0400
+
+    merge changes
+
+commit 02ffe030d2dbefb1281616f59a1b0e18e99f9b00
+Author: Igor S <Igor S>
+Date:   Wed Apr 6 19:40:04 2016 -0400
+
+    progress on shooting mechanics
+
+commit 9011a1f124a93f30227663c47955b2515909d0a1
+Merge: 5607564 924f329
+Author: Bernardo Simões Lage Gomes Duarte <bernardolageduarte@gmail.com>
+Date:   Wed Apr 6 16:10:32 2016 -0400
+
+    Merge pull request #5 from cperez3/map-bernie
+    
+    Map bernie
+
+commit 924f329aedefd9b623c7af893af029f617143c48
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Wed Apr 6 16:05:28 2016 -0400
+
+    main menu + aircraft carrier map
+
+commit b7c97e55082d159d05acaea802f2777106b30388
+Merge: 283d3be 5607564
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Wed Apr 6 15:49:53 2016 -0400
+
+    conflict
+
+commit 283d3beb35ee8194f0322fa382d72e71b9de0ea8
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Wed Apr 6 15:42:28 2016 -0400
+
+    Textures fixed
+
+commit 5607564a8c96d2b50ff04b75aa829ae1319046ad
+Merge: 64768e3 84ee411
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Wed Apr 6 15:30:33 2016 -0400
+
+    Merge pull request #4 from cperez3/ui-chris
+    
+    Ui chris
+
+commit 8d022eb450a64046e2626abf9e3c52fb5c4ca2da
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Wed Apr 6 11:02:27 2016 -0400
+
+    Aircrafts added
+
+commit 43a8bfb7dfd1448fdb5993edbbf11792234eac6f
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Wed Apr 6 01:47:54 2016 -0400
+
+    Updated map scale added texture
+
+commit 57707cc283a08a34446ba8af4418c32f2a8004d5
+Author: Igor S <Igor S>
+Date:   Tue Apr 5 21:48:21 2016 -0400
+
+    Weapon attachement completed
+
+commit bdb9cc3e9bea8b5a9497b6ec3edb2ca7d9093c9a
+Merge: 0b77d38 aa740dc
+Author: Igor S <Igor S>
+Date:   Tue Apr 5 13:07:11 2016 -0400
+
+    erge branch 'ui-igor' of https://github.com/cperez3/RunningBack into ui-igor
+    
+    because is my branch
+
+commit 0b77d381ba46f23ecafd995d5561a15fa0eb1cf7
+Author: Igor S <Igor S>
+Date:   Tue Apr 5 13:05:59 2016 -0400
+
+    camera changes, attachable
+
+commit 84ee4113dad45243fafbab9012fb55d95f120c8e
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Mon Apr 4 17:34:32 2016 -0400
+
+    Added simple pause menu
+
+commit abeddf1b5cb14a999bbe1418da888fd0e0f91f0d
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Mon Apr 4 17:22:30 2016 -0400
+
+    added the aircraft carrier level
+
+commit af8a4c50239f2c3a3a7cd232e049326394fcffd4
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Mon Apr 4 16:16:53 2016 -0400
+
+    Settings button opens settings menu
+
+commit 7ac04b7afc718f2e0cbc11b21c7893f0bfb5dc50
+Author: Bernardo Duarte <bernardolageduarte@gmail.com>
+Date:   Mon Apr 4 15:57:42 2016 -0400
+
+    testing
+
+commit 64768e335694e2a5032717a782d73cec61e59d17
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Apr 4 14:06:35 2016 -0400
+
+    Update README.md
+
+commit aa740dc0000d01e1bc39713ba01f43c0f40d5336
+Author: Igor S <Igor S>
+Date:   Fri Mar 25 10:50:01 2016 -0400
+
+    fitst test commit
+
+commit d0b96d0f5513f2a377fc0427700443382620a0f8
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Wed Mar 23 18:31:05 2016 -0400
+
+    Play button gets rid of menu
+
+commit 156575dce30614c0c92afbcbcf54b9f1bfc428fa
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Wed Mar 23 18:24:23 2016 -0400
+
+    Added menu with rotating car and working quit button
+
+commit 49759c5e6991aab5cd0ef80c855029552bf8dcf3
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Wed Mar 23 16:58:51 2016 -0400
+
+    Added Start Menu widget
+
+commit 50f501be235cf7006fb5da31127a4a3b2c971514
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Tue Mar 22 18:24:53 2016 -0400
+
+    Changed project to CPP template
+
+commit 67eb041c19a46ef99e50ce7b4dad8ef8b390596a
+Merge: d8647a4 bb71eb7
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:17:56 2016 -0400
+
+    Merge pull request #3 from cperez3/dev
+    
+    updated readme
+
+commit bb71eb7e5f6546864135a6f559567bbbb1134bfa
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:14:41 2016 -0400
+
+    Update README.md
+
+commit 5520df4b1c6deb04d6570b73ac50f2f354822d8f
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:14:25 2016 -0400
+
+    Update README.md
+
+commit 9a966ba6ea748fb278cbc0798a2194b148b3aa56
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:13:39 2016 -0400
+
+    Update README.md
+
+commit e2a74482e8eeb1eb9de48d6d6651c32b08cd9d38
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:11:03 2016 -0400
+
+    Update README.md
+
+commit ea49466fd255b855f176325dc50eeb0e60102282
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:07:57 2016 -0400
+
+    Update README.md
+
+commit 6eb757544292f2e1ecd7fd601f261800bcaf2c72
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:07:18 2016 -0400
+
+    Update README.md
+
+commit 09581bf1dea801489e184e82b936d8b0b0d4297e
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 18:06:49 2016 -0400
+
+    Update README.md
+
+commit d8647a4864045f66b9dfbb6c90e4b76b84ab7cd0
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 17:42:39 2016 -0400
+
+    should be setup now
+
+commit 47689dbcc46206cf0340edd7883fc17e3ab218c4
+Merge: 9ab2022 c79b3ed
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 17:29:24 2016 -0400
+
+    Merge pull request #2 from cperez3/master
+    
+    added project files?
+
+commit c79b3eda8aebd9d8b5a7cecb604154489bcc741c
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Mon Mar 21 17:27:40 2016 -0400
+
+    added project files?
+
+commit 9ab2022b5cba642c60d8a824476d9abf4d729d5a
+Author: cperez3 <chrisv.perez@gmail.com>
+Date:   Wed Mar 9 10:50:21 2016 -0500
+
+    Create README.md
+
+commit 0b2ad7e0b407273b03815b1e9b7df473b901a15e
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Mon Mar 7 16:36:05 2016 -0500
+
+    commit
+
+commit bb2f6614bf4960d72b1b44c1f929e5f98f15b51a
+Author: Chris <chrisv.perez@gmail.com>
+Date:   Mon Mar 7 15:07:42 2016 -0500
+
+    Initial commit

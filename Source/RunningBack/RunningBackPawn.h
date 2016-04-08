@@ -148,6 +148,9 @@ public:
 	void SpawnWeapon();
 
 	FTimerHandle FireRate;
+	// to set up the collection of the timer
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class USphereComponent* CollectionSphere;
 
 private:
 	/** 
@@ -176,4 +179,7 @@ public:
 	FORCEINLINE UTextRenderComponent* GetInCarSpeed() const { return InCarSpeed; }
 	/** Returns InCarGear subobject **/
 	FORCEINLINE UTextRenderComponent* GetInCarGear() const { return InCarGear; }
+
+	// Returns CollectionSphere
+	FORCEINLINE class USphereComponent* GetCollectionSphere() const { return CollectionSphere; }
 };

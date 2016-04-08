@@ -136,11 +136,11 @@ ARunningBackPawn::ARunningBackPawn()
 	GunOffset = FVector(100.0f, 30.0f, 40.0f);
 	fRate = 0.02f;
 
-	if (GetVehicleMovementComponent()->IsFlying() == false)
-	{
-		//set movement to fly
-		
-	}
+	//Collection SPhere stuff
+	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
+	CollectionSphere->AttachTo(RootComponent);
+	CollectionSphere->SetSphereRadius(150.0f);
+
 
 }
 

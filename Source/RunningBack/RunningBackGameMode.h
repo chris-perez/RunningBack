@@ -22,6 +22,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Time")
 	float CountdownTimer;
 
+	float MaxTime;
+
+	UFUNCTION(BlueprintPure, Category = "Time")
+		float GetMaxTime();
+
+	UFUNCTION(BlueprintPure, Category = "Time")
+		float GetCountdownTime();
+
 	float LTime;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Game")
