@@ -1,24 +1,31 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.4
 //Seth's Updates:
+//Added a timer! Can be adjusted in the GameMode cpp file. When timer hits 0, Game freezes.
+//Added a win condition! If you destroy all the gold spheres before the timer runs out, game again freezes.
+//Hopefully both the game win/lose condition are replaced with a matinee instead of freezing.
+//Added a crosshair! For now, it's just a purple square. Will make better adjustments later.
+//Created a class. It's called IsPlane, because originally I wanted to make it so you destroy the planes.
+//But I'd have to create a BP class attached to the IsPlane cpp class and add a plane static mesh to each BP instance for
+//it to work. Too much work. So instead, IsPlane is attached to the Gold Spheres and is used to register
+//hits, so they can be destroyed.
 
-//Shooting line traces instead of projectiles. More memory efficient.
-//Traces are green if they hit another car. Red otherwise.
-//If you hit another car, that car will destroy itself. Will add physics to instead make it fly back or slow down.
-//Fixed gun rotation. Was a glitch where turning the car while simultaneously turning the camera made the gun spin around.
-//Added an adjustable property in the editor called ""fRate." Controls gun fire rate. Lower = faster.
+//THINGS (FOR IGOR) TO DO:
+//Add explosion sound for destruction.
+//Add matinee for win/lose condition.
+//Add water around AirCraft carrier. And a skybox. Make it pretty.
+//(Try) and make the car/turret mesh look less ugly. God it's ugly.
 
-//STILL TO DO:
-//"YOU WIN!"Implementation. I know how to do it using Trigger Boxes but it's hard moving them around in the editor because
-//your translate arrows are weird.
-//Make it so other vehicle actors hit by line traces have impulses added to them, causing them to fly away or slow down.
-//Making this a true multiplayer game. That...will require some reading.
+//PS:
+//Check the GameModeCPP file and look at the comments I made there. They're useful.
 
 #include "RunningBack.h"
 #include "RunningBackPawn.h"
 #include "RunningBackWheelFront.h"
 #include "RunningBackWheelRear.h"
 #include "RunningBackHud.h"
+#include "RunningBackGameMode.h"
 #include "Attachable.h"
+#include "IsPlane.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
@@ -71,7 +78,7 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create a spring arm component
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm0"));
-	SpringArm->TargetOffset = FVector(0.f, 0.f, 175.f);
+	SpringArm->TargetOffset = FVector(0.f, 0.f, 150.f);
 	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 	SpringArm->AttachTo(RootComponent);
 	SpringArm->TargetArmLength = 500.0f;
@@ -195,9 +202,19 @@ void ARunningBackPawn::ShootStuff()
 
 		FHitResult Hit(ForceInit);
 		GetWorld()->LineTraceSingle(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
-		if(Hit.bBlockingHit)
+
+		AIsPlane * isItAPlane = Cast<AIsPlane>(Hit.GetActor());
+		if(isItAPlane)
 		{
 			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
+			Hit.GetActor()->Destroy();
+			ARunningBackGameMode* gm = (ARunningBackGameMode*)GetWorld()->GetAuthGameMode();
+			gm->score += 1;
+			if (gm->score >= gm->maxScore)
+			{
+				UGameplayStatics::SetGamePaused(GetWorld(), true);
+			}
+			
 		}
 		else
 		{
@@ -417,8 +434,8 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator NewRot = SpawnedWeapon->GetActorRotation();
-		NewRot.Pitch += -Val;
+		FRotator NewRot = GetCamera()->GetComponentRotation();
+		//Fix Pitch.
 		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
