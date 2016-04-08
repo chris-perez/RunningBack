@@ -11,7 +11,8 @@ ARunningBackGameMode::ARunningBackGameMode()
 {
 	DefaultPawnClass = ARunningBackPawn::StaticClass();
 	HUDClass = ARunningBackHud::StaticClass();
-	CountdownTimer = 150.f;
+	CountdownTimer = 60.f;
+	MaxTime = 60;
 	LTime = 1.f;
 	//Score starts at 0.
 	score = 0;
@@ -52,4 +53,14 @@ void ARunningBackGameMode::Tick(float Delta)
 {
 	//FString TheFloatStr = FString::SanitizeFloat(CountdownTimer);
 	//GEngine->AddOnScreenDebugMessage(-1, 1.0, FColor::Red, *TheFloatStr);
+}
+
+float ARunningBackGameMode::GetMaxTime()
+{
+	return MaxTime;
+}
+
+float ARunningBackGameMode::GetCountdownTime()
+{
+	return CountdownTimer;
 }
