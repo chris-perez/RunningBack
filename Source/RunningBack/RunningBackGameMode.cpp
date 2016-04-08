@@ -11,6 +11,14 @@ ARunningBackGameMode::ARunningBackGameMode()
 {
 	DefaultPawnClass = ARunningBackPawn::StaticClass();
 	HUDClass = ARunningBackHud::StaticClass();
+	CountdownTimer = 150.f;
+	LTime = 1.f;
+	//Score starts at 0.
+	score = 0;
+	//Max Score is the score you need to reach to end game.
+	//There are 6 spheres on the map currently so max score is 6.
+	//If you add a sphere to the map, you must add 1 to max score.
+	maxScore = 6;
 }
 
 void ARunningBackGameMode::BeginPlay()
@@ -29,4 +37,19 @@ void ARunningBackGameMode::BeginPlay()
 	}
 	else
 		UE_LOG(LogClass, Log, TEXT("HUD widgetClass Is NULL "));*/
+	GetWorld()->GetTimerManager().SetTimer(LoopTime, this, &ARunningBackGameMode::DecreaseTime, LTime, true, -1);
+}
+void ARunningBackGameMode::DecreaseTime()
+{
+	CountdownTimer = CountdownTimer - 1;
+	if (CountdownTimer <= 0)
+	{
+		GetWorld()->GetTimerManager().ClearTimer(LoopTime);
+		UGameplayStatics::SetGamePaused(GetWorld(), true);
+	}
+}
+void ARunningBackGameMode::Tick(float Delta)
+{
+	//FString TheFloatStr = FString::SanitizeFloat(CountdownTimer);
+	//GEngine->AddOnScreenDebugMessage(-1, 1.0, FColor::Red, *TheFloatStr);
 }
