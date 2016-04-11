@@ -1,11 +1,31 @@
-// Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.4
+//Seth's Updates:
+//Added a timer! Can be adjusted in the GameMode cpp file. When timer hits 0, Game freezes.
+//Added a win condition! If you destroy all the gold spheres before the timer runs out, game again freezes.
+//Hopefully both the game win/lose condition are replaced with a matinee instead of freezing.
+//Added a crosshair! For now, it's just a purple square. Will make better adjustments later.
+//Created a class. It's called IsPlane, because originally I wanted to make it so you destroy the planes.
+//But I'd have to create a BP class attached to the IsPlane cpp class and add a plane static mesh to each BP instance for
+//it to work. Too much work. So instead, IsPlane is attached to the Gold Spheres and is used to register
+//hits, so they can be destroyed.
+
+//THINGS (FOR IGOR) TO DO:
+//Add explosion sound for destruction.
+//Add matinee for win/lose condition.
+//Add water around AirCraft carrier. And a skybox. Make it pretty.
+//(Try) and make the car/turret mesh look less ugly. God it's ugly.
+
+//PS:
+//Check the GameModeCPP file and look at the comments I made there. They're useful.
 
 #include "RunningBack.h"
 #include "RunningBackPawn.h"
 #include "RunningBackWheelFront.h"
 #include "RunningBackWheelRear.h"
 #include "RunningBackHud.h"
+#include "RunningBackGameMode.h"
 #include "Attachable.h"
+#include "IsPlane.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
@@ -58,10 +78,10 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create a spring arm component
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm0"));
-	SpringArm->TargetOffset = FVector(0.f, 0.f, 175.f);
+	SpringArm->TargetOffset = FVector(0.f, 0.f, 150.f);
 	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 	SpringArm->AttachTo(RootComponent);
-	SpringArm->TargetArmLength = 600.0f;
+	SpringArm->TargetArmLength = 500.0f;
 	SpringArm->bEnableCameraRotationLag = true;
 	SpringArm->CameraRotationLagSpeed = 7.f;
 	SpringArm->bInheritPitch = true;
@@ -110,16 +130,17 @@ ARunningBackPawn::ARunningBackPawn()
 	/*************************            Custom Code     *******************/
 
 	MaxLife = 2000.f;
-	LifePoints = 2000.f;
+	LifePoints = 800.f;
 	TurnRate = 25.f;
 
 	GunOffset = FVector(100.0f, 30.0f, 40.0f);
+	fRate = 0.02f;
 
-	if (GetVehicleMovementComponent()->IsFlying() == false)
-	{
-		//set movement to fly
-		
-	}
+	//Collection SPhere stuff
+	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
+	CollectionSphere->AttachTo(RootComponent);
+	CollectionSphere->SetSphereRadius(150.0f);
+
 
 }
 
@@ -137,31 +158,80 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 	InputComponent->BindAction("Handbrake", IE_Released, this, &ARunningBackPawn::OnHandbrakeReleased);
 	InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ARunningBackPawn::OnToggleCamera);
 	InputComponent->BindAction("Shoot", IE_Pressed, this, &ARunningBackPawn::ShootStuff);
+	InputComponent->BindAction("Shoot", IE_Released, this, &ARunningBackPawn::ShootStop);
 
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
 }
 
+#define COLLISION_WEAPON        ECC_GameTraceChannel1  
+
 void ARunningBackPawn::ShootStuff()
 {
 	// try and fire a projectile
-	if (ProjectileClass != NULL)
-	{
-		const FRotator SpawnRotation = GetControlRotation();
-		// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-		FVector SpawnLocation = GetActorLocation();
-		SpawnLocation.Z += 200.f;
-		SpawnLocation+= SpawnRotation.RotateVector(GunOffset);
+	//if (ProjectileClass != NULL)
+	//{
+	//	const FRotator SpawnRotation = GetControlRotation();
+	//	// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+	//	FVector SpawnLocation = GetActorLocation();
+	//	SpawnLocation.Z += 200.f;
+	//	SpawnLocation+= SpawnRotation.RotateVector(GunOffset);
 
-		UWorld* const World = GetWorld();
-		if (World != NULL)
+	//	UWorld* const World = GetWorld();
+	//	if (World != NULL)
+	//	{
+	//		// spawn the projectile at the muzzle
+	//		World->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
+	//		
+	//	}
+	//}
+
+	if (Controller && Controller->IsLocalPlayerController()) // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
+	{
+		FVector CamLoc;
+		FRotator CamRot;
+
+		SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
+		const FVector StartTrace = CamLoc; // trace start is the camera location
+		const FVector Direction = CamRot.Vector();
+		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
+
+																// Perform trace to retrieve hit info
+		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
+		TraceParams.bTraceAsyncScene = true;
+		TraceParams.bReturnPhysicalMaterial = true;
+
+		FHitResult Hit(ForceInit);
+		GetWorld()->LineTraceSingle(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
+
+		AIsPlane * isItAPlane = Cast<AIsPlane>(Hit.GetActor());
+		if(isItAPlane)
 		{
-			// spawn the projectile at the muzzle
-			World->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
+			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
+			Hit.GetActor()->Destroy();
+			ARunningBackGameMode* gm = (ARunningBackGameMode*)GetWorld()->GetAuthGameMode();
+			gm->score += 1;
+			if (gm->score >= gm->maxScore)
+			{
+				UGameplayStatics::SetGamePaused(GetWorld(), true);
+			}
 			
 		}
+		else
+		{
+			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 12);
+		}
+		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::ShootStuff, fRate);
 	}
-	
+}
 
+void ARunningBackPawn::ShootStop()
+{
+	GetWorld()->GetTimerManager().ClearTimer(FireRate);
+}
+
+bool ARunningBackPawn::IsCar()
+{
+	return true;
 }
 
 void ARunningBackPawn::MoveForward(float Val)
@@ -219,40 +289,8 @@ void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
 	}
 }
 
-#define COLLISION_WEAPON        ECC_GameTraceChannel1  
-
 void ARunningBackPawn::Tick(float Delta)
 {
-	//GetActorLocation();
-
-	if (Controller && Controller->IsLocalPlayerController()) // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
-	{
-		FVector CamLoc;
-		FRotator CamRot;
-
-		Controller->GetActorEyesViewPoint(CamLoc, CamRot);
-		const FVector StartTrace = CamLoc; // trace start is the camera location
-		const FVector Direction = CamRot.Vector();
-		const FVector EndTrace = StartTrace + Direction * 1500; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
-
-																// Perform trace to retrieve hit info
-		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
-		TraceParams.bTraceAsyncScene = true;
-		TraceParams.bReturnPhysicalMaterial = true;
-
-		FHitResult Hit(ForceInit);
-		GetWorld()->LineTraceSingle(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
-
-		if (Hit.bBlockingHit)
-		{
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), false, -1, 0, 4);
-		}
-		else
-		{
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), false, -1, 0, 4);
-		}
-	}
-
 		// Setup the flag to say we are in reverse gear
 		bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;
 		// Update the strings used in the hud (incar and onscreen)
@@ -396,8 +434,8 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator NewRot = SpawnedWeapon->GetActorRotation();
-		NewRot.Pitch += -Val;
+		FRotator NewRot = GetCamera()->GetComponentRotation();
+		//Fix Pitch.
 		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
@@ -406,8 +444,9 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 	Super::AddControllerYawInput(Val);
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator NewRot = SpawnedWeapon->GetActorRotation();
-		NewRot.Yaw += Val;
+		FRotator NewRot = GetCamera()->GetComponentRotation();
+		
+		//NewRot.Yaw += Val;
 		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
