@@ -49,10 +49,10 @@ ARunningBackPawn::ARunningBackPawn()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	// Car mesh
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/Sedan/Sedan_SkelMesh.Sedan_SkelMesh"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/RunningBack/Flying_Car_Skeleton.Flying_Car_Skeleton"));
 	GetMesh()->SetSkeletalMesh(CarMesh.Object);
 
-	static ConstructorHelpers::FClassFinder<UObject> AnimBPClass(TEXT("/Game/Vehicle/Sedan/Sedan_AnimBP"));
+	static ConstructorHelpers::FClassFinder<UObject> AnimBPClass(TEXT("/Game/Vehicle/RunningBack/FlyingCar_ABP"));
 	GetMesh()->SetAnimInstanceClass(AnimBPClass.Class);
 
 	// Simulation
