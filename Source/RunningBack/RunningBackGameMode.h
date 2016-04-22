@@ -30,17 +30,8 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Time")
 		float GetCountdownTime();
 
-	float LTime;
-	
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Game")
-	float score;
-	
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Game")
-	float maxScore;
-	
-	FTimerHandle LoopTime;
-	void DecreaseTime();
-	virtual void Tick(float Delta) override;
+	UFUNCTION(BlueprintPure, Category = "Life")
+		FString GetLifeText();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	TSubclassOf <class UUserWidget> PauseMenu;

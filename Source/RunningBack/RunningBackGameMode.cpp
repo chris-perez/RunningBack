@@ -51,6 +51,7 @@ void ARunningBackGameMode::DecreaseTime()
 }
 void ARunningBackGameMode::Tick(float Delta)
 {
+	Super::Tick(Delta);
 	//FString TheFloatStr = FString::SanitizeFloat(CountdownTimer);
 	//GEngine->AddOnScreenDebugMessage(-1, 1.0, FColor::Red, *TheFloatStr);
 }
@@ -63,4 +64,9 @@ float ARunningBackGameMode::GetMaxTime()
 float ARunningBackGameMode::GetCountdownTime()
 {
 	return CountdownTimer;
+}
+
+FString ARunningBackGameMode::GetLifeText()
+{
+	return FString("Life");
 }
