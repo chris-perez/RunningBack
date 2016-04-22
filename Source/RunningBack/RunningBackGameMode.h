@@ -11,6 +11,8 @@ class ARunningBackGameMode : public AGameMode
 public:
 	ARunningBackGameMode();
 
+	virtual void Tick(float Delta) override;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
 	TSubclassOf <class UUserWidget> HUDWidgetClass;
 

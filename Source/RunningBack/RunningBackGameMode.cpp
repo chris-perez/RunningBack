@@ -13,13 +13,13 @@ ARunningBackGameMode::ARunningBackGameMode()
 	HUDClass = ARunningBackHud::StaticClass();
 	CountdownTimer = 60.f;
 	MaxTime = 60;
-	LTime = 1.f;
+//	LTime = 1.f;
 	//Score starts at 0.
-	score = 0;
+	//score = 0;
 	//Max Score is the score you need to reach to end game.
 	//There are 6 spheres on the map currently so max score is 6.
 	//If you add a sphere to the map, you must add 1 to max score.
-	maxScore = 6;
+	//maxScore = 6;
 }
 
 void ARunningBackGameMode::BeginPlay()
@@ -38,17 +38,17 @@ void ARunningBackGameMode::BeginPlay()
 	}
 	else
 		UE_LOG(LogClass, Log, TEXT("HUD widgetClass Is NULL "));*/
-	GetWorld()->GetTimerManager().SetTimer(LoopTime, this, &ARunningBackGameMode::DecreaseTime, LTime, true, -1);
+	//GetWorld()->GetTimerManager().SetTimer(LoopTime, this, &ARunningBackGameMode::DecreaseTime, LTime, true, -1);
 }
-void ARunningBackGameMode::DecreaseTime()
-{
-	CountdownTimer = CountdownTimer - 1;
-	if (CountdownTimer <= 0)
-	{
-		GetWorld()->GetTimerManager().ClearTimer(LoopTime);
-		UGameplayStatics::SetGamePaused(GetWorld(), true);
-	}
-}
+//void ARunningBackGameMode::DecreaseTime()
+//{
+//	CountdownTimer = CountdownTimer - 1;
+//	if (CountdownTimer <= 0)
+//	{
+//		GetWorld()->GetTimerManager().ClearTimer(LoopTime);
+//		UGameplayStatics::SetGamePaused(GetWorld(), true);
+//	}
+//}
 void ARunningBackGameMode::Tick(float Delta)
 {
 	Super::Tick(Delta);
@@ -68,5 +68,5 @@ float ARunningBackGameMode::GetCountdownTime()
 
 FString ARunningBackGameMode::GetLifeText()
 {
-	return FString("Life");
+	return "Life";
 }
