@@ -5,6 +5,13 @@
 #include "public/Projectile.h"
 #include "RunningBackPawn.generated.h"
 
+UENUM(BlueprintType)
+enum class EPawnState {
+	Active,
+	Inactive,
+	Unknown
+};
+
 class UCameraComponent;
 class USpringArmComponent;
 class UTextRenderComponent;
@@ -122,6 +129,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
 		float fRate;
 
+	//controlls the pawn state
+
+	EPawnState PawnState;
+
 
 	//Control the Weapon on the car
 	//UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
@@ -134,6 +145,11 @@ public:
 	void ShootStuff();
 
 	void ShootStop();
+	UFUNCTION(Blueprintpure, Category="State")
+	EPawnState GetPawnState();
+
+	UFUNCTION(BlueprintCallable, Category = "Colision")
+	void Hit(AActor *SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);
 
 	bool IsCar();
 
@@ -143,6 +159,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
 		FVector GunOffset;
 
+	UPROPERTY(EditAnywhere, Category="Health")
+	float lifeDecreaseRate;
+
 	float TurnRate;
 
 	void SpawnWeapon();
@@ -151,6 +170,15 @@ public:
 	// to set up the collection of the timer
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USphereComponent* CollectionSphere;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Test")
+	bool OnTest = false;
+
+	FTimerHandle ShootTestTimer;
+
+	void FunctionOnTest();
+
+
 
 private:
 	/** 

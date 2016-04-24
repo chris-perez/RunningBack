@@ -24,6 +24,4 @@ public:
 	virtual void Tick(float Delta) override;
 	
 	
-	
-	
 };
