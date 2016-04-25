@@ -50,7 +50,7 @@ ARunningBackPawn::ARunningBackPawn()
 	
 	PrimaryActorTick.bCanEverTick = true;
 	// Car mesh
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/RunningBack/Flying_Car_Skeleton.Flying_Car_Skeleton"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/RunningBack/Flying_Car.Flying_Car"));
 	GetMesh()->SetSkeletalMesh(CarMesh.Object);
 
 	static ConstructorHelpers::FClassFinder<UObject> AnimBPClass(TEXT("/Game/Vehicle/RunningBack/FlyingCar_ABP"));
