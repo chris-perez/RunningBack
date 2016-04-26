@@ -31,6 +31,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapons", meta = (AllowPrivateAccess = "true"))
 	class UStaticMesh *WeaponMesh;
 
+	FVector GetSoc();
 
 protected:
 
