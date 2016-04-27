@@ -196,7 +196,8 @@ void ARunningBackPawn::ShootStuff()
 		if(ARB)
 		{
 			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
-			ARB->SetLifePoints(-lifeDecreaseRate);
+			//ARB->SetLifePoints(-lifeDecreaseRate);
+			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
 			//ARunningBackGameMode* gm = (ARunningBackGameMode*)GetWorld()->GetAuthGameMode();
 			///*gm->score += 1;
 			//if (gm->score >= gm->maxScore)
