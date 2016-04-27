@@ -13,10 +13,12 @@ git clone <GitHub url>
 ```
 
 Checkout New Branch
+
+
 ```
-Create new branch on GitHub.
-git checkout -b <branch_name>                                            // Creates new branch locally
-git branch --set-upstream-to=origin/<branch_name> <branch_name>         //links local branch to remote branch
+Create new branch from the dropdown menu on github.
+Then in terminal type:
+git checkout <branch_name>
 ```
 
 Pull Remote Changes
