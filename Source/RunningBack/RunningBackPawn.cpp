@@ -172,23 +172,6 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 
 void ARunningBackPawn::ShootStuff()
 {
-	// try and fire a projectile
-	//if (ProjectileClass != NULL)
-	//{
-	//	const FRotator SpawnRotation = GetControlRotation();
-	//	// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-	//	FVector SpawnLocation = GetActorLocation();
-	//	SpawnLocation.Z += 200.f;
-	//	SpawnLocation+= SpawnRotation.RotateVector(GunOffset);
-
-	//	UWorld* const World = GetWorld();
-	//	if (World != NULL)
-	//	{
-	//		// spawn the projectile at the muzzle
-	//		World->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
-	//		
-	//	}
-	//}
 
 	if (Controller && Controller->IsLocalPlayerController()) // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
 	{
@@ -196,7 +179,7 @@ void ARunningBackPawn::ShootStuff()
 		FRotator CamRot;
 
 		SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
-		const FVector StartTrace = CamLoc; // trace start is the camera location
+		const FVector StartTrace = SpawnedWeapon->GetSoc(); // trace start is the camera location
 		const FVector Direction = CamRot.Vector();
 		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
 
@@ -228,37 +211,7 @@ void ARunningBackPawn::ShootStuff()
 		}
 		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::ShootStuff, fRate);
 	}
-	else if(Controller)
-	{
-		FVector CamLoc;
-		FRotator CamRot;
-
-		//SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
-		const FVector StartTrace = SpawnedWeapon->GetActorLocation(); // trace start is the camera location
-		const FVector Direction = SpawnedWeapon->GetActorForwardVector();
-		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
-
-		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
-		TraceParams.bTraceAsyncScene = true;
-		TraceParams.bReturnPhysicalMaterial = true;
-
-		FHitResult Hit(ForceInit);
-		GetWorld()->LineTraceSingle(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
-
-
-		ARunningBackPawn * ARB = Cast<ARunningBackPawn>(Hit.GetActor());
-		if (ARB)
-		{
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
-			ARB->SetLifePoints(-lifeDecreaseRate);
-		}
-		else
-		{
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 12);
-		}
-		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::ShootStuff, fRate);
-
-	}
+	
 }
 
 void ARunningBackPawn::ShootStop()
@@ -506,9 +459,10 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 	if (SpawnedWeapon != nullptr)
 	{
 		FRotator NewRot = GetCamera()->GetComponentRotation();
-		
+
 		//NewRot.Yaw += Val;
 		SpawnedWeapon->SetActorRotation(NewRot);
+		SpringArm->SetRelativeRotation(FRotator(SpringArm->RelativeRotation.Pitch ,-NewRot.Yaw, SpringArm->RelativeRotation.Roll));
 	}
 }
 void ARunningBackPawn::Hit(AActor *SelfActor, AActor *OtherActor, FVector NormalImpulse, const FHitResult& Hit)

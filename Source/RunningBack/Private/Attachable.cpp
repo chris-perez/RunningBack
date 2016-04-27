@@ -36,3 +36,8 @@ void AAttachable::Tick(float DeltaTime)
 
 }
 
+FVector AAttachable::GetSoc()
+{
+	FVector soc = GetRootComponent()->GetChildComponent(0)->GetSocketLocation("Barrel");
+	return soc;
+}
