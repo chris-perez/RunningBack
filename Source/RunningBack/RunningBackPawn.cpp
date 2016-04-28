@@ -170,11 +170,11 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1  
 
-void ARunningBackPawn::ShootStuff()
+void ARunningBackPawn::ShootStuff_Implementation()
 {
-
-	if (Controller && Controller->IsLocalPlayerController()) // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
-	{
+	return;
+	//if (Controller && Controller->IsLocalPlayerController()) // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
+	/*if (HasAuthority()){
 		FVector CamLoc;
 		FRotator CamRot;
 
@@ -189,7 +189,7 @@ void ARunningBackPawn::ShootStuff()
 		TraceParams.bReturnPhysicalMaterial = true;
 
 		FHitResult Hit(ForceInit);
-		GetWorld()->LineTraceSingle(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
+		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
 
 	
 		ARunningBackPawn *ARB = Cast<ARunningBackPawn>(Hit.GetActor());
@@ -198,21 +198,28 @@ void ARunningBackPawn::ShootStuff()
 			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
 			//ARB->SetLifePoints(-lifeDecreaseRate);
 			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
+			ServerTakeDamage(ARB, 10, FDamageEvent(), GetController(), this);
 			//ARunningBackGameMode* gm = (ARunningBackGameMode*)GetWorld()->GetAuthGameMode();
-			///*gm->score += 1;
+			//gm->score += 1;
 			//if (gm->score >= gm->maxScore)
 			//{
 			//	UGameplayStatics::SetGamePaused(GetWorld(), true);
 			//}
-			//*/
+			//
 		}
 		else
-		{
 			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 12);
 		}
-		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::ShootStuff, fRate);
-	}
+		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::ShootStuff, fRate);*/
+}
 	
+
+bool ARunningBackPawn::ShootStuff_Validate() {
+	return true;
+}
+
+void ARunningBackPawn::ServerTakeDamage(APawn* p, float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) {
+	p->TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
 }
 
 void ARunningBackPawn::ShootStop()

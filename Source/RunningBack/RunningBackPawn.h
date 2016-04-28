@@ -142,7 +142,11 @@ public:
 
 	void AddControllerYawInput(float Val) override;
 
+	UFUNCTION( Server, Reliable, WithValidation )
 	void ShootStuff();
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerTakeDamage(APawn* p, float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
 
 	void ShootStop();
 	UFUNCTION(Blueprintpure, Category="State")
