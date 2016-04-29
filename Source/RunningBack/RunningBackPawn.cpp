@@ -443,11 +443,11 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator NewRot = GetCamera()->GetComponentRotation();
+		//FRotator NewRot = GetCamera()->GetComponentRotation();
 		//Fix Pitch.
-		NewRot.Pitch -= .5;
+		//NewRot.Pitch -= .5;
 
-		SpawnedWeapon->SetActorRotation(NewRot);
+		SpawnedWeapon->AddActorLocalRotation(FRotator(Val,0, 0));
 	}
 }
 

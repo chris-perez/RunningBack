@@ -178,6 +178,8 @@ public:
 
 	void FunctionOnTest();
 
+	//bool Destroy(bool bNetForce, bool bShouldModifyLevel) override;
+
 
 
 private:
