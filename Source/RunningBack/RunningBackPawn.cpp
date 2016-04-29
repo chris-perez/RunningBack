@@ -160,19 +160,21 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 	InputComponent->BindAction("Handbrake", IE_Pressed, this, &ARunningBackPawn::OnHandbrakePressed);
 	InputComponent->BindAction("Handbrake", IE_Released, this, &ARunningBackPawn::OnHandbrakeReleased);
 	InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ARunningBackPawn::OnToggleCamera);
-	InputComponent->BindAction("Shoot", IE_Pressed, this, &ARunningBackPawn::ShootStuff);
+	InputComponent->BindAction("Shoot", IE_Pressed, this, &ARunningBackPawn::Shoot);
 	InputComponent->BindAction("Shoot", IE_Released, this, &ARunningBackPawn::ShootStop);
 
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
 }
 
-#define COLLISION_WEAPON        ECC_GameTraceChannel1  
+#define COLLISION_WEAPON        ECC_GameTraceChannel1
 
-void ARunningBackPawn::ShootStuff()
+void ARunningBackPawn::Shoot() {
+	ServerShoot();
+}
+
+void ARunningBackPawn::ServerShoot_Implementation()
 {
-
-	if (Controller && Controller->IsLocalPlayerController()) // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
-	{
+	//if (Controller && Controller->IsLocalPlayerController()) { // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
 		FVector CamLoc;
 		FRotator CamRot;
 
@@ -187,34 +189,59 @@ void ARunningBackPawn::ShootStuff()
 		TraceParams.bReturnPhysicalMaterial = true;
 
 		FHitResult Hit(ForceInit);
-		GetWorld()->LineTraceSingle(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
+		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
 
-	
+
 		ARunningBackPawn *ARB = Cast<ARunningBackPawn>(Hit.GetActor());
-		if(ARB)
+		if (ARB)
 		{
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
-			ARB->SetLifePoints(-lifeDecreaseRate);
+			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
+			//ARB->SetLifePoints(-lifeDecreaseRate);
+			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
+			//ServerTakeDamage(ARB, 10, FDamageEvent(), GetController(), this);
+
 			//ARunningBackGameMode* gm = (ARunningBackGameMode*)GetWorld()->GetAuthGameMode();
-			///*gm->score += 1;
+			//gm->score += 1;
 			//if (gm->score >= gm->maxScore)
 			//{
 			//	UGameplayStatics::SetGamePaused(GetWorld(), true);
 			//}
-			//*/
+			//
 		}
-		else
-		{
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 12);
+		else {
+			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 12);
 		}
-		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::ShootStuff, fRate);
-	}
+		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::Shoot, fRate);
+//	}
+}
 	
+bool ARunningBackPawn::ServerShoot_Validate() {
+	return true;
 }
 
-void ARunningBackPawn::ShootStop()
+void ARunningBackPawn::DisplayDebugLine_Implementation(const UWorld* InWorld, FVector const& LineStart, FVector const& LineEnd, FColor const& Color, bool bPersistentLines, float LifeTime, uint8 DepthPriority, float Thickness) {
+	DrawDebugLine(InWorld, LineStart, LineEnd, Color, bPersistentLines, LifeTime, DepthPriority, Thickness);
+}
+
+void ARunningBackPawn::ServerTakeDamage_Implementation(APawn* p, float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) {
+	p->TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+}
+
+bool ARunningBackPawn::ServerTakeDamage_Validate(APawn* p, float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) {
+	return true;
+}
+
+void ARunningBackPawn::ShootStop() {
+	ServerShootStop();
+}
+
+void ARunningBackPawn::ServerShootStop_Implementation()
 {
 	GetWorld()->GetTimerManager().ClearTimer(FireRate);
+}
+
+bool ARunningBackPawn::ServerShootStop_Validate() {
+	return true;
 }
 
 bool ARunningBackPawn::IsCar()
@@ -475,7 +502,7 @@ EPawnState ARunningBackPawn::GetPawnState()
 
 void ARunningBackPawn::FunctionOnTest()
 {
-	ShootStuff();
+	Shoot();
 	GetWorldTimerManager().SetTimer(ShootTestTimer, this, &ARunningBackPawn::FunctionOnTest, 1, false);
 }
 
