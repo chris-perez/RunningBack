@@ -164,6 +164,8 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 	InputComponent->BindAction("Shoot", IE_Released, this, &ARunningBackPawn::ShootStop);
 
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
+
+	InputComponent->BindAction("Instructions", IE_Pressed, this, &ARunningBackPawn::ToggleVisibility);
 }
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
@@ -191,6 +193,10 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		FHitResult Hit(ForceInit);
 		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
 
+		if (FireSound != NULL)
+		{
+			UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+		}
 
 		ARunningBackPawn *ARB = Cast<ARunningBackPawn>(Hit.GetActor());
 		if (ARB)
@@ -470,11 +476,18 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 
 	if (SpawnedWeapon != nullptr)
 	{
-		//FRotator NewRot = GetCamera()->GetComponentRotation();
-		//Fix Pitch.
-		//NewRot.Pitch -= .5;
-
-		SpawnedWeapon->AddActorLocalRotation(FRotator(Val,0, 0));
+		FRotator MeshRot = GetMesh()->GetComponentRotation();
+		FRotator NewRot = SpawnedWeapon->GetActorRotation().Clamp();
+		NewRot.Roll = MeshRot.Roll;
+		NewRot += FRotator(-Val, 0, 0);
+		NewRot = NewRot.Clamp();
+		SpawnedWeapon->SetActorRotation(NewRot);
+		UE_LOG(LogClass, Log, TEXT("New Pitch = %f "),NewRot.Yaw);
+		////Fix Pitch.
+		////NewRot.Pitch -= .5;
+		//SpawnedWeapon->AddActorLocalRotation(FRotator(-Val, 0, 0));
+		//FRotator MeshRot = GetMesh()->GetComponentRotation();
+		//SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
 
@@ -483,11 +496,14 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 
 	if (SpawnedWeapon != nullptr)
 	{
-		//FRotator NewRot = GetCamera()->GetComponentRotation();
+		FRotator MeshRot = GetMesh()->GetComponentRotation();
+		FRotator NewRot = SpawnedWeapon->GetActorRotation().Clamp();
+		NewRot.Roll = MeshRot.Roll;
+		NewRot += FRotator(0, Val, 0);
+		NewRot = NewRot.Clamp();
+		SpawnedWeapon->SetActorRotation(NewRot);
 
-		//NewRot.Yaw += Val;
-		SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));
-		//SpawnedWeapon->SetActorRotation(NewRot);		
+		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}
 }
 void ARunningBackPawn::Hit(AActor *SelfActor, AActor *OtherActor, FVector NormalImpulse, const FHitResult& Hit)
@@ -504,6 +520,19 @@ void ARunningBackPawn::FunctionOnTest()
 {
 	Shoot();
 	GetWorldTimerManager().SetTimer(ShootTestTimer, this, &ARunningBackPawn::FunctionOnTest, 1, false);
+}
+
+bool ARunningBackPawn::GetVisibility()
+{
+	return  InstructionVisibility;
+}
+void ARunningBackPawn::SetVisibility(bool Visibility)
+{
+	InstructionVisibility = Visibility;
+}
+void ARunningBackPawn::ToggleVisibility()
+{
+	SetVisibility(!InstructionVisibility);
 }
 
 

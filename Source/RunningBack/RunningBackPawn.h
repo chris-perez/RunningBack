@@ -192,6 +192,19 @@ public:
 
 	void FunctionOnTest();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interface")
+		bool InstructionVisibility;
+
+	UFUNCTION(BlueprintPure, Category = "Interface")
+		bool GetVisibility();
+
+	UFUNCTION(BlueprintCallable, Category = "Interface")
+		void SetVisibility(bool Visibility);
+
+	void ToggleVisibility();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	class USoundBase* FireSound;
 	//bool Destroy(bool bNetForce, bool bShouldModifyLevel) override;
 
 
