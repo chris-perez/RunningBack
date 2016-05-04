@@ -41,3 +41,10 @@ FVector AAttachable::GetSoc()
 	FVector soc = GetRootComponent()->GetChildComponent(0)->GetSocketLocation("Barrel");
 	return soc;
 }
+
+void AAttachable::ChangeMesh(UStaticMesh* mesh)
+{
+	UStaticMeshComponent *msh = Cast<UStaticMeshComponent>(GetRootComponent()->GetChildComponent(0));
+	msh->SetStaticMesh(mesh);
+
+}

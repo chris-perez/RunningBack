@@ -121,7 +121,8 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Health")
 		float GetLifePoints();
 
-	AAttachable* SpawnedWeapon;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Guns")
+		AAttachable* SpawnedWeapon;
 
 	UPROPERTY(EditAnywhere, Category = "Projectile")
 		TSubclassOf<class AProjectile> ProjectileClass;
@@ -191,6 +192,9 @@ public:
 	FTimerHandle ShootTestTimer;
 
 	void FunctionOnTest();
+
+	UFUNCTION(BlueprintCallable, Category = "Customization")
+		void changeGun(uint8 index, UStaticMesh* msh);
 
 
 

@@ -33,6 +33,8 @@ public:
 
 	FVector GetSoc();
 
+	void ChangeMesh(UStaticMesh* mesh);
+
 protected:
 
 

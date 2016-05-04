@@ -506,7 +506,10 @@ void ARunningBackPawn::FunctionOnTest()
 	GetWorldTimerManager().SetTimer(ShootTestTimer, this, &ARunningBackPawn::FunctionOnTest, 1, false);
 }
 
-
+void ARunningBackPawn::changeGun(uint8 index, UStaticMesh* msh)
+{
+	SpawnedWeapon->ChangeMesh(msh);
+}
 
 
 #undef LOCTEXT_NAMESPACE
