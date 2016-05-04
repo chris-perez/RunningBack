@@ -79,10 +79,10 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create a spring arm component
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm0"));
-	SpringArm->TargetOffset = FVector(0.f, 0.f, 150.f);
+	SpringArm->TargetOffset = FVector(0.f, 0.f, 0.f);
 	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 	SpringArm->AttachTo(RootComponent);
-	SpringArm->TargetArmLength = 400.0f;
+	SpringArm->TargetArmLength = 1000.0f;
 	SpringArm->bEnableCameraRotationLag = true;
 	SpringArm->CameraRotationLagSpeed = 7.f;
 	SpringArm->bInheritPitch = true;
@@ -90,12 +90,10 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create camera component 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
-	//Camera->AddLocalOffset(FVector(0.0f, 500.0f, 0.0f));
+
 	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = true;
 	Camera->FieldOfView = 90.f;
-	//Camera->AddRelativeLocation(FVector(0.0f, 500.0f, 0.0f));
-	//
 
 	// Create In-Car camera component 
 	InternalCameraOrigin = FVector(8.0f, -40.0f, 130.0f);
@@ -357,6 +355,10 @@ void ARunningBackPawn::BeginPlay()
 
 	PawnState = EPawnState::Active;
 	SpawnWeapon();
+	if (SpawnedWeapon)
+	{
+		SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
+	}
 	bool bEnableInCar = false;
 #ifdef HMD_INTGERATION
 	bEnableInCar = GEngine->HMDDevice.IsValid();
@@ -478,18 +480,14 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 
 void ARunningBackPawn::AddControllerYawInput(float Val) {
 	Super::AddControllerYawInput(Val);
-	FRotator Rot;
-	Rot.Yaw = Val;
-	Rot.Pitch = 0;
-	Rot.Roll = 0;
-	SpringArm->AddRelativeRotation(Rot);
+
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator NewRot = GetCamera()->GetComponentRotation();
+		//FRotator NewRot = GetCamera()->GetComponentRotation();
 
 		//NewRot.Yaw += Val;
-		SpawnedWeapon->SetActorRotation(NewRot);
-		SpringArm->SetRelativeRotation(FRotator(SpringArm->RelativeRotation.Pitch ,-NewRot.Yaw, SpringArm->RelativeRotation.Roll));
+		SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));
+		//SpawnedWeapon->SetActorRotation(NewRot);		
 	}
 }
 void ARunningBackPawn::Hit(AActor *SelfActor, AActor *OtherActor, FVector NormalImpulse, const FHitResult& Hit)
