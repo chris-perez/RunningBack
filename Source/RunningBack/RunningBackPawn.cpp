@@ -363,7 +363,7 @@ void ARunningBackPawn::BeginPlay()
 	SpawnWeapon();
 	if (SpawnedWeapon)
 	{
-		SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
+		//SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
 	}
 	bool bEnableInCar = false;
 #ifdef HMD_INTGERATION
@@ -476,18 +476,19 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator MeshRot = GetMesh()->GetComponentRotation();
+		/*FRotator MeshRot = GetMesh()->GetComponentRotation();
 		FRotator NewRot = SpawnedWeapon->GetActorRotation().Clamp();
 		NewRot.Roll = MeshRot.Roll;
 		NewRot += FRotator(-Val, 0, 0);
 		NewRot = NewRot.Clamp();
 		SpawnedWeapon->SetActorRotation(NewRot);
-		UE_LOG(LogClass, Log, TEXT("New Pitch = %f "),NewRot.Yaw);
+		UE_LOG(LogClass, Log, TEXT("New Pitch = %f "),NewRot.Yaw);*/
 		////Fix Pitch.
 		////NewRot.Pitch -= .5;
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(-Val, 0, 0));
+		SpringArm->AddLocalRotation(FRotator(-Val, 0, 0));
 		//FRotator MeshRot = GetMesh()->GetComponentRotation();
-		//SpawnedWeapon->SetActorRotation(NewRot);
+		SpawnedWeapon->SetActorRotation(SpringArm->GetComponentRotation());
 	}
 }
 
@@ -496,13 +497,15 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator MeshRot = GetMesh()->GetComponentRotation();
+		/*FRotator MeshRot = GetMesh()->GetComponentRotation();
 		FRotator NewRot = SpawnedWeapon->GetActorRotation().Clamp();
 		NewRot.Roll = MeshRot.Roll;
 		NewRot += FRotator(0, Val, 0);
 		NewRot = NewRot.Clamp();
-		SpawnedWeapon->SetActorRotation(NewRot);
+		SpawnedWeapon->SetActorRotation(NewRot);*/
 
+		SpringArm->AddLocalRotation(FRotator(0, Val, 0));
+		SpawnedWeapon->SetActorRotation(SpringArm->GetComponentRotation());
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}
 }
