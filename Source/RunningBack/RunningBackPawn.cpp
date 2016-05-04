@@ -472,40 +472,40 @@ void ARunningBackPawn::SpawnWeapon() {
 }
 
 void ARunningBackPawn::AddControllerPitchInput(float Val) {
-	Super::AddControllerPitchInput(Val);
+	//Super::AddControllerPitchInput(Val);
 
 	if (SpawnedWeapon != nullptr)
 	{
-		/*FRotator MeshRot = GetMesh()->GetComponentRotation();
-		FRotator NewRot = SpawnedWeapon->GetActorRotation().Clamp();
+		FRotator MeshRot = GetMesh()->GetComponentRotation().Clamp();
+		FRotator NewRot = SpringArm->GetComponentRotation().Clamp();
 		NewRot.Roll = MeshRot.Roll;
 		NewRot += FRotator(-Val, 0, 0);
 		NewRot = NewRot.Clamp();
-		SpawnedWeapon->SetActorRotation(NewRot);
-		UE_LOG(LogClass, Log, TEXT("New Pitch = %f "),NewRot.Yaw);*/
-		////Fix Pitch.
-		////NewRot.Pitch -= .5;
-		//SpawnedWeapon->AddActorLocalRotation(FRotator(-Val, 0, 0));
-		SpringArm->AddLocalRotation(FRotator(-Val, 0, 0));
+		
+		SpringArm->SetWorldRotation(NewRot);
+		//SpringArm->AddLocalRotation(FRotator(-Val, 0, 0));
 		//FRotator MeshRot = GetMesh()->GetComponentRotation();
 		SpawnedWeapon->SetActorRotation(SpringArm->GetComponentRotation());
+		AngleTestPitch = SpringArm->GetComponentRotation().Pitch;
 	}
 }
 
 void ARunningBackPawn::AddControllerYawInput(float Val) {
-	Super::AddControllerYawInput(Val);
+	//Super::AddControllerYawInput(Val);
 
 	if (SpawnedWeapon != nullptr)
 	{
-		/*FRotator MeshRot = GetMesh()->GetComponentRotation();
-		FRotator NewRot = SpawnedWeapon->GetActorRotation().Clamp();
+		FRotator MeshRot = GetMesh()->GetComponentRotation();
+		FRotator NewRot = SpringArm->GetComponentRotation();
 		NewRot.Roll = MeshRot.Roll;
 		NewRot += FRotator(0, Val, 0);
 		NewRot = NewRot.Clamp();
-		SpawnedWeapon->SetActorRotation(NewRot);*/
+		SpringArm->SetWorldRotation(NewRot);
+		AngleTestYaw = NewRot.Yaw;
 
-		SpringArm->AddLocalRotation(FRotator(0, Val, 0));
+		//SpringArm->AddLocalRotation(FRotator(0, Val, 0));
 		SpawnedWeapon->SetActorRotation(SpringArm->GetComponentRotation());
+		AngleTestYaw = SpringArm->GetComponentRotation().Yaw;
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}
 }
@@ -536,6 +536,16 @@ void ARunningBackPawn::SetVisibility(bool Visibility)
 void ARunningBackPawn::ToggleVisibility()
 {
 	SetVisibility(!InstructionVisibility);
+}
+
+float ARunningBackPawn::GetAngleTestYaw()
+{
+	return  AngleTestYaw;
+}
+
+float ARunningBackPawn::GetAngleTestPitch()
+{
+	return  AngleTestPitch;
 }
 
 

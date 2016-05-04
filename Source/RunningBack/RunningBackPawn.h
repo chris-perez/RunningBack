@@ -207,6 +207,23 @@ public:
 	class USoundBase* FireSound;
 	//bool Destroy(bool bNetForce, bool bShouldModifyLevel) override;
 
+	
+
+
+
+	//Testing stuff
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Test)
+	float AngleTestYaw;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Test)
+		float AngleTestPitch;
+
+	UFUNCTION(BlueprintCallable, Category = "Test")
+	float GetAngleTestYaw();
+
+	UFUNCTION(BlueprintCallable, Category = "Test")
+	float GetAngleTestPitch();
+
 
 
 private:
