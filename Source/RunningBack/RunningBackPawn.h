@@ -142,9 +142,23 @@ public:
 
 	void AddControllerYawInput(float Val) override;
 
-	void ShootStuff();
+	UFUNCTION()
+	void Shoot();
+
+	UFUNCTION( Server, Reliable, WithValidation )
+	void ServerShoot();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void DisplayDebugLine(const UWorld* InWorld, FVector const& LineStart, FVector const& LineEnd, FColor const& Color, bool bPersistentLines, float LifeTime, uint8 DepthPriority, float Thickness);
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerTakeDamage(APawn* p, float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
 
 	void ShootStop();
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerShootStop();
+
 	UFUNCTION(Blueprintpure, Category="State")
 	EPawnState GetPawnState();
 
