@@ -549,6 +549,11 @@ float ARunningBackPawn::GetAngleTestPitch()
 }
 
 
+void ARunningBackPawn::changeGun(uint8 index, UStaticMesh* msh)
+{
+	SpawnedWeapon->ChangeMesh(msh);
+}
+
 
 
 #undef LOCTEXT_NAMESPACE

@@ -121,7 +121,8 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Health")
 		float GetLifePoints();
 
-	AAttachable* SpawnedWeapon;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Guns")
+		AAttachable* SpawnedWeapon;
 
 	UPROPERTY(EditAnywhere, Category = "Projectile")
 		TSubclassOf<class AProjectile> ProjectileClass;
@@ -192,6 +193,7 @@ public:
 
 	void FunctionOnTest();
 
+<<<<<<< HEAD
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interface")
 		bool InstructionVisibility;
 
@@ -223,6 +225,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Test")
 	float GetAngleTestPitch();
+=======
+	UFUNCTION(BlueprintCallable, Category = "Customization")
+		void changeGun(uint8 index, UStaticMesh* msh);
+>>>>>>> 83daecaf8ee4290b3dcc4343d9356b28bdbde776
 
 
 
