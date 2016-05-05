@@ -124,6 +124,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Guns")
 		AAttachable* SpawnedWeapon;
 
+	UFUNCTION(BlueprintCallable, Category = "Guns")
+		AAttachable* GetCurrentWeapon();
+
 	UPROPERTY(EditAnywhere, Category = "Projectile")
 		TSubclassOf<class AProjectile> ProjectileClass;
 
@@ -193,8 +196,42 @@ public:
 
 	void FunctionOnTest();
 
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interface")
+		bool InstructionVisibility;
+
+	UFUNCTION(BlueprintPure, Category = "Interface")
+		bool GetVisibility();
+
+	UFUNCTION(BlueprintCallable, Category = "Interface")
+		void SetVisibility(bool Visibility);
+
+	void ToggleVisibility();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	class USoundBase* FireSound;
+	//bool Destroy(bool bNetForce, bool bShouldModifyLevel) override;
+
+	
+
+
+
+	//Testing stuff
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Test)
+	float AngleTestYaw;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Test)
+		float AngleTestPitch;
+
+	UFUNCTION(BlueprintCallable, Category = "Test")
+	float GetAngleTestYaw();
+
+	UFUNCTION(BlueprintCallable, Category = "Test")
+	float GetAngleTestPitch();
+
 	UFUNCTION(BlueprintCallable, Category = "Customization")
 		void changeGun(uint8 index, UStaticMesh* msh);
+
 
 
 

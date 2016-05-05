@@ -164,6 +164,8 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 	InputComponent->BindAction("Shoot", IE_Released, this, &ARunningBackPawn::ShootStop);
 
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
+
+	InputComponent->BindAction("Instructions", IE_Pressed, this, &ARunningBackPawn::ToggleVisibility);
 }
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
@@ -178,9 +180,10 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		FVector CamLoc;
 		FRotator CamRot;
 
-		SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
+		//SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
+		
 		const FVector StartTrace = SpawnedWeapon->GetSoc(); // trace start is the camera location
-		const FVector Direction = CamRot.Vector();
+		const FVector Direction = SpawnedWeapon->GetActorForwardVector();
 		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
 
 																// Perform trace to retrieve hit info
@@ -191,28 +194,23 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		FHitResult Hit(ForceInit);
 		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
 
+		if (FireSound != NULL)
+		{
+			UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+		}
 
 		ARunningBackPawn *ARB = Cast<ARunningBackPawn>(Hit.GetActor());
 		if (ARB)
 		{
 			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
-			//ARB->SetLifePoints(-lifeDecreaseRate);
 			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
-			//ServerTakeDamage(ARB, 10, FDamageEvent(), GetController(), this);
-
-			//ARunningBackGameMode* gm = (ARunningBackGameMode*)GetWorld()->GetAuthGameMode();
-			//gm->score += 1;
-			//if (gm->score >= gm->maxScore)
-			//{
-			//	UGameplayStatics::SetGamePaused(GetWorld(), true);
-			//}
-			//
+			
 		}
 		else {
 			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 12);
 		}
 		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::Shoot, fRate);
-//	}
+
 }
 	
 bool ARunningBackPawn::ServerShoot_Validate() {
@@ -357,7 +355,7 @@ void ARunningBackPawn::BeginPlay()
 	SpawnWeapon();
 	if (SpawnedWeapon)
 	{
-		SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
+		//SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
 	}
 	bool bEnableInCar = false;
 #ifdef HMD_INTGERATION
@@ -466,28 +464,34 @@ void ARunningBackPawn::SpawnWeapon() {
 }
 
 void ARunningBackPawn::AddControllerPitchInput(float Val) {
-	Super::AddControllerPitchInput(Val);
+	//Super::AddControllerPitchInput(Val);
 
 	if (SpawnedWeapon != nullptr)
 	{
-		FRotator NewRot = GetCamera()->GetComponentRotation();
-		//Fix Pitch.
-		NewRot.Pitch -= .5;
-
+		FRotator MeshRot = GetMesh()->GetComponentRotation();
+		FRotator NewRot = SpringArm->GetComponentRotation();
+		NewRot.Roll = MeshRot.Roll;
+		NewRot += FRotator(-Val, 0, 0);
+		NewRot = NewRot.Clamp();
+		SpringArm->SetWorldRotation(NewRot);
 		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
 
 void ARunningBackPawn::AddControllerYawInput(float Val) {
-	Super::AddControllerYawInput(Val);
+	//Super::AddControllerYawInput(Val);
 
 	if (SpawnedWeapon != nullptr)
 	{
-		//FRotator NewRot = GetCamera()->GetComponentRotation();
+		FRotator MeshRot = GetMesh()->GetComponentRotation();
+		FRotator NewRot = SpringArm->GetComponentRotation();
+		NewRot.Roll = MeshRot.Roll;
+		NewRot += FRotator(0, Val, 0);
+		NewRot = NewRot.Clamp();
+		SpringArm->SetWorldRotation(NewRot);
+		SpawnedWeapon->SetActorRotation(NewRot);
 
-		//NewRot.Yaw += Val;
-		SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));
-		//SpawnedWeapon->SetActorRotation(NewRot);		
+		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}
 }
 void ARunningBackPawn::Hit(AActor *SelfActor, AActor *OtherActor, FVector NormalImpulse, const FHitResult& Hit)
@@ -506,9 +510,37 @@ void ARunningBackPawn::FunctionOnTest()
 	GetWorldTimerManager().SetTimer(ShootTestTimer, this, &ARunningBackPawn::FunctionOnTest, 1, false);
 }
 
+bool ARunningBackPawn::GetVisibility()
+{
+	return  InstructionVisibility;
+}
+void ARunningBackPawn::SetVisibility(bool Visibility)
+{
+	InstructionVisibility = Visibility;
+}
+void ARunningBackPawn::ToggleVisibility()
+{
+	SetVisibility(!InstructionVisibility);
+}
+
+float ARunningBackPawn::GetAngleTestYaw()
+{
+	return  AngleTestYaw;
+}
+
+float ARunningBackPawn::GetAngleTestPitch()
+{
+	return  AngleTestPitch;
+}
+
+
 void ARunningBackPawn::changeGun(uint8 index, UStaticMesh* msh)
 {
 	SpawnedWeapon->ChangeMesh(msh);
+}
+AAttachable* ARunningBackPawn::GetCurrentWeapon()
+{
+	return SpawnedWeapon;
 }
 
 

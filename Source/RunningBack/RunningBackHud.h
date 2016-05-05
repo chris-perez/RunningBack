@@ -16,6 +16,9 @@ public:
 	UPROPERTY()
 	UFont* HUDFont;
 
+	/** Crosshair asset pointer */
+	class UTexture2D* CrosshairTex;
+
 	// Begin AHUD interface
 	virtual void DrawHUD() override;
 	// End AHUD interface
