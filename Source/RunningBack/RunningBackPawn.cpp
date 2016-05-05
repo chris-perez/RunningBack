@@ -363,7 +363,7 @@ void ARunningBackPawn::BeginPlay()
 	SpawnWeapon();
 	if (SpawnedWeapon)
 	{
-		//SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
+		//Camera->AttachTo(SpawnedWeapon->WeaponSubObj);
 	}
 	bool bEnableInCar = false;
 #ifdef HMD_INTGERATION
