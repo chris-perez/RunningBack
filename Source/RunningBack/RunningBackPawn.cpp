@@ -194,6 +194,7 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		FHitResult Hit(ForceInit);
 		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
 
+
 		if (FireSound != NULL)
 		{
 			UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
