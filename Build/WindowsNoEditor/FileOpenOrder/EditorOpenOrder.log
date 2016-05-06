@@ -1,4 +1,4 @@
-"D:/Documents/GitHub/RunningBack/RunningBack.uproject" 1
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/RunningBack.uproject" 1
 "../../../Engine/Plugins/2D/Paper2D/Paper2D.uplugin" 2
 "../../../Engine/Plugins/Blendables/LightPropagationVolume/LightPropagationVolume.uplugin" 3
 "../../../Engine/Plugins/Developer/BlankPlugin/BlankPlugin.uplugin" 4
@@ -73,52 +73,52 @@
 "..\..\..\Engine\Content\Internationalization\icudt53l\en_US.res" 73
 "..\..\..\Engine\Content\Internationalization\icudt53l\en.res" 74
 "..\..\..\Engine\Content\Internationalization\icudt53l\root.res" 75
-"C:/Users/Chris/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/Manifest.ini" 76
+"C:/Users/Sodre/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/Manifest.ini" 76
 "../../../Engine/Config/Base.ini" 77
 "../../../Engine/Config/BaseEngine.ini" 78
-"D:/Documents/GitHub/RunningBack/Config/DefaultEngine.ini" 79
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Config/DefaultEngine.ini" 79
 "../../../Engine/Config/Windows/WindowsEngine.ini" 80
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/Engine.ini" 81
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Engine.ini" 82
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/Engine.ini" 81
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Engine.ini" 82
 "../../../Engine/Config/BaseGame.ini" 83
-"D:/Documents/GitHub/RunningBack/Config/DefaultGame.ini" 84
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/Game.ini" 85
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Game.ini" 86
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Config/DefaultGame.ini" 84
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/Game.ini" 85
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Game.ini" 86
 "../../../Engine/Config/BaseInput.ini" 87
-"D:/Documents/GitHub/RunningBack/Config/DefaultInput.ini" 88
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/Input.ini" 89
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Input.ini" 90
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Config/DefaultInput.ini" 88
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/Input.ini" 89
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Input.ini" 90
 "../../../Engine/Config/BaseEditor.ini" 91
-"D:/Documents/GitHub/RunningBack/Config/DefaultEditor.ini" 92
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/Editor.ini" 93
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Editor.ini" 94
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Config/DefaultEditor.ini" 92
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/Editor.ini" 93
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Editor.ini" 94
 "../../../Engine/Config/BaseEditorPerProjectUserSettings.ini" 95
-"D:/Documents/GitHub/RunningBack/Config/DefaultEditorPerProjectUserSettings.ini" 96
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/EditorPerProjectUserSettings.ini" 97
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorPerProjectUserSettings.ini" 98
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Config/DefaultEditorPerProjectUserSettings.ini" 96
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/EditorPerProjectUserSettings.ini" 97
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorPerProjectUserSettings.ini" 98
 "../../../Engine/Config/BaseEditorSettings.ini" 99
-"C:/Users/Chris/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/EditorSettings.ini" 100
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorSettings.ini" 101
+"C:/Users/Sodre/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/EditorSettings.ini" 100
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorSettings.ini" 101
 "../../../Engine/Config/BaseEditorLayout.ini" 102
-"C:/Users/Chris/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/EditorLayout.ini" 103
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorLayout.ini" 104
+"C:/Users/Sodre/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/EditorLayout.ini" 103
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorLayout.ini" 104
 "../../../Engine/Config/BaseEditorKeyBindings.ini" 105
-"C:/Users/Chris/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/EditorKeyBindings.ini" 106
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorKeyBindings.ini" 107
+"C:/Users/Sodre/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/EditorKeyBindings.ini" 106
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/EditorKeyBindings.ini" 107
 "../../../Engine/Config/BaseCompat.ini" 108
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/Compat.ini" 109
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Compat.ini" 110
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/Compat.ini" 109
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Compat.ini" 110
 "../../../Engine/Config/BaseLightmass.ini" 111
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/Lightmass.ini" 112
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Lightmass.ini" 113
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/Lightmass.ini" 112
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Lightmass.ini" 113
 "../../../Engine/Config/BaseScalability.ini" 114
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/Scalability.ini" 115
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Scalability.ini" 116
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/GameUserSettings.ini" 117
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/GameUserSettings.ini" 118
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/Scalability.ini" 115
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/Scalability.ini" 116
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/GameUserSettings.ini" 117
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/GameUserSettings.ini" 118
 "../../../Engine/Config/BaseDeviceProfiles.ini" 119
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/DeviceProfiles.ini" 120
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/DeviceProfiles.ini" 121
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/DeviceProfiles.ini" 120
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/DeviceProfiles.ini" 121
 "../../../Engine/Config/ConsoleVariables.ini" 122
 "..\..\..\Engine\Content\Internationalization\icudt53l\es.res" 123
 "..\..\..\Engine\Content\Internationalization\icudt53l\ja.res" 124
@@ -356,7 +356,7 @@
 "../../../Engine/Config/Android/AndroidEngine.ini" 356
 "../../../Engine/Config/IOS/IOSEngine.ini" 357
 "../../../Engine/Config/Linux/LinuxEngine.ini" 358
-"C:/Users/Chris/AppData/Local/UnrealEngine/4.10/DerivedDataCache/Boot.ddc" 359
+"C:/Users/Sodre/AppData/Local/UnrealEngine/4.10/DerivedDataCache/Boot.ddc" 359
 "../../../Engine/DerivedDataCache/Compressed.ddp" 360
 "../../../Engine/Content/EngineFonts/Roboto.uasset" 361
 "../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 362
@@ -381,10 +381,10 @@
 "../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 381
 "../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 382
 "../../../Engine/Content/EditorResources/S_Actor.uasset" 383
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/TemplateDefs.ini" 384
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/TemplateDefs.ini" 385
-"D:/Documents/GitHub/RunningBack/Saved/Config/Windows/GameplayTags.ini" 386
-"D:/Documents/GitHub/RunningBack/Intermediate/Config/CoalescedSourceConfigs/GameplayTags.ini" 387
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/TemplateDefs.ini" 384
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/TemplateDefs.ini" 385
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/GameplayTags.ini" 386
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/GameplayTags.ini" 387
 "../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 388
 "../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 389
 "../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 390
@@ -438,6 +438,902 @@
 "..\..\..\Engine\Content\Internationalization\icudt53l\coll\root.res" 438
 "../../../Engine/Content/EngineResources/AICON-Red.uasset" 439
 "../../../Engine/Content/EngineResources/AICON-Green.uasset" 440
+<<<<<<< HEAD
+"../../../Engine/Content/Tutorial/Basics/LevelEditorAttract.uasset" 441
+"../../../Engine/Content/Tutorial/Basics/LevelEditorOverview.uasset" 442
+"../../../Engine/Content/Tutorial/Basics/TutorialAssets/icon_tab_Levels_40x.uasset" 443
+"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 444
+"../../../Engine/Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 445
+"../../../Engine/Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 446
+"../../../Engine/Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 447
+"../../../Engine/Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 448
+"../../../Engine/Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 449
+"../../../Engine/Plugins/2D/Paper2D/Content/DummySprite.uasset" 450
+"../../../Engine/Plugins/2D/Paper2D/Content/DummySpriteTexture.uasset" 451
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/Flying_Car.uasset" 452
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/tranparency.uasset" 453
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default2.uasset" 454
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_brakelights1.uasset" 455
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_cockpit_console_displays1.uasset" 456
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/gm1.uasset" 457
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_cushions1.uasset" 458
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/yx1_02_01_01.uasset" 459
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_display_center_front1.uasset" 460
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/fx1.uasset" 461
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_display_center_rear1.uasset" 462
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/gt3_02_01_01_01.uasset" 463
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_headlights1.uasset" 464
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_name1.uasset" 465
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_rotor_blades1.uasset" 466
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/default_top_display1.uasset" 467
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/red_texture.uasset" 468
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/red.uasset" 469
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/Flying_Car_PhysicsAsset.uasset" 470
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/Flying_Car_Skeleton.uasset" 471
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_ABP.uasset" 472
+"C:/Users/Sodre/AppData/Local/UnrealEngine/4.10/Saved/Config/Windows/SourceControlSettings.ini" 473
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/Config/CoalescedSourceConfigs/SourceControlSettings.ini" 474
+"C:/Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Config/Windows/SourceControlSettings.ini" 475
+"../../../Engine/Plugins/Runtime/LeapMotionController/Content/LM_CapsuleMesh.uasset" 476
+"../../../Engine/Plugins/Runtime/LeapMotionController/Content/LM_TorusMesh.uasset" 477
+"../../../Engine/Plugins/Runtime/LeapMotionController/Content/LM_HandColor.uasset" 478
+"../../../Engine/Plugins/Runtime/LeapMotionController/Content/LM_PassthroughMaterial.uasset" 479
+"../../../Engine/Plugins/Runtime/LeapMotionController/Content/LM_SampleDistortion.uasset" 480
+"../../../Engine/Plugins/Runtime/LeapMotionController/Content/LM_TestTexture.uasset" 481
+"../../../Engine/Content/BasicShapes/Cube.uasset" 482
+"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 483
+"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 484
+"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 485
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 486
+"../../../Engine/Content/EditorMaterials/GizmoMaterial.uasset" 487
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 488
+"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 489
+"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 490
+"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 491
+"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 492
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 493
+"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 494
+"../../../Engine/Content/EngineFonts/RobotoTiny.uasset" 495
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Intermediate/CachedAssetRegistry.bin" 496
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/RayActor.uasset" 497
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Pawn/RunningBackPawn_BP.uasset" 498
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/ExampleContent/Effects/ParticleSystems/P_electricity_arc.uasset" 499
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Engine/EditorMaterials/Thumbnails/SkySphereMaterial_Auto6.uasset" 500
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/PlayGameMode_Auto7.uasset" 501
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/Attachable_BP_Auto1.uasset" 502
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/GameMode_BP_Auto1.uasset" 503
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/GameMode_BP_Auto3.uasset" 504
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/GameMode_BP_Auto7.uasset" 505
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/VehicleHUD_Auto1.uasset" 506
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/VehicleHUD_Auto2.uasset" 507
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/VehicleHUD_Auto4.uasset" 508
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/VehicleHUD_Auto5.uasset" 509
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/VehicleHUD_Auto6.uasset" 510
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/GameModes/RBGameMode_BP_Auto4.uasset" 511
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/Pawn/RunningBackPawn_BP_Auto1.uasset" 512
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/Pawn/RunningBackPawn_BP_Auto2.uasset" 513
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/Pawn/RunningBackPawn_BP_Auto3.uasset" 514
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Blueprints/Pawn/RunningBackPawn_BP_Auto4.uasset" 515
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/ExampleContent/Effects/ParticleSystems/P_electricity_arc_Auto3.uasset" 516
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Levels/UEDPCMainMenuLevel.umap" 517
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Auto1.umap" 518
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Auto2.umap" 519
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Auto3.umap" 520
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Auto4.umap" 521
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Auto5.umap" 522
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Auto6.umap" 523
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Multiplayer_Auto1.umap" 524
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Multiplayer_Auto2.umap" 525
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Multiplayer_Auto3.umap" 526
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/AircraftCarrier_Level_Multiplayer_Auto4.umap" 527
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/MainMenuLevel_Auto1.umap" 528
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/MainMenuLevel_Auto2.umap" 529
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/MainMenuLevel_Auto3.umap" 530
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/MainMenuLevel_Auto4.umap" 531
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/MainMenuLevel_Auto5.umap" 532
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/MainMenuLevel_Auto6.umap" 533
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/MainMenuLevel_Auto7.umap" 534
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/UEDPCAircraftCarrier_Level.umap" 535
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/UEDPCAircraftCarrier_Level_Multiplayer.umap" 536
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/UEDPCCustomizeScreen.umap" 537
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Maps/UEDPCMainMenuLevel.umap" 538
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/10_-_Default_Auto1.uasset" 539
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/12_-_Default_Auto1.uasset" 540
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/13_-_Default2_Auto1.uasset" 541
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/13_-_Default_Auto1.uasset" 542
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/15_-_Default_Auto1.uasset" 543
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/16_-_Default_Auto1.uasset" 544
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/19_-_Default_Auto1.uasset" 545
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/1_-_Default_Auto1.uasset" 546
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/24_-_Default_Auto1.uasset" 547
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/30Bal_Auto1.uasset" 548
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/30Casq2_Auto1.uasset" 549
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/30Casq_Auto1.uasset" 550
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/3_-_Default_Auto1.uasset" 551
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/4_-_Default_Auto1.uasset" 552
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/5_-_Default_Auto1.uasset" 553
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/7_-_Default2_Auto1.uasset" 554
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/7_-_Default_Auto1.uasset" 555
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/9_-_Default_Auto1.uasset" 556
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/E015CROM_Auto1.uasset" 557
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Saved/Autosaves/Game/Vehicle/Meshes/Flak_37_Auto1.uasset" 558
+"C:/Users/Sodre/AppData/Local/Temp/UnrealShaderWorkingDir/403C5C6C411764AFD3F8D5A668374FB6/0/WorkerOutputOnly.out" 559
+"C:/Users/Sodre/AppData/Local/Temp/UnrealShaderWorkingDir/403C5C6C411764AFD3F8D5A668374FB6/1/WorkerOutputOnly.out" 560
+"../../../Engine/Config/HTML5/HTML5Engine.ini" 561
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 562
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/RBGameInstance.uasset" 563
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 564
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/State.uasset" 565
+"C:/Users/Sodre/AppData/Local/Temp/UnrealShaderWorkingDir/403C5C6C411764AFD3F8D5A668374FB6/2/WorkerOutputOnly.out" 566
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 567
+"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 568
+"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 569
+"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 570
+"../../../Engine/Content/EditorMaterials/PhAT_JointLimitMaterial.uasset" 571
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 572
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 573
+"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 574
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/SM_ColorCalibrator.uasset" 575
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ChromeBall.uasset" 576
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoat.uasset" 577
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoatBlack.uasset" 578
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ColorGrid.uasset" 579
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/T_ColorGrid.uasset" 580
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_GreyBall.uasset" 581
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Blueprint_64x.uasset" 582
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_Editor_Preferences_General_40x.uasset" 583
+"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DSprite_TutorialIcon.uasset" 584
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_ShowSkeletalMeshes_40x.uasset" 585
+"../../../Engine/Content/Tutorial/Landscape/TutorialAssets/Landscape.uasset" 586
+"../../../Engine/Content/Tutorial/Foliage/TutorialAssets/Foliage.uasset" 587
+"../../../Engine/Content/Tutorial/SubEditors/StaticMeshEditorTutorial.uasset" 588
+"../../../Engine/Content/EngineMeshes/Cube.uasset" 589
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintEditorTutorial.uasset" 590
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintMacroLibrariesEditorOverview.uasset" 591
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintMacroLibrary_64x.uasset" 592
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_MacroLib.uasset" 593
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintInterfacesEditorOverview.uasset" 594
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintInterface_64x.uasset" 595
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 596
+"../../../Engine/Content/Tutorial/BlueprintTutorials/LevelBlueprintEditorOverview.uasset" 597
+"../../../Engine/Content/Tutorial/SubEditors/DestructibleMeshEditorTutorial.uasset" 598
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Tutorial_DM.uasset" 599
+"../../../Engine/Content/EditorMeshes/EditorCube.uasset" 600
+"../../../Engine/Content/Tutorial/SubEditors/MaterialEditorTutorial.uasset" 601
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 602
+"../../../Engine/Content/Tutorial/SubEditors/ParticleSystemEditorTutorial.uasset" 603
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 604
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 605
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 606
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 607
+"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimEditorWalkThrough.uasset" 608
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/NewBlendSpace1D.uasset" 609
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/Tutorial_Idle.uasset" 610
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_Skeleton.uasset" 611
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/Tutorial_Walk_Fwd.uasset" 612
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP.uasset" 613
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_Mat.uasset" 614
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_PhysicsAsset.uasset" 615
+"../../../Engine/Content/Tutorial/SubEditors/PersonaAnimBlueprintEditorWalkthrough.uasset" 616
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialTPP_AnimBlueprint.uasset" 617
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/Character/TutorialCharacter.uasset" 618
+"../../../Engine/Content/Tutorial/Paper2D/SpriteEditorTutorial.uasset" 619
+"../../../Engine/Content/Tutorial/Paper2D/FlipbookEditorTutorial.uasset" 620
+"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DFlipbook_TutorialIcon.uasset" 621
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Manage_Mode.uasset" 622
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Sculpt_Mode.uasset" 623
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Painting_Mode.uasset" 624
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Intro_Tutorial.uasset" 625
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Using_The_Tool_Tutorial.uasset" 626
+"../../../Engine/Content/Tutorial/Foliage/Foliage_Settings_Tutorial.uasset" 627
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_cushions1.uasset" 628
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/yx1_02_01_01.uasset" 629
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/4/2/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF68119CCE__512D748C200A4F3DC815B307BCF0C18B8DCC54D6.udd" 630
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" 631
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_MacroVariation.uasset" 632
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Ground_Moss.uasset" 633
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_ground_Moss_D.uasset" 634
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" 635
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" 636
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Ground_Gravel.uasset" 637
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" 638
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" 639
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Ground_Grass.uasset" 640
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" 641
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" 642
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Glass.uasset" 643
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" 644
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" 645
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" 646
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" 647
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" 648
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Concrete_Poured.uasset" 649
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" 650
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" 651
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Concrete_Panels.uasset" 652
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" 653
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" 654
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Concrete_Grime.uasset" 655
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" 656
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" 657
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" 658
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" 659
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" 660
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" 661
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" 662
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Gradinet_01.uasset" 663
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" 664
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" 665
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" 666
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" 667
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" 668
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" 669
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" 670
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" 671
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" 672
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" 673
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" 674
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" 675
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" 676
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" 677
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" 678
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" 679
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" 680
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" 681
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" 682
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" 683
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" 684
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" 685
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" 686
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" 687
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" 688
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" 689
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" 690
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" 691
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" 692
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" 693
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" 694
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Basic_Wall.uasset" 695
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Basic_Floor.uasset" 696
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_AssetPlatform.uasset" 697
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" 698
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" 699
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/Skybox.uasset" 700
+"../../../Engine/Content/EditorMaterials/Thumbnails/SkySphereMaterial.uasset" 701
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/2/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF7E67A9DF__436EF791ED9924DE997C4F74A6EBC34C6A972043.udd" 702
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" 703
+"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 704
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" 705
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" 706
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" 707
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" 708
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Sounds/SFx/Waves_Crashing_on_Rock_Beach.uasset" 709
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/2/AUDIO_0002_0000_OGG_0001_C24BE3AA834DD023109B79BF6D285D0A.udd" 710
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Sounds/SFx/Laser_Gun_short.uasset" 711
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Sounds/SFx/Laser_Gun.uasset" 712
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/0/AUDIO_0002_0000_OGG_0001_F86379ADA64189E6293D5C89B97D7479.udd" 713
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Sounds/Music/MainMenu.uasset" 714
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/9/AUDIO_0002_0000_OGG_0001_155DADD6AD4E844E2BEF49B9BE59BBBA.udd" 715
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Sounds/Music/LobbySong.uasset" 716
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Sounds/Music/Lobby.uasset" 717
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/6/AUDIO_0002_0000_OGG_0001_E453B649ED4EED6AF7C272AE13817D04.udd" 718
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Geometry/Meshes/TemplateFloor.uasset" 719
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Geometry/Meshes/CubeMaterial.uasset" 720
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 721
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Geometry/Meshes/1M_Cube.uasset" 722
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/Meshes/FirstPersonProjectileMesh.uasset" 723
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/Meshes/FirstPersonProjectileMaterial.uasset" 724
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/Meshes/BaseMaterial.uasset" 725
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/6/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_C418824E4EA51B7ABCD164BCEEBBFBB__02FD0742DF20FAEDB6B6FB9500594A1EDA8BE59C.udd" 726
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/6/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_C418824E4EA51B7AB__369545BFB03A089F176AE1871AF20CCFA46A288B.udd" 727
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Textures/T_FPGun_N.uasset" 728
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/Glass_Cockpit.uasset" 729
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E30756F88E4EF1DDBBA4448F2A096__B483537856BFFE21F052DCC097391B304E52CC33.udd" 730
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/5/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E30756F88E4EF1DDBBA4448F2A096__6AF5068D614C53A27894B6F072C140E71B0EE86A.udd" 731
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E30756F88E4EF1DDBBA4448F2A096__EEE2BB57F83FD98F4DA6FAB08D11D07374C79060.udd" 732
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E30756F88E4EF1DDBBA4448F2A096__4F7E1656C52E534FC9D70F52BEAFD91989F44D9C.udd" 733
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/6/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E30756F88E4EF1DDBBA4448F2A096__322C3E0D1699D91945AA8EBC14089FBEB07299FA.udd" 734
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" 735
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/aircraft_1.uasset" 736
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/glass1.uasset" 737
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/Glass_Cockpit.uasset" 738
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/pilot1.uasset" 739
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/Pilot_usa.uasset" 740
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/plane1.uasset" 741
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/FA-18C_Hornet_N.uasset" 742
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/FA-18C_Hornet_P01.uasset" 743
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/seat1.uasset" 744
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Hornet/Eject_Seat.uasset" 745
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF568BFABE__0471A5F9CEE83F434FB26AD624627432A3763A71.udd" 746
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF6A2C21A6__5A2B61912BE6783A52AAA0508E709DA805869921.udd" 747
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/6/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF69EEA29B__77780631CCC1197E5C8366A2EEDD7886FF177DA3.udd" 748
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/7/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_9F__4CDBEFA16D9E501D6F05FDFA798904A67464D64F.udd" 749
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/9/1/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_4D8A9FD3484660831__7BFDAFD6FE7325B74ADC7F720357B07C0094995E.udd" 750
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/2/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_4D8A9FD34846608310329CB085B2B5F__8DA9DA06495A3DA2DB489BAF0E540CA487B17308.udd" 751
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/5/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFB91399CD__7ABF34F7383BC3541DDB665FBDF202A76709B11A.udd" 752
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/Su-34_Fullback_P01.uasset" 753
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7F06C704B7498CA1DD8F91A149259__E4C765C8C91E55ECC05B7CFE15EC598E981C1D36.udd" 754
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/4/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7F06C704B7498CA1DD8F91A149259__326DC80360A620B8056E8A609A2DDEC5501D28F8.udd" 755
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/9/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7F06C704B7498CA1DD8F91A149259__666802B95D0889DA14B551EF250190016D3574C9.udd" 756
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7F06C704B7498CA1DD8F91A149259__71B88C5DE49707BCEF80D76F1E49CF987611C10C.udd" 757
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7F06C704B7498CA1DD8F91A149259__77A1C0BBC388E083AC853F36C22071E4E994A9FE.udd" 758
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_display_center_front1.uasset" 759
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/fx1.uasset" 760
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/7/0/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF14D107E6__994D8EC9E02146E83450EA719A003F99ABF8EA65.udd" 761
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Chair_M.uasset" 762
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Eject_Seat.uasset" 763
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/aircraft_1.uasset" 764
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/upper2.uasset" 765
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/5/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F8E39BE6A44278FA0BFDFB936880A__1B35210D296BDC6BF891982FBEDA93C8DADF5DC9.udd" 766
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/flyingcar_wheels.uasset" 767
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar.uasset" 768
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/blue_texture.uasset" 769
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/blue.uasset" 770
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/5/0/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_048781E7244EBB4BDD4424B24D0278C__97914E1643C46488794EF6B2664AEF22FDAB1483.udd" 771
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset" 772
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset" 773
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset" 774
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset" 775
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/M_FPGun.uasset" 776
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.uasset" 777
+"../../../Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_NormalBlend.uasset" 778
+"../../../Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_Simple.uasset" 779
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Screen.uasset" 780
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset" 781
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01.uasset" 782
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset" 783
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Textures/T_FPGun_M.uasset" 784
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/ExampleContent/Effects/Materials/M_beam_ramp.uasset" 785
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/ExampleContent/Effects/Materials/M_radial_ramp.uasset" 786
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradient.uasset" 787
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/6/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFD82A7A08__FD0BEB1BD5E3C9E1AFED324E97230916D56744C6.udd" 788
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/9/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFCB3ADB87__0DE1D1A2A2AA9852331E5CA2A624DA57D9D25727.udd" 789
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_E2FD3DFA4A48C14E580010ADA3A497F0__3DB6B86525227DE7883586374401980C50110490.udd" 790
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_E2FD3DFA4A48C14E580010ADA3A497F0__CF0C44C75D69871824601AF0B2AB8B9FD13EA861.udd" 791
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/5/0/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_E2FD3DFA4A48C14E580010ADA3A497F0__A529B0E03FB413E05E5900293F1A04F6897C8FCD.udd" 792
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/5/5/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_E2FD3DFA4A48C14E580010ADA3A497F0__EB46B6551B3DA70B54C90FD1F49F0E45DD791635.udd" 793
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" 794
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Maps/MainMenuLevel.umap" 795
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/GameModes/UIGameMode.uasset" 796
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/RBGameState_BP.uasset" 797
+"../../../Engine/Content/EditorBlueprintResources/ActorMacros.uasset" 798
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/RBPlayerController_BP.uasset" 799
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/GameModes/RBGameMode_BP.uasset" 800
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Attachable_BP.uasset" 801
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Metal_Gold.uasset" 802
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" 803
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Flak_37.uasset" 804
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Pawn/RunningBackWheelFront.uasset" 805
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Pawn/RunningBackWheelRear.uasset" 806
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Projectile_BP.uasset" 807
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/StateOfGame.uasset" 808
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/RBPlayerState_BP.uasset" 809
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/StateOfPlayer.uasset" 810
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/TeamPlayerStart.uasset" 811
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Team.uasset" 812
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/Countdown.uasset" 813
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/CrossHair.uasset" 814
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Assets/Crosshair/crosshair.uasset" 815
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/WinScreen.uasset" 816
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/GameLobby.uasset" 817
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/GameModes/LobbyGameMode_BP.uasset" 818
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/LobbyPlayerRow.uasset" 819
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/HUD.uasset" 820
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/Scoreboard.uasset" 821
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/PlayerScoreRow.uasset" 822
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/PauseMenu.uasset" 823
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" 824
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" 825
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" 826
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/StartMenu.uasset" 827
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/flyingcar.uasset" 828
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default2.uasset" 829
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_brakelights1.uasset" 830
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_cockpit_console_displays1.uasset" 831
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/gm1.uasset" 832
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_display_center_rear1.uasset" 833
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/gt3_02_01_01_01.uasset" 834
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_headlights1.uasset" 835
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_name1.uasset" 836
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_rotor_blades1.uasset" 837
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/default_top_display1.uasset" 838
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/red_texture.uasset" 839
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/red.uasset" 840
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/0/8/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_2A__1132FD740E983407BE2ECB56C503F243179C9B35.udd" 841
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/2/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_14F93F0C8642D5A03B6A91BA69A4CB9__C9FE46A8371A161EDD1E3E026D19B4E9E5FBB825.udd" 842
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_14F93F0C8642D5A03__0AD1AAF891F94415B50224E19E4FE88D653878F7.udd" 843
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/3/6/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_F582B91B344ADA5EE3C3AEBFEA16679A__1_0_13123_0.udd" 844
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/4/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_7A5E7502F6448937A97DB4A48A985AB0__1_0_13123_0.udd" 845
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/7/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_E53830478D44F093CAFDDC90E5A58FBF__1_0_13123_0.udd" 846
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/3/8/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_56684B8B1E47E5FD941F0982432093FC__1_0_13123_0.udd" 847
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/8/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_24__99A44FB5210B77A207B2C382FA51474285746F24.udd" 848
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/2/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFDB4D5AA0__925ED2569483BD96D5D44F200ED8AD668E2E05B9.udd" 849
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/8/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF857FF438__6EBA5191A2C38B193DEC6B80D9AA845D13390635.udd" 850
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/4/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFFEA5F9D2__D23BBDF0DD5289BC2FF83D79D403485CBFC91B4A.udd" 851
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/3/6/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_21742033495326E79332BC871B787C2__236BE69456652D217AD476D051E6729EBFB5BB3C.udd" 852
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/3/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_21742033495326E79__26A22BBAA0D0E0B7090C4A5E7C07F850CFF82541.udd" 853
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF6DA68229__735D8331FED6F5D49A594946BC82E6FD5196F1F6.udd" 854
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF7EB025EB__C64EB9401CA8A51EDA99E0C53F3DA919BF432AEE.udd" 855
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/7/7/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFFE3732EE__A34AD63AF44D97978C0A829A3C39BF840D8AC73C.udd" 856
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/7/8/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFC90CCB5C__4A1FD4BC083E944F5CBC96B928B0151BD55624A1.udd" 857
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF9412A566__11CB23F8AEC31EC0930D92165D42F7501094103D.udd" 858
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/1/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF672AC205__58BBCBE81D9CB50C48D5C3B3BC38D6F91536B182.udd" 859
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_1A0934CB124CF7FD340D299512D44__D819090FF76A1970728DEDE3405807EDA1C587EB.udd" 860
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/5/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_1A0934CB124CF7FD340D299512D44__53C537CDF9A16FC68E146617A71F6D68D94D5753.udd" 861
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/4/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_1A0934CB124CF7FD340D299512D44__C8310D9991A7C04F8BD9B7BDE104A4E34902A515.udd" 862
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_1A0934CB124CF7FD340D299512D44__C77E748F3D4AAA9C7074CE392988983592C77D07.udd" 863
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/7/6/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_50C610F8D84A3CFCE8B1D29BFC49B430__18EA53F88FF3BDBA31653BC95E02155D1BEC502A.udd" 864
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/6/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_50C610F8D84A3CFCE8B1D29BFC49B430__AE442319AE334D44B010886AAC6FE4CFE6A09EA9.udd" 865
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/0/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_50C610F8D84A3CFCE8B1D29BFC49B430__EE2F60F9070A52336DDA728DADD7FAD9E2510B62.udd" 866
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/7/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_50C610F8D84A3CFCE8B1D29BFC49B430__F591774ED9547023C86D58EE7FE630301BF50C2D.udd" 867
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/6/8/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_C6DB3226F343F7CF2DDBF29E66FDF573_0__38AB2AB2F8F80663F99B3B30E296A5B9C063C707.udd" 868
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_C6DB3226F343F7CF2DDBF29E66FDF573_0__B399C63729CA0AF7FCDB00D3E4CF9712ADF1BC14.udd" 869
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/5/3/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_C6DB3226F343F7CF2DDBF29E66FDF573_0__81E6733B1ABE0A85CCC52C5AE3DC9DCDD0F97634.udd" 870
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/2/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_C6DB3226F343F7CF2DDBF29E66FDF573_0__3D1280A7A23350446BDA8020F935852B78A58003.udd" 871
+"../../../Engine/Content/EditorResources/EmptyActor.uasset" 872
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Shelf_M.uasset" 873
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" 874
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Cylinder.uasset" 875
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Cube.uasset" 876
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Cone.uasset" 877
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Wood_Walnut.uasset" 878
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" 879
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" 880
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Wood_Pine.uasset" 881
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" 882
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" 883
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Wood_Oak.uasset" 884
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" 885
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" 886
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" 887
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/AlphaOffset.uasset" 888
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" 889
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" 890
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" 891
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Water_Ocean.uasset" 892
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Water_M.uasset" 893
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Water_N.uasset" 894
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Water_Lake.uasset" 895
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Tech_Panel.uasset" 896
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" 897
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" 898
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" 899
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" 900
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" 901
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" 902
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Single_Tile_N.uasset" 903
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" 904
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" 905
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Rock_Slate.uasset" 906
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" 907
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" 908
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" 909
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" 910
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" 911
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" 912
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Rock_Basalt.uasset" 913
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" 914
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" 915
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Metal_Steel.uasset" 916
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" 917
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Metal_Rust.uasset" 918
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" 919
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Metal_Copper.uasset" 920
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" 921
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Metal_Chrome.uasset" 922
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" 923
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" 924
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/transparent.uasset" 925
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/tranparency_Inst.uasset" 926
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/NewWorld.uasset" 927
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/NewMaterial.uasset" 928
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/lower.uasset" 929
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EB27D4F753468254C1FFC39C7044B__9DDDFD0EC5C8F6B164071CB610B0BCFF1ACEB9FB.udd" 930
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/8/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EB27D4F753468254C1FFC39C7044B__ED541F6CD49720DD3E8A7F811DA49441EA578200.udd" 931
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EB27D4F753468254C1FFC39C7044B__5687D34FE1752A5BA730E7C3FDBC3B68D44F5C41.udd" 932
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EB27D4F753468254C1FFC39C7044B__828DE431C485B419F5430222989C521F467FA663.udd" 933
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EB27D4F753468254C1FFC39C7044B__F2F195B9217C204583E361A04D36F459D0D531A4.udd" 934
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EB27D4F753468254C1FFC39C7044B__440A308048933C9507760EFD25D5B82ADE04A738.udd" 935
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_RockMesh_M.uasset" 936
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/d8a55a9f_dds3.uasset" 937
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/0/4/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF0A798CBC__123A02CEA1C7B092DDFD455AF3A45B077F919037.udd" 938
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/Pilot_usa.uasset" 939
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F7B88AF32148C4D81FB1B680E1779__322073DC7DDAC7C6B1D38685F76D98A88700F176.udd" 940
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F7B88AF32148C4D81FB1B680E1779__0F5E4179E7CB4340E9F4D32F582CF18A686CD5DA.udd" 941
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/panel.uasset" 942
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_57CC571EB3468984BBF26081EFCEC__438541CC3734B7E61C37411A16DB8BDF6A5424C3.udd" 943
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/2/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_57CC571EB3468984BBF26081EFCEC__83FE1BE1B31606E19EE148EC0EF9EE85FD4EFCE2.udd" 944
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/2/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_57CC571EB3468984BBF26081EFCEC__76DD176FA6A4A28FBD337FDE60249450ACDB0ED3.udd" 945
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_57CC571EB3468984BBF26081EFCEC__457230DF31CFFE3F0A2B8EBF1CC5AC338B4DBC38.udd" 946
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_57CC571EB3468984BBF26081EFCEC__17842C56B6508B54ED8BBD6F39E18D4315DCDA79.udd" 947
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/a0326c1d.uasset" 948
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/2/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_B9CF8973454C2124718F84A2CDAA1__E8BE5F5F85990FB340ED62849E29C5303965159F.udd" 949
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/WhiteMaterial.uasset" 950
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/BaseMaterial.uasset" 951
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/RoughTerrain_StaticMesh.uasset" 952
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/OrangeMaterial.uasset" 953
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Mr_Freeze_Gun_D_Mat.uasset" 954
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/0/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFCEA49E1A__7448BB4FEDD4E8686FD40DFAA4D850C9F42BF8C3.udd" 955
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/PlayGameMode.uasset" 956
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/NewGameMode.uasset" 957
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FlyingCar_SkeletalMesh1.uasset" 958
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/BlueEndzone.uasset" 959
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/0/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF5585B4B2__1CE9FF6C59988CE63E4AEE0D56171D760281F9B2.udd" 960
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/NewUserDefinedEnum.uasset" 961
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/KillBox.uasset" 962
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Endzone.uasset" 963
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/RedEndzone.uasset" 964
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFBC22CB8E__08845AC000170EFD9D85AD8CCFC6B7046C4D10AD.udd" 965
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/ActionHUD.uasset" 966
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_60A1010848AB04B977C919B2683FD__3D024E97EFF903D48AA16C01CE9606A306ADCD2E.udd" 967
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/CustomizationMenu.uasset" 968
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/FreezeGun.uasset" 969
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/mat_Glass_Brokensides_m.uasset" 970
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/5/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF93651625__5A3819D8478F680BD6E7AE9EF066248766C9E225.udd" 971
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/7/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_46__219418ED24659F2787A0ECED874B5F35EBDED3B9.udd" 972
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/9/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_F9091BF04C5E581B0__71BD9F36B52A3603D84A291723CC99F4DCF52B4D.udd" 973
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/9/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_F9091BF04C5E581B05816BBD7DBFF06__8616F8613C715A7322A270C09E1B109D94569FC3.udd" 974
+"../../../Engine/Content/Maps/Entry.umap" 975
+"../../../Engine/Content/EngineMaterials/DefaultNormal.uasset" 976
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Maps/TestLevel.umap" 977
+"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 978
+"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 979
+"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 980
+"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 981
+"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 982
+"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 983
+"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 984
+"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 985
+"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 986
+"../../../Engine/Content/MapTemplates/SM_Template_Map_Floor.uasset" 987
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/9/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_2EC539D546F5738F7C78139733E53__C4014BEBC9BC2AC074B9EE3D3CE0D0CFB9571E71.udd" 988
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/9/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_2EC539D546F5738F7C78139733E53__4EAB8914548C8F0F58EDDE55A66801BC2BA1AA4D.udd" 989
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_2EC539D546F5738F7C78139733E53__D6D91A7A4E34ADADCFB097215D42EFD22FC33014.udd" 990
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_EB54030D42D3686772C6619FCC7FE__9D5EC32F5A27C08F0AE43AF5D09A5E6DEF368D0A.udd" 991
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/4/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_A41701584E451DC587BD2EA954FFEB1D__7084D88381CAD20E0060EEA5314FA82F86088D78.udd" 992
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/3/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_A41701584E451DC587BD2EA954FFEB1D__DC8C65BFC5B5A3EDE37616120764342A35F57FB6.udd" 993
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/3/0/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_A41701584E451DC587BD2EA954FFEB1D__18AAEED6289C412F0282E27A3C0244730EDF5C9F.udd" 994
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/2/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_4DBA353847F8E8E705C54EA6ABAAAC1A__F6BC5636DA0AF6D02F66CC5E9B0CEC236A2C1566.udd" 995
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/8/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_284C119E4D43F183ADCCA0AFEFACCEFB_0__AD3E3A2987152FD3621863FCA9243010F3A0F2C5.udd" 996
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/9/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_284C119E4D43F183ADCCA0AFEFACCEFB_0__22E043774F51C748B85651A1AF5A3319DE743E27.udd" 997
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/8/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_284C119E4D43F183ADCCA0AFEFACCEFB_0__954D8AF218F3AB0B0FA4113FC003DCE424A5B95A.udd" 998
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/7/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_8530B7DA4FBB22408A7275B5AF80B4D0_0__F521E77CB4B9B4BF780F2ACE829362303051C146.udd" 999
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Shelf_N.uasset" 1000
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__33.uasset" 1001
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/land.uasset" 1002
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF389FB0CB__E57E42E09E14626C35FE8C90F4E115B03B09DC03.udd" 1003
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_22ED7C886848446A46743B937A14F18__CC0C624F009F622AD25CDD278A434BF6619AED44.udd" 1004
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/4/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_BB893A254F4C16B6658FDFA582BBE__14E021AD594832E85178E5ADD6CDC0C828935348.udd" 1005
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/0/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_4E57A522664783411D02C386ADC17__7EFD2D13A17668C1BBF148236991F902093FB3F3.udd" 1006
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_4E57A522664783411D02C386ADC17__639D1CE3CBEA53766A28392F40FFD13BA0656B8D.udd" 1007
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_4E57A522664783411D02C386ADC17__89A5B0B9352308FE240993675F07FB68842A08F9.udd" 1008
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" 1009
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/UIGameMode.uasset" 1010
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/NewGameMode.uasset" 1011
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/UI/LobbyGameMode.uasset" 1012
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Maps/GameLobby.umap" 1013
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Maps/CustomizeScreen.umap" 1014
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/1/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_9AF4C0BF0144476F4AE6FBB83237BA0C__1_0_13123_0.udd" 1015
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/8/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_D4F1A2CC024A13EC971CD383ADB6FB8F__1_0_13123_0.udd" 1016
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/6/6/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_9E172F39AE407DF5F8B894A2508380DF__1_0_13123_0.udd" 1017
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/7/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_4DA33548284AEF0475B5F99089873A91__1_0_13123_0.udd" 1018
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_82924BED024714BF08E8F7B5E87DE__D0292B7FBC8F261CA8FF19FE726AEE212C8BB5BC.udd" 1019
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_82924BED024714BF08E8F7B5E87DE__5A5C8B793769E470C1F7F230E1F4F68578E09F9F.udd" 1020
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_82924BED024714BF08E8F7B5E87DE__8720D38479D6D1FBEF090EDE6EA7235796A91C26.udd" 1021
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/3/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_82924BED024714BF08E8F7B5E87DE__C50CDC12842908F2B1A6446B86993C436F683375.udd" 1022
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_6809D3530B437D5AD483039572E4E__6C69EF1F1ED848C6C87C14EC54DE4A5E67AC9D25.udd" 1023
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/2/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_F876B593524C082B011353903C3DF13A__075F1605471E5805DBB773417408A8333393CD33.udd" 1024
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/9/2/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_F876B593524C082B011353903C3DF13A__3F6EC5DB4352460590B318C19506A39CE57657C2.udd" 1025
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_F876B593524C082B011353903C3DF13A__8445F228337963F5CE1E5112A5915930177EB765.udd" 1026
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/4/5/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_F876B593524C082B011353903C3DF13A__0A887E71D0777C216EC1E3F664B6BAF8780F7E0B.udd" 1027
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_B8D0707B444B0431EA378F9B535F1A2C__BFCE1EB12B7A3CA98184B5AD68583130A6AE1A3B.udd" 1028
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/0/2/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_9A43683B924B66B815634DBFD051C7EA_0__F5F39E8A7C4116BD81FCF061E8BB3E05DC1F9093.udd" 1029
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/1/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_9A43683B924B66B815634DBFD051C7EA_0__11A68E08D0CAE6A15CA8A30E0F73B2C4CC3A5D2A.udd" 1030
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/0/1/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_9A43683B924B66B815634DBFD051C7EA_0__5DCA84F9243780FDC7C15800363BE3BD4DE266E6.udd" 1031
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/5/4/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_9A43683B924B66B815634DBFD051C7EA_0__D0BA25DB481D325111BB38BAE40816F673533163.udd" 1032
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_E5082149CB4C7C545643618D0FFEB67B_0__069BC521C6A4436C1C6954EC2226070BFA07B417.udd" 1033
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/RunningBackHud_BP.uasset" 1034
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 1035
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 1036
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/pink_texture.uasset" 1037
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/pink.uasset" 1038
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/blue_texture.uasset" 1039
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/blue.uasset" 1040
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/GameModes/GameMode_BP.uasset" 1041
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/VehicleHUD.uasset" 1042
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/TimerUp_BP.uasset" 1043
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/TENd.uasset" 1044
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 1045
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 1046
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Bush_D.uasset" 1047
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/seat1.uasset" 1048
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/Eject_Seat.uasset" 1049
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFEAD17493__0D4CEF19CAEBE5A70B6AE9352EE07C1037E2E108.udd" 1050
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__30.uasset" 1051
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/4/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF4E8C0E84__B8E3AA1728D4818626E5A993DFF6482F24F74237.udd" 1052
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__25.uasset" 1053
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/fuselage.uasset" 1054
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF1BDE4AA3__234D22CB078DBC2DC5B5E6014F2C10633F38A574.udd" 1055
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__34.uasset" 1056
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/2/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFB8638F20__685845DC12CE29D0379DEFED00AEB54DDF30DF57.udd" 1057
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/15_-_Default.uasset" 1058
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF4F2D7E81__922C23B6080C349C2D4132A0D3B97CDF1B9FCC99.udd" 1059
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_DBE8D005B0498D54C1E36491D4AC9ED__C498713C55A18776BA625D05E385E722E0E07726.udd" 1060
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/Su-34_Fullback_N.uasset" 1061
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_767C75EC4D46E2C8C50A2C8190BA62AA___879BFF0A7DF7D21DB1D771DE3EC6768A3BECAB7C.udd" 1062
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/9/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_767C75EC4D46E2C8C50A2C8190BA62AA___27797D7D6A01D8162EAB134166898180397EDFB4.udd" 1063
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/9/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_767C75EC4D46E2C8C50A2C8190BA62AA___BE7F3C5E64341B2A09B0CD92D946D05F96D3911D.udd" 1064
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_767C75EC4D46E2C8C50A2C8190BA62AA___5B0C3A686B7FBD498018EF8164EEF859864CA757.udd" 1065
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/6/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_767C75EC4D46E2C8C50A2C8190BA62AA___0059488F12CC33FE19FAF9E5D044776493A271EA.udd" 1066
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/3/6/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_02746DB1AC406FE5518BB38BE9B721C__826E048520CE226B7AF7FF93DA50B935844D3A2D.udd" 1067
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/FA-18C_Hornet_N.uasset" 1068
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Upper.uasset" 1069
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/2/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFF90E00A1__3CC2681C9249611B52E6B677B0AFB22F0F0C5F65.udd" 1070
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/24_-_Default.uasset" 1071
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/8/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF5A5D151B__60A72428BC125F5AFD148434959CE3A79F1BAA1C.udd" 1072
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_552FC8B7E642358589C5D69C122A4__6B75E504E45DE9E8168D7742D50276CA6D318A2D.udd" 1073
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_552FC8B7E642358589C5D69C122A4__4DBFD6C4E958AD4D8133B88056742FAE5C3DAE09.udd" 1074
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" 1075
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" 1076
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Tube.uasset" 1077
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" 1078
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" 1079
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" 1080
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Trim.uasset" 1081
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Torus.uasset" 1082
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Sphere.uasset" 1083
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" 1084
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Plane.uasset" 1085
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" 1086
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" 1087
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_Pipe.uasset" 1088
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun_Skeleton.uasset" 1089
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun.uasset" 1090
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun_PhysicsAsset.uasset" 1091
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Plastic_Shiny_Beige_LOGO.uasset" 1092
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Blueprints/Pawn/NewBlueprint.uasset" 1093
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 1094
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Frame_M.uasset" 1095
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_0F12DC50674AC3A72D96C5B6842D4__B09C37C14F9C1E845DF4E2B8C39F7D1F63EEA31C.udd" 1096
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_0F12DC50674AC3A72D96C5B6842D4__0C64C883FFA2A0AC9A6156FCC066F665201F0F74.udd" 1097
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_0F12DC50674AC3A72D96C5B6842D4__F7D2FCAEF81994F01C6AA9560604A7A327D7AA03.udd" 1098
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_0F12DC50674AC3A72D96C5B6842D4__BAB76FBCE7EA17B5B713A71471D7BB831FA9AF29.udd" 1099
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_0F12DC50674AC3A72D96C5B6842D4__F424F7B9D2B995195DCA5B5009FDF08B04527CC0.udd" 1100
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/plane1.uasset" 1101
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/6/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFF0CD0526__E62509FA537213E7A4F618B53DB8FB2F4552D334.udd" 1102
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 1103
+"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 1104
+"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 1105
+"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 1106
+"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 1107
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Door_N.uasset" 1108
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__36.uasset" 1109
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/8/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFCC30565A__96F839ADFEC500E0CA606A005D4232EF17224B0E.udd" 1110
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/glass1.uasset" 1111
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/3/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFCF94B484__EB840BE368FEFC3977A5AAABDB5723DF727242BA.udd" 1112
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" 1113
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/30Casq.uasset" 1114
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF772AD093__C4F419AE800EF00774DF6C15AD37F768BBE6C2E8.udd" 1115
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Lamp_N.uasset" 1116
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/16_-_Default.uasset" 1117
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/3/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF7B8CE912__38BAAC2607F879421FF96DC9A4B21CD1E4524BB5.udd" 1118
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/GrayMaterial.uasset" 1119
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/E015CROM.uasset" 1120
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/2/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF1CB2C632__30813F0711FFDA75E508BDF0CA5DD4578DEEAF06.udd" 1121
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_AB06B30FD042FD54DC7F4EAA9521795__378466D24EC99BF162CFDC0D4FDA0C40D1A6D9F0.udd" 1122
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/5_-_Default.uasset" 1123
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/9/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF398A046C__038488E6E0102D25105DE9FF340DD2CC315DECA7.udd" 1124
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7E1EC06AB04D7DA52AF6A78C9945E__8EEFCAA55A6CDCB47980A30E638EFD84116D2313.udd" 1125
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/3_-_Default.uasset" 1126
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/0/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF151B5F09__8268B540638CD957EF20423F40DE3CCBE32B883C.udd" 1127
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 1128
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/10_-_Default.uasset" 1129
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/1/8/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF80521F76__9D1AEC79D11B960A46337763602675E2B93369F1.udd" 1130
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/yellow_texture.uasset" 1131
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/yellow.uasset" 1132
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C11898CDFC4A765894831399D3A23__9A702D4F31167281091906C46B157996F9745809.udd" 1133
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/3/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C11898CDFC4A765894831399D3A23__B71F1A3D2B7A74AB24A3B30F508344E89FC13391.udd" 1134
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C11898CDFC4A765894831399D3A23__FDCF6DF38700F1E84CB3E1E9FB49EAAFD3EA890A.udd" 1135
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C11898CDFC4A765894831399D3A23__35BA585DF0E70023B367CE4088015DF3B1700B6A.udd" 1136
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C11898CDFC4A765894831399D3A23__9AB0820A2B73BAF8988CC0B79E5AB3A258912551.udd" 1137
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__29.uasset" 1138
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/pal.uasset" 1139
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/7/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF306D9BAF__E2BCB18E15D5B05AB5851C2CD3A876CA57308F97.udd" 1140
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/3/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_DE5AFA6C2F4C03F4B14767B4CC94D__755162714341436B424B8D7B1C568C9982889D85.udd" 1141
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_DE5AFA6C2F4C03F4B14767B4CC94D__F403338C7FFB2B6B9382973E06C137C1A78DA1AA.udd" 1142
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/2/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_DE5AFA6C2F4C03F4B14767B4CC94D__8301C258FC6457E11535195DF1DA6688C0D52203.udd" 1143
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/0/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_DE5AFA6C2F4C03F4B14767B4CC94D__A30124359B52DBF5059F55C055A197CD6A05F8D7.udd" 1144
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/0/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_DE5AFA6C2F4C03F4B14767B4CC94D__FC2C6405C506A587AEAA1436EFB35D7E0C70AE76.udd" 1145
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/yellow.uasset" 1146
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/5/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_CD389B284C46FC8D2EA23A8A8127163__C4D394483D75D51F524BBF6954C0CC1E3B35C7A2.udd" 1147
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_BE6282BBCE43E78046E7CC8C14E8677__AD7189044A04AC3832FFF8190D07729264962322.udd" 1148
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_RockMesh_N.uasset" 1149
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Maps/AircraftCarrier_Level_Multiplayer.umap" 1150
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/6bef6eb8.uasset" 1151
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/7cfc9e4e.uasset" 1152
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/aircraft_carreir.uasset" 1153
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/a0326c1d_dds3.uasset" 1154
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/bef6eb8_dds3.uasset" 1155
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/cfc9e4e_dds3.uasset" 1156
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/blackhawk.uasset" 1157
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__26.uasset" 1158
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__28.uasset" 1159
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__32.uasset" 1160
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Plt.uasset" 1161
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Blackhawk/Material__37.uasset" 1162
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/aircraft_3.uasset" 1163
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/glass1.uasset" 1164
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/Glass_Cockpit.uasset" 1165
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/pilot1.uasset" 1166
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Fullback/Pilot_usa.uasset" 1167
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/aircraft_2.uasset" 1168
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/pilot1.uasset" 1169
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/plane1.uasset" 1170
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/FA-22_Raptor_N.uasset" 1171
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Raptor/FA-22_Raptor_P01.uasset" 1172
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/5/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_FC__8848FD45B163297E09433D34312111A31BE50E46.udd" 1173
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/6/4/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_DAF71305564C038DE__8BA373C80838933349A272851D8E1AB7F12E20E5.udd" 1174
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/8/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_DAF71305564C038DE64015B82061D1E__736714B8FFC1D949BF799DDBE63B75A07881875E.udd" 1175
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/7/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFC97E9DC7__6C7321487DAA9C76888BF12E8E936B0968374913.udd" 1176
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/7/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_A5__B0055E57F139C7098E506913A476A854E03AB576.udd" 1177
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/0/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_383B9C6A0A4BF5EC3__C13DEACFC8A2758402D7EE422FB9BD8398897F18.udd" 1178
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/4/9/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_383B9C6A0A4BF5EC3FD3D9804913475__9B67026A5CDF5B150997A212FB3C528A995E4126.udd" 1179
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/4/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFDB553071__A37786FAD36C97B68A3EB2D138AB1ECA780143AF.udd" 1180
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/2/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFF5F26F92__4A434D0159E586005838FCD0B76DD401C6F9F397.udd" 1181
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/0/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF7FFCFFEF__07A9370146591B89FA7F02D543F63EFC16059BE0.udd" 1182
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/4/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF7B657097__43D2E3EEB40109AA321ABDB27D24BED8B79CD90A.udd" 1183
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/2/3/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_B3__04A5A055A62D66D8F5F6B7E052DE812745E23BB8.udd" 1184
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/5/6/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_CD005F44034DE7C14__BE4E87638910A4E69D2E29EA2FD5A20CF306DFE6.udd" 1185
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/2/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_CD005F44034DE7C1435945BDEC84AAA__E49601B6E7207CDB5F5B90B7133C85305B4A1F6D.udd" 1186
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/0/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF0620F163__F3EF43484EA49AF22F5682A357B95A947CABAF45.udd" 1187
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/0/STATICMESH_46A8778361B442A9523C54440EA1E9D_8C68575CEF434CA8A9E1DA4AED8A47BB_74__132463ACA83E0A95980E5743EC798F1C0294AFF8.udd" 1188
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/6/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_E1C2B03D2A4AB793D__012127CEEDAC7FF9CB68FC4B32D471CFC9C24FAE.udd" 1189
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/8/PHYSX_1D9C17C451EA4FB88CB7A27536A65DB0_PHYSXPC_E1C2B03D2A4AB793DDEF62858AC8113__60F7559EFF55AFBB88C75F6D51B17AFBF742DD7E.udd" 1190
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFA52B2121__E298AF1F9BA5C1CFC6122F5100B5AC64DE9E564C.udd" 1191
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/6/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFBE8602F3__C3BAFA4070363C8121B42329FB736861ABD1C179.udd" 1192
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/2/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFD0F46BE9__CAEE399859F4D1C2C28BE1BB1CAFF36658799BA7.udd" 1193
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/0/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFE7B4EDE8__DD20DCB34DAB67F35F6C8EB7184E70EE72B7934B.udd" 1194
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/4/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF902C4336__C97135ADB01376CBD9D1FB1E8A0A060E16C8A571.udd" 1195
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_2848328049DC1AA888D139B85ED0E__68C26E948D8F4E82A475A99B194F0E9D4FA9D26D.udd" 1196
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_2848328049DC1AA888D139B85ED0E__32C53050711B3168724ED83DDDAD4A4FE657B614.udd" 1197
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/4/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_2848328049DC1AA888D139B85ED0E__A867A46096047CEBAF5BA902C11B003BC93A3F56.udd" 1198
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_2848328049DC1AA888D139B85ED0E__5530E1500B1E129867CE1054FC916185C6CAD3EA.udd" 1199
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/7/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_54A2E6FD4109DE5A771834B4B90B8828__763B285B461DC1DF949D28FAF4BBEAD37D9560CF.udd" 1200
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/5/5/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_54A2E6FD4109DE5A771834B4B90B8828__C8D5167A13A83FD57A755507A98F53923E6EA8EE.udd" 1201
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/6/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_54A2E6FD4109DE5A771834B4B90B8828__70C64C64C594C0DDFFE76EF6DEED21C7DB677A16.udd" 1202
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/0/8/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_54A2E6FD4109DE5A771834B4B90B8828__D0C0E98F69EC4D3F0F698BB1F086154C4E7A8ABB.udd" 1203
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/3/3/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_F6003D1F466B263375FA87A829C3422A_0__9608022D6C755A0E8AA0180E99BD820E173E18CB.udd" 1204
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/4/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_F6003D1F466B263375FA87A829C3422A_0__A3EED207F6E7F7FA18B57C7A8EF900D379945D73.udd" 1205
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/0/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_F4363C8B47CE2143FEFEA3BF4DEEBE2A_0__8A55D5AD7B89F6A370D9C3420ADBC0742819F182.udd" 1206
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/4/8/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_F4363C8B47CE2143FEFEA3BF4DEEBE2A_0__10286D4CF6802C4FBD8EC84EF604696FBBFA90CF.udd" 1207
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/8/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_D3F2D5D643C5F9D4BA48C09172CAF890_0__636681EB0467123ABE5B96A9B9D928FEA1D08F95.udd" 1208
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/9/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_D3F2D5D643C5F9D4BA48C09172CAF890_0__E996F1BF9D1937A2D27CD372CBA895C95154BEF5.udd" 1209
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/7/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_93D3D19043165374324DE5A5FF524F47_0__5D04ED76F2DA786FA35F7157D749618257C6FF34.udd" 1210
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/4/9/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_93D3D19043165374324DE5A5FF524F47_0__1AEC9BAE12C6D581C335E537CF7763BEB18E37B7.udd" 1211
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/5/4/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_78FA9E78462B879C28E6CCB1BD3CDA0A_0__BD23D1E3124198D598C22AA1089F45C935415DE5.udd" 1212
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/0/7/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_78FA9E78462B879C28E6CCB1BD3CDA0A_0__CEF88B8D1963E0173C9DDB97AB093992A939EC76.udd" 1213
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/5/9/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_BD4BBF7246358BC8F8029784F61F4DFB_0__92F118E5B1CE4F55AE35E757DCF9484D9C706955.udd" 1214
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/5/7/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_BD4BBF7246358BC8F8029784F61F4DFB_0__4C70C60AD2465D707E981BD33BBDE2D65E5B79F7.udd" 1215
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/8/1/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_7A6F48094A9A63E97A032D9B708F4ED0_0__1CA625DC1E8C7FEE857069D42F99199899A4F7CF.udd" 1216
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_7A6F48094A9A63E97A032D9B708F4ED0_0__BE5EC3F52B5D93D5A9675D33DB5A29A15AD9F2E4.udd" 1217
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/2/8/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_7A6F48094A9A63E97A032D9B708F4ED0_0__9C13B6BEBA910FC8824E785E5F7EA433B755D788.udd" 1218
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/pink_texture.uasset" 1219
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/pink.uasset" 1220
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/30Casq2.uasset" 1221
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/9/0/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF20A493F5__A6F6804457EAE547A54C03D16A3B0F487ED54301.udd" 1222
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/30Bal.uasset" 1223
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF215AB0B2__231834695DE7CA18EC6B17D58705F7DEEDC96D52.udd" 1224
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Burst_M.uasset" 1225
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Glass_Cockpit.uasset" 1226
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/glass1.uasset" 1227
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/FA-18C_Hornet_P01.uasset" 1228
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_60A3D5872F48905438D549A9D342C__85E6B766C5BEF1CF3A3003107DCD91E8374260D2.udd" 1229
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/4/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_60A3D5872F48905438D549A9D342C__FA83557577D687D858563D96725DB2C4A41B6026.udd" 1230
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_3CB754C501400FC6608E3D803C6BCFC__B1D388BB96D6A9ED59BADC8814A7CB1A89320BFD.udd" 1231
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_FineRubber.uasset" 1232
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8616200B44447EB359576E9D27057__033DDEAC2AC74F34590C0E566730CDEB32B7F560.udd" 1233
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8616200B44447EB359576E9D27057__2B364621294D06A5859E259BD6E4C592B3BB1F60.udd" 1234
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8616200B44447EB359576E9D27057__B27D3C87E7FDCF487F55BFC6B7E4F4C47BE56D5C.udd" 1235
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/12_-_Default.uasset" 1236
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/4/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF67BA72C1__460943D89D1A4CC0D915A4775C42929DA0E94059.udd" 1237
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F04DEE77B242C6D99E6DC39912BD8__64063C0B62A6628D3BA5A5B24CD6814DDBC74CA5.udd" 1238
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/5/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F04DEE77B242C6D99E6DC39912BD8__7288DD2A1AE47AC32D7494270358D021038948BC.udd" 1239
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F04DEE77B242C6D99E6DC39912BD8__1CB1DB376FADAA857ACAAD1513E29926A3F75A38.udd" 1240
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F04DEE77B242C6D99E6DC39912BD8__81C4857F58CBCDF4E85D17CD120CE4BB9A56AA58.udd" 1241
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_F04DEE77B242C6D99E6DC39912BD8__3EE0B84FF4C2C2C098A13635B53CD7AC2D8EFF61.udd" 1242
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" 1243
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/transparent.uasset" 1244
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/lambert1.uasset" 1245
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/green_texture.uasset" 1246
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/green.uasset" 1247
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/4_-_Default.uasset" 1248
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/2/1/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFFF018C86__5F3B545DD342C25BDCF7F26695750D36320A046C.udd" 1249
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_422FBE04C44F921D908752B508120__925165529A99BA93B0E9CA4522B06832C2860DD6.udd" 1250
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_422FBE04C44F921D908752B508120__E56AD00868FB5BAB82932BB4ECF7931E054F430E.udd" 1251
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/5/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_422FBE04C44F921D908752B508120__B13A69AA5B4704BB288AA645755A153E93C81C5A.udd" 1252
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_422FBE04C44F921D908752B508120__44196F9D721BC9ED57F5998C66CE8A4489386700.udd" 1253
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/2/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_422FBE04C44F921D908752B508120__B3E86D9E079EE28CB50749CD142535B89975D790.udd" 1254
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/9_-_Default.uasset" 1255
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/9/9/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFF5F967A7__68BEA6D79A2B1998782DDC10A342EEC787EDD7F7.udd" 1256
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/7_-_Default2.uasset" 1257
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/6/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF0937C739__DAECEB77639B6BA9EB549609678B2D7633B7DCAB.udd" 1258
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Bush_N.uasset" 1259
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/13_-_Default2.uasset" 1260
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF9BEA187D__FFC9F97726957FCECB3DC17100AA39791DF64183.udd" 1261
+"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 1262
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" 1263
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/green.uasset" 1264
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_8B33AA83984DF484402DCFA55918A5D__2098429721E625C6FCAECDBCE60E8EA227ACFDEC.udd" 1265
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/8/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1CDA855A2445FB1B676779370E36__7B5226E3C34931F454BC5C2DEACF8FC8F49BBAD0.udd" 1266
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/9/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1CDA855A2445FB1B676779370E36__17A9B6B97D545DAA6554E183DBC27E6C78E5CEDD.udd" 1267
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/4/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1CDA855A2445FB1B676779370E36__C8DDB786E95987598CAAD6948793ABC09FC992AF.udd" 1268
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1CDA855A2445FB1B676779370E36__D4B974B07BE5998FC1B67C487F9E926BD574905F.udd" 1269
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_C1CDA855A2445FB1B676779370E36__AFF3811DED3CBC5EFB0C8F5B6BDEA773CD1D3750.udd" 1270
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/green_texture.uasset" 1271
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Spark_Core.uasset" 1272
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/RunningBack/FlyingCar_StaticMesh/yellow_texture.uasset" 1273
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" 1274
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Fire_SubUV.uasset" 1275
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Door_M.uasset" 1276
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/2/5/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_7A8F3F67F74520D7C6248EA9719F1838___E549204E69AE9B5EE012075BC1ED38F1D5459C64.udd" 1277
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/5/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_7A8F3F67F74520D7C6248EA9719F1838___5ADEB3E1B375DDC974F0B3C5A2C96686E1FAD587.udd" 1278
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/4/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_7A8F3F67F74520D7C6248EA9719F1838___27A9CB48DA47245F33EB3FFB36107CE4FB6FF418.udd" 1279
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_7A8F3F67F74520D7C6248EA9719F1838___606E9AC0DC1B0CF74D94ABF5EB618142CE7FA8E7.udd" 1280
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_7A8F3F67F74520D7C6248EA9719F1838___0FF9C7EB31732C16B99CD11B94B18C2D35BC8A20.udd" 1281
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/13_-_Default.uasset" 1282
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/6/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFAEBB3375__ACF040E232BA2E5705A44ECB33621E57AD5D6AC0.udd" 1283
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/seat1.uasset" 1284
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/plane1.uasset" 1285
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/Pilot_usa.uasset" 1286
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/Aircraft_Carrier/Aircrafts/pilot1.uasset" 1287
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/9/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_BE75D168BA4CF511F00475A838D11__90C4A7FD9F1562319ECC90F124C1AE40369BF434.udd" 1288
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/1/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_BE75D168BA4CF511F00475A838D11__EBDE8C2B595EB68379491FC8DF741CF3545A40D8.udd" 1289
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_C3AB4D0E864D8185CEE5A097AA849C8__10954F85D5FE2DEF181B28E0DB129BAD74096162.udd" 1290
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_TableRound_N.uasset" 1291
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 1292
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Statue_M.uasset" 1293
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/3/5/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_DEAAEDE18F44BA5B075B3A91A850EA65___B4AE12348C0562CF046AE694DB3DDB8CA418A9A3.udd" 1294
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/3/9/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_DEAAEDE18F44BA5B075B3A91A850EA65___DE6AB3060DF2B8EAB3E54569BFA22F627E5745B7.udd" 1295
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/2/7/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_DEAAEDE18F44BA5B075B3A91A850EA65___FF713F533C0C8A77685F88A16D4CF6BB550D345F.udd" 1296
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/9/8/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_DEAAEDE18F44BA5B075B3A91A850EA65___FE2825127022340F3383A2CD3FB6C7776DD3F72F.udd" 1297
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/2/TEXTURE_814DCC3DC72143F49509781513CB9855_BC5_DEAAEDE18F44BA5B075B3A91A850EA65___31CC8B4E6B415DC259143D2E9CA8468D489BE6B4.udd" 1298
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7C8D0DECD14C0FF3D906E0A654D05__3E294C31E7347BCA2E5693E8461BBF4E0742BB75.udd" 1299
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7C8D0DECD14C0FF3D906E0A654D05__70A4158F3B3EED6FA53002C4B49CDD7EB645C296.udd" 1300
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7C8D0DECD14C0FF3D906E0A654D05__1416BE08B0D67075A49862E800F74847B585BFC0.udd" 1301
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Lamp_M.uasset" 1302
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/7_-_Default.uasset" 1303
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/3/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUFF487503D__0269C5BD9E71A9F13B734539D6EA6A76F7F41A50.udd" 1304
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Chair_N.uasset" 1305
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/1_-_Default.uasset" 1306
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/4/8/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF174B7335__A813357B2810D1CA51FA419560AAD1CD35746528.udd" 1307
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_931E1FF23041B14FB55F60B61AEEF__A21F050B2191A81785073615E15577EC880406BD.udd" 1308
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_931E1FF23041B14FB55F60B61AEEF__188A6C4C2537488CFEED4FF159C29479C8E6ABF7.udd" 1309
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/6/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_931E1FF23041B14FB55F60B61AEEF__3E7956BCBD1B10B9327AC328055630BD9169BCC2.udd" 1310
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_931E1FF23041B14FB55F60B61AEEF__729AC0C77C093DEF32993D6DDDC95307F9E1E88B.udd" 1311
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/1/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_931E1FF23041B14FB55F60B61AEEF__67867B0D6D320785205650C2AAE967A1CE579537.udd" 1312
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 1313
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/2/6/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_32A16D3B9A4271BFB75960B84FE09BF__66648E1853CFD4CC3AED849A39D5A4C3D531B380.udd" 1314
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/Vehicle/Meshes/19_-_Default.uasset" 1315
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/5/MATSM_984AFA3849534FAA8491540B994BD32E_PCD3D_SM5_3__BC5N_DEV_SL_NODBUF2E6A8EAC__521FD80D2CB963930A891B272B232CD3E59459BC.udd" 1316
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Statue_N.uasset" 1317
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 1318
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" 1319
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 1320
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 1321
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StartLevel.umap" 1322
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/5/1/TEXTURE_814DCC3DC72143F49509781513CB9855_BGRA8_9576B0B3164263DC4E38BEAB71CE7C2__76005BCF924CE9733670BD0618B3475E1342245B.udd" 1323
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 1324
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/6/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CEA1AA014C489F9EBB5FFAA2A3438__03903CB7CE07CB3B3716D0319FFEB4884D1E5E50.udd" 1325
+"C:/Users/Sodre/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/7/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_CEA1AA014C489F9EBB5FFAA2A3438__1FBEDD3F3CABB67CA774EE9240CBCBF46A453800.udd" 1326
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_TableRound_M.uasset" 1327
+"../../../../../../Users/Sodre/Documents/Dropbox/Ithaca College/COMP 207 - 3D Game Dev/RunningBack/Content/StarterContent/Textures/T_Frame_N.uasset" 1328
+"..\..\..\Engine\Content\Internationalization\icudt53l\windowsZones.res" 1329
+"..\..\..\Engine\Content\Internationalization\icudt53l\zoneinfo64.res" 1330
+"..\..\..\Engine\Content\Internationalization\icudt53l\keyTypeData.res" 1331
+"..\..\..\Engine\Content\Internationalization\icudt53l\timezoneTypes.res" 1332
+"..\..\..\Engine\Content\Internationalization\icudt53l\supplementalData.res" 1333
+"..\..\..\Engine\Content\Internationalization\icudt53l\likelySubtags.res" 1334
+=======
 "../../../Engine/Content/Tutorial/Basics/LevelEditorOverview.uasset" 441
 "../../../Engine/Content/Tutorial/Basics/TutorialAssets/icon_tab_Levels_40x.uasset" 442
 "../../../Engine/Content/Tutorial/Basics/FeaturePacks.uasset" 443
@@ -1327,3 +2223,4 @@
 "..\..\..\Engine\Content\Internationalization\icudt53l\timezoneTypes.res" 1327
 "..\..\..\Engine\Content\Internationalization\icudt53l\supplementalData.res" 1328
 "..\..\..\Engine\Content\Internationalization\icudt53l\likelySubtags.res" 1329
+>>>>>>> ca68b56f2364a6ef177ca9069321fc85b38bfd9a

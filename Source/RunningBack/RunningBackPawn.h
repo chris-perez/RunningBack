@@ -184,6 +184,20 @@ public:
 
 	void SpawnWeapon();
 
+	/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category ="Projectile")
+		UParticleSystemComponent *FreezeRay;*/
+	UFUNCTION(BlueprintNativeEvent, Category="Projectile")
+		void SpawnRay();
+	virtual void SpawnRay_Implementation();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
+	FVector RayDest;
+
+	FTimerHandle FreezeDelay;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
+	float FreezDelayTime;
+
 	FTimerHandle FireRate;
 	// to set up the collection of the timer
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
