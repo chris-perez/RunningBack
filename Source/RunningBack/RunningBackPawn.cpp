@@ -186,6 +186,7 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		const FVector Direction = SpawnedWeapon->GetActorForwardVector();
 		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
 
+		RayDest = EndTrace;
 																// Perform trace to retrieve hit info
 		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
 		TraceParams.bTraceAsyncScene = true;
@@ -194,6 +195,7 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		FHitResult Hit(ForceInit);
 		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
 
+		SpawnRay();
 
 		if (FireSound != NULL)
 		{
@@ -203,12 +205,12 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		ARunningBackPawn *ARB = Cast<ARunningBackPawn>(Hit.GetActor());
 		if (ARB)
 		{
-			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 12);
+			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, .1);
 			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
 			
 		}
 		else {
-			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 12);
+			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 1);
 		}
 		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::Shoot, fRate);
 
@@ -544,5 +546,9 @@ AAttachable* ARunningBackPawn::GetCurrentWeapon()
 	return SpawnedWeapon;
 }
 
+void ARunningBackPawn::SpawnRay_Implementation()
+{
+
+}
 
 #undef LOCTEXT_NAMESPACE
