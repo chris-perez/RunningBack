@@ -4,6 +4,17 @@
 #include "RBGameMode.h"
 #include "RBPlayerState.h"
 #include <iostream>
+#include "RBPlayerController.h"
+#include "RunningBackPawn.h"
+
+
+ARBGameMode::ARBGameMode()
+{
+	/*PlayerControllerClass = ARBPlayerController::StaticClass();
+	DefaultPawnClass = ARunningBackPawn::StaticClass();*/
+
+}
+
 
 void ARBGameMode::OnConstruction(const FTransform& Transform)
 {
@@ -16,7 +27,7 @@ void ARBGameMode::OnConstruction(const FTransform& Transform)
 	for (AActor* actor : found_starts)
 	{
 		ARBPlayerStart* player_start = static_cast<ARBPlayerStart*>(actor);
-		if (player_start->team == ETeam::VE_Blue)
+		if (player_start->team == ETeam::VE_Red)
 		{
 			red_starts.Add(player_start);
 		}
@@ -44,7 +55,7 @@ AActor* ARBGameMode::GetSpawn(APlayerController* player_controller)
 	{
 		return blue_starts[rand() % blue_starts.Num()];
 	}
-	else if (red_starts.Num() > 0)
+	else if (player_state->Team == ETeam::VE_Red && red_starts.Num() > 0)
 	{
 		return red_starts[rand() % red_starts.Num()];
 	}

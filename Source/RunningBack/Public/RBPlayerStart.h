@@ -13,7 +13,7 @@ UCLASS()
 class RUNNINGBACK_API ARBPlayerStart : public APlayerStart
 {
 public:
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Enum)
 		ETeam team; 
 	GENERATED_BODY()
 	

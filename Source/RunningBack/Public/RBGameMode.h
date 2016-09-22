@@ -24,6 +24,7 @@ class RUNNINGBACK_API ARBGameMode : public AGameMode
 
 	GENERATED_BODY()
 
+		ARBGameMode();
 	UFUNCTION()
 	void OnConstruction(const FTransform& Transform);
 
