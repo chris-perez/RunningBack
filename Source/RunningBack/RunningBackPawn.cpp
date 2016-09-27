@@ -79,14 +79,15 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create a spring arm component
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm0"));
-	SpringArm->TargetOffset = FVector(0.f, 0.f, 0.f);
-	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
-	SpringArm->AttachTo(RootComponent);
+//	SpringArm->TargetOffset = FVector(500.f, 0.f, 0.f);
+//	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
+	SpringArm->AttachTo(GetMesh());
 	SpringArm->TargetArmLength = 1000.0f;
-	SpringArm->bEnableCameraRotationLag = true;
-	SpringArm->CameraRotationLagSpeed = 7.f;
+//	SpringArm->bEnableCameraRotationLag = true;
+//	SpringArm->CameraRotationLagSpeed = 7.f;
 	SpringArm->bInheritPitch = true;
 	SpringArm->bInheritRoll = true;
+
 
 	// Create camera component 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
@@ -131,8 +132,8 @@ ARunningBackPawn::ARunningBackPawn()
 
 	/*************************            Custom Code     *******************/
 
-	MaxLife = 2000.f;
-	LifePoints = 2000.f;
+	MaxLife = 50.f;
+	LifePoints = 50.f;
 	lifeDecreaseRate = 100;
 	TurnRate = 25.f;
 
@@ -231,6 +232,20 @@ void ARunningBackPawn::ServerTakeDamage_Implementation(APawn* p, float Damage, F
 bool ARunningBackPawn::ServerTakeDamage_Validate(APawn* p, float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) {
 	return true;
 }
+
+float ARunningBackPawn::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	// Call the base class - this will tell us how much damage to apply  
+	const float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	LifePoints -= ActualDamage; 
+	if (LifePoints < 0.f)
+	{
+		LifePoints = 0;
+		Destroy();
+	}
+	return ActualDamage;
+}
+
 
 void ARunningBackPawn::ShootStop() {
 	ServerShootStop();
@@ -477,6 +492,7 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 		NewRot += FRotator(-Val, 0, 0);
 		NewRot = NewRot.Clamp();
 		SpringArm->SetWorldRotation(NewRot);
+//		SpringArm->SetRelativeRotation(NewRot);
 		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
@@ -492,6 +508,7 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 		NewRot += FRotator(0, Val, 0);
 		NewRot = NewRot.Clamp();
 		SpringArm->SetWorldRotation(NewRot);
+//		SpringArm->SetRelativeRotation(NewRot);
 		SpawnedWeapon->SetActorRotation(NewRot);
 
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		

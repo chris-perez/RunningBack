@@ -158,6 +158,9 @@ public:
 	UFUNCTION(Server, Reliable, WithValidation)
 	void ServerTakeDamage(APawn* p, float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
 
+	UFUNCTION(BlueprintCallable, Category="Health")
+	float TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	
 	void ShootStop();
 
 	UFUNCTION(Server, Reliable, WithValidation)
