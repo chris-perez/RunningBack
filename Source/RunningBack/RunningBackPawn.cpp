@@ -492,7 +492,6 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 		NewRot += FRotator(-Val, 0, 0);
 		NewRot = NewRot.Clamp();
 		SpringArm->SetWorldRotation(NewRot);
-//		SpringArm->SetRelativeRotation(NewRot);
 		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
@@ -508,7 +507,6 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 		NewRot += FRotator(0, Val, 0);
 		NewRot = NewRot.Clamp();
 		SpringArm->SetWorldRotation(NewRot);
-//		SpringArm->SetRelativeRotation(NewRot);
 		SpawnedWeapon->SetActorRotation(NewRot);
 
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
