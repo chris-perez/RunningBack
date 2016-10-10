@@ -33,3 +33,16 @@ void AAICharacter::SetupPlayerInputComponent(class UInputComponent* InputCompone
 
 }
 
+float AAICharacter::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	// Call the base class - this will tell us how much damage to apply  
+	const float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	LifePoints -= ActualDamage;
+	if (LifePoints < 0.f)
+	{
+		LifePoints = 0;
+		Destroy();
+	}
+	return ActualDamage;
+}
+

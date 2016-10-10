@@ -203,7 +203,7 @@ void ARunningBackPawn::ServerShoot_Implementation()
 			UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 		}
 
-		ARunningBackPawn *ARB = Cast<ARunningBackPawn>(Hit.GetActor());
+		APawn *ARB = Cast<APawn>(Hit.GetActor());
 		if (ARB)
 		{
 			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, .1);
@@ -461,7 +461,7 @@ void ARunningBackPawn::SpawnWeapon() {
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = Instigator;
 		FVector SpawnLocation = GetActorLocation();
-		SpawnLocation.Z += 20.f;
+		SpawnLocation.Z += 170.f;
 		//SpawnLocation.X += 400.f;
 
 		FRotator SpawnRotation;
@@ -471,10 +471,7 @@ void ARunningBackPawn::SpawnWeapon() {
 
 		SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
 		SpawnedWeapon->AttachRootComponentTo(GetMesh());
-		SpawnLocation = GetActorLocation();
-		SpawnLocation.Z += 225.f;
 		
-		SpawnedWeapon->SetActorLocation(SpawnLocation);
 		SpawnedWeapon->SetActorRotation(GetActorRotation());
 		UE_LOG(LogClass, Log, TEXT("Gun Mesh Spawned succesfully "));
 

@@ -11,6 +11,9 @@ class RUNNINGBACK_API AAICharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
+	float LifePoints;
+	
 	// Sets default values for this character's properties
 	AAICharacter();
 
@@ -23,6 +26,6 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
-	
-	
+
+	float TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 };
