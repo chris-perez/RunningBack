@@ -29,6 +29,52 @@ void AAttachable::BeginPlay()
 
 }
 
+#define COLLISION_WEAPON        ECC_GameTraceChannel1
+
+void AAttachable::Shoot()
+{
+	//if (Controller && Controller->IsLocalPlayerController()) { // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
+	FVector CamLoc;
+	FRotator CamRot;
+
+	//SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
+
+	const FVector StartTrace = GetSoc(); // trace start is the camera location
+	const FVector Direction = GetActorForwardVector();
+	const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
+
+	// Perform trace to retrieve hit info
+	FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
+	TraceParams.bTraceAsyncScene = true;
+	TraceParams.bReturnPhysicalMaterial = true;
+
+	FHitResult Hit(ForceInit);
+	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
+
+	if (FireSound != nullptr)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+	}
+
+	APawn *ARB = Cast<APawn>(Hit.GetActor());
+
+	if (ARB && ARB != Owner)
+	{
+		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+		ARB->TakeDamage(10, FDamageEvent(), Owner->GetController(), this);
+
+	}
+	else {
+		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+	}
+
+	//automatic fire
+//	GetWorld()->GetTimerManager().SetTimer(FireRate, this, &AAttachable::Shoot, fRate);
+}
+
+void AAttachable::ShootStop() {
+}
+
 // Called every frame
 void AAttachable::Tick(float DeltaTime)
 {
@@ -47,4 +93,8 @@ void AAttachable::ChangeMesh(UStaticMesh* mesh)
 	UStaticMeshComponent *msh = Cast<UStaticMeshComponent>(GetRootComponent()->GetChildComponent(0));
 	msh->SetStaticMesh(mesh);
 
+}
+
+void AAttachable::DisplayDebugLine_Implementation(const UWorld* InWorld, FVector const& LineStart, FVector const& LineEnd, FColor const& Color, bool bPersistentLines, float LifeTime, uint8 DepthPriority, float Thickness) {
+	DrawDebugLine(InWorld, LineStart, LineEnd, Color, bPersistentLines, LifeTime, DepthPriority, Thickness);
 }

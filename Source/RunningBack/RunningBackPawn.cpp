@@ -178,7 +178,9 @@ void ARunningBackPawn::Shoot() {
 void ARunningBackPawn::ServerShoot_Implementation()
 {
 	//if (Controller && Controller->IsLocalPlayerController()) { // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
-		FVector CamLoc;
+		
+	SpawnedWeapon->Shoot();
+	/*FVector CamLoc;
 		FRotator CamRot;
 
 		//SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
@@ -213,7 +215,7 @@ void ARunningBackPawn::ServerShoot_Implementation()
 		else {
 			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 1);
 		}
-		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::Shoot, fRate);
+		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::Shoot, fRate);*/
 
 }
 	
@@ -248,7 +250,7 @@ float ARunningBackPawn::TakeDamage(float Damage, FDamageEvent const& DamageEvent
 
 
 void ARunningBackPawn::ShootStop() {
-	ServerShootStop();
+	SpawnedWeapon->ShootStop();
 }
 
 void ARunningBackPawn::ServerShootStop_Implementation()
@@ -470,6 +472,7 @@ void ARunningBackPawn::SpawnWeapon() {
 		SpawnRotation.Roll = 360.f;
 
 		SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
+		SpawnedWeapon->Owner = this;
 		SpawnedWeapon->AttachRootComponentTo(GetMesh());
 		
 		SpawnedWeapon->SetActorRotation(GetActorRotation());
