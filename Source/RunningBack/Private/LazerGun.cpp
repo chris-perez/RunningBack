@@ -10,7 +10,7 @@ void ALazerGun::DelayedShoot()
 
 void ALazerGun::Shoot()
 {
-	GetWorldTimerManager().SetTimer(FireDelayHandle, this, &ALazerGun::DelayedShoot, 1.0f, true, 0.5f);	
+	GetWorldTimerManager().SetTimer(FireDelayHandle, this, &Super::Shoot, 1.0f, true, 0.5f);	
 }
 
 void ALazerGun::ShootStop()
