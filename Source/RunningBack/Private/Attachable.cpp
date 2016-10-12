@@ -33,6 +33,7 @@ void AAttachable::BeginPlay()
 
 void AAttachable::Shoot()
 {
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("MoveToLocation"));
 	//if (Controller && Controller->IsLocalPlayerController()) { // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
 	FVector CamLoc;
 	FRotator CamRot;

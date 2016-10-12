@@ -3,23 +3,22 @@
 #pragma once
 
 #include "Attachable.h"
-#include "TurretGun.generated.h"
+#include "FreezeRay.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class RUNNINGBACK_API ATurretGun : public AAttachable
+class RUNNINGBACK_API AFreezeRay : public AAttachable
 {
 	GENERATED_BODY()
 	
 	UFUNCTION(BlueprintCallable, Category = "Projectile")
 	virtual void Shoot() override;
-	
+
 	virtual void ShootStop() override;
 
 	void DelayedShoot();
 
 	FTimerHandle FireDelayHandle;
-	
 };

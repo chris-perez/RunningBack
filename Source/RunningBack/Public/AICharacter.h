@@ -28,4 +28,10 @@ public:
 
 
 	float TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+	void SlowDown(float SpeedDecrease);
+
+	void SpeedUp();
+
+	FTimerHandle SlowDelayHandle;
 };

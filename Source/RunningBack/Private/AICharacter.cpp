@@ -46,3 +46,14 @@ float AAICharacter::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AC
 	return ActualDamage;
 }
 
+void AAICharacter::SlowDown(float SpeedDecrease)
+{
+	GetCharacterMovement()->MaxWalkSpeed -= SpeedDecrease;
+	GetWorldTimerManager().SetTimer(SlowDelayHandle, this, &AAICharacter::SpeedUp, 1.0f);
+}
+
+void AAICharacter::SpeedUp()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Speed Up"));
+	GetCharacterMovement()->MaxWalkSpeed = 600;
+}
