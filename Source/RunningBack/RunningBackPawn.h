@@ -3,6 +3,8 @@
 #include "GameFramework/WheeledVehicle.h"
 #include "public/Attachable.h"
 #include "public/Projectile.h"
+#include "SpellComponent.h"
+#include "Spell.h"
 #include "RunningBackPawn.generated.h"
 
 UENUM(BlueprintType)
@@ -166,6 +168,9 @@ public:
 	UFUNCTION(Server, Reliable, WithValidation)
 	void ServerShootStop();
 
+	UFUNCTION(BlueprintCallable, Category="Spell")
+	void CastSpell();
+
 	UFUNCTION(Blueprintpure, Category="State")
 	EPawnState GetPawnState();
 
@@ -175,7 +180,10 @@ public:
 	bool IsCar();
 
 	UPROPERTY(EditAnywhere, Category = "Spawning")
-	TSubclassOf<class AAttachable> WhatToSpawn;
+	TSubclassOf<AAttachable> WhatToSpawn;
+
+	UPROPERTY(EditAnywhere, Category = "Spells")
+	TSubclassOf<ASpell> SpellClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
 		FVector GunOffset;
@@ -186,6 +194,12 @@ public:
 	float TurnRate;
 
 	void SpawnWeapon();
+
+	void ChangeWeaponLazerGun();
+
+	void ChangeWeaponTurretGun();
+
+	void ChangeWeaponFreezeRay();
 
 	/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category ="Projectile")
 		UParticleSystemComponent *FreezeRay;*/

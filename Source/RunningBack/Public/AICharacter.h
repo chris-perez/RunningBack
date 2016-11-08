@@ -14,6 +14,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
 	float LifePoints;
 	
+	UPROPERTY(EditAnywhere, Category = "Health", BlueprintReadWrite)
+	float MaxLifePoints;
+
 	// Sets default values for this character's properties
 	AAICharacter();
 

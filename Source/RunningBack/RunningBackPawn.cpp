@@ -34,6 +34,9 @@
 #include "Vehicles/WheeledVehicleMovementComponent4W.h"
 #include "Engine/SkeletalMesh.h"
 #include "Engine.h"
+#include "TurretGun.h"
+#include "LazerGun.h"
+#include "FreezeRay.h"
 
 #ifdef HMD_INTGERATION
 // Needed for VR Headset
@@ -164,6 +167,13 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 	InputComponent->BindAction("Shoot", IE_Pressed, this, &ARunningBackPawn::Shoot);
 	InputComponent->BindAction("Shoot", IE_Released, this, &ARunningBackPawn::ShootStop);
 
+
+	InputComponent->BindAction("LazerGun", IE_Pressed, this, &ARunningBackPawn::ChangeWeaponLazerGun);
+	InputComponent->BindAction("TurretGun", IE_Pressed, this, &ARunningBackPawn::ChangeWeaponTurretGun);
+	InputComponent->BindAction("FreezeRay", IE_Pressed, this, &ARunningBackPawn::ChangeWeaponFreezeRay);
+
+	InputComponent->BindAction("CastSpell", IE_Pressed, this, &ARunningBackPawn::CastSpell);
+
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
 
 	InputComponent->BindAction("Instructions", IE_Pressed, this, &ARunningBackPawn::ToggleVisibility);
@@ -180,42 +190,6 @@ void ARunningBackPawn::ServerShoot_Implementation()
 	//if (Controller && Controller->IsLocalPlayerController()) { // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
 		
 	SpawnedWeapon->Shoot();
-	/*FVector CamLoc;
-		FRotator CamRot;
-
-		//SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
-		
-		const FVector StartTrace = SpawnedWeapon->GetSoc(); // trace start is the camera location
-		const FVector Direction = SpawnedWeapon->GetActorForwardVector();
-		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
-
-		RayDest = EndTrace;
-																// Perform trace to retrieve hit info
-		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
-		TraceParams.bTraceAsyncScene = true;
-		TraceParams.bReturnPhysicalMaterial = true;
-
-		FHitResult Hit(ForceInit);
-		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
-
-		SpawnRay();
-
-		if (FireSound != NULL)
-		{
-			UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-		}
-
-		APawn *ARB = Cast<APawn>(Hit.GetActor());
-		if (ARB)
-		{
-			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, .1);
-			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
-			
-		}
-		else {
-			DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 1);
-		}
-		GetWorld()->GetTimerManager().SetTimer(FireRate, this, &ARunningBackPawn::Shoot, fRate);*/
 
 }
 	
@@ -260,6 +234,29 @@ void ARunningBackPawn::ServerShootStop_Implementation()
 
 bool ARunningBackPawn::ServerShootStop_Validate() {
 	return true;
+}
+
+void ARunningBackPawn::CastSpell()
+{
+	UWorld* const World = GetWorld();
+	if (World) {
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = Instigator;
+		FVector SpawnLocation = GetActorLocation();
+		SpawnLocation.Z += 370.f;
+		//SpawnLocation.X += 400.f;
+
+		FRotator SpawnRotation;
+		SpawnRotation.Yaw = 360.f;
+		SpawnRotation.Pitch = 360.f;
+		SpawnRotation.Roll = 360.f;
+
+		World->SpawnActor<ASpell>(SpellClass, SpawnLocation, SpawnRotation, SpawnParams);
+
+		UE_LOG(LogClass, Log, TEXT("Spell spawned succesfully "));
+
+	}
 }
 
 bool ARunningBackPawn::IsCar()
@@ -481,6 +478,27 @@ void ARunningBackPawn::SpawnWeapon() {
 	}
 }
 
+void ARunningBackPawn::ChangeWeaponLazerGun()
+{
+	WhatToSpawn = TSubclassOf<ALazerGun>();
+	SpawnedWeapon->Destroy();
+	SpawnWeapon();
+}
+
+void ARunningBackPawn::ChangeWeaponTurretGun()
+{
+	WhatToSpawn = TSubclassOf<ATurretGun>();
+	SpawnedWeapon->Destroy();
+	SpawnWeapon();
+}
+
+void ARunningBackPawn::ChangeWeaponFreezeRay()
+{
+	WhatToSpawn = TSubclassOf<AFreezeRay>();
+	SpawnedWeapon->Destroy();
+	SpawnWeapon();
+}
+
 void ARunningBackPawn::AddControllerPitchInput(float Val) {
 	//Super::AddControllerPitchInput(Val);
 
@@ -516,6 +534,7 @@ void ARunningBackPawn::Hit(AActor *SelfActor, AActor *OtherActor, FVector Normal
 {
 	UE_LOG(LogClass, Log, TEXT("Hit Succesfully "));
 }
+
 
 EPawnState ARunningBackPawn::GetPawnState()
 {

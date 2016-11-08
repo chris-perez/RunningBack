@@ -38,7 +38,7 @@ float AAICharacter::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AC
 	// Call the base class - this will tell us how much damage to apply  
 	const float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
 	LifePoints -= ActualDamage;
-	if (LifePoints < 0.f)
+	if (LifePoints <= 0.f)
 	{
 		LifePoints = 0;
 		Destroy();
