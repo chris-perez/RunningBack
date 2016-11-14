@@ -50,7 +50,9 @@ const FName ARunningBackPawn::LookRightBinding("LookRight");
 
 ARunningBackPawn::ARunningBackPawn()
 {
-	
+//	ASpell* SpellDefault = SpellClass.GetDefaultObject();
+	SpellCooldown = 5;//SpellDefault->Cooldown();
+	SpellTimeToReady = 5;
 	PrimaryActorTick.bCanEverTick = true;
 	// Car mesh
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/RunningBack/Flying_Car.Flying_Car"));
@@ -141,7 +143,6 @@ ARunningBackPawn::ARunningBackPawn()
 	TurnRate = 25.f;
 
 	GunOffset = FVector(100.0f, 30.0f, 40.0f);
-	fRate = 0.4f;
 
 	//Collection SPhere stuff
 	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
@@ -251,8 +252,12 @@ void ARunningBackPawn::CastSpell()
 		SpawnRotation.Yaw = 360.f;
 		SpawnRotation.Pitch = 360.f;
 		SpawnRotation.Roll = 360.f;
-
-		World->SpawnActor<ASpell>(SpellClass, SpawnLocation, SpawnRotation, SpawnParams);
+		
+		ASpell* Spell = World->SpawnActor<ASpell>(SpellClass, SpawnLocation, SpawnRotation, SpawnParams);
+		
+		Spell->Creator = this;
+		Spell->Activate();
+		
 
 		UE_LOG(LogClass, Log, TEXT("Spell spawned succesfully "));
 
@@ -558,6 +563,16 @@ void ARunningBackPawn::SetVisibility(bool Visibility)
 void ARunningBackPawn::ToggleVisibility()
 {
 	SetVisibility(!InstructionVisibility);
+}
+
+float ARunningBackPawn::GetSpellTimeToReady()
+{
+	return SpellTimeToReady;
+}
+
+void ARunningBackPawn::SetSpellTimeToReady(float TimeLeft)
+{
+	SpellTimeToReady = TimeLeft;
 }
 
 float ARunningBackPawn::GetAngleTestYaw()

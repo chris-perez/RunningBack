@@ -2,6 +2,7 @@
 
 #include "RunningBack.h"
 #include "Spell.h"
+#include "RunningBackPawn.h"
 
 
 // Sets default values
@@ -15,7 +16,9 @@ ASpell::ASpell()
 void ASpell::BeginPlay()
 {
 	Super::BeginPlay();
-	GetWorldTimerManager().SetTimer(LifetimeHandle, this, &ASpell::Kill, 5.0f, false, 5.0f);
+//	Activate();
+	
+	GetWorldTimerManager().SetTimer(LifetimeHandle, this, &ASpell::Kill, Cooldown(), false);
 }
 
 // Called every frame
@@ -25,8 +28,58 @@ void ASpell::Tick( float DeltaTime )
 
 }
 
+void ASpell::SetCreator(ARunningBackPawn* Pawn)
+{
+	Creator = Pawn;
+}
+
 void ASpell::Kill()
 {
+	Deactivate();
 	Destroy();
 }
 
+void ASpell::Activate()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Spell Activate"));
+	if (Creator == nullptr)
+	{
+		
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Null Creator"));
+		return;
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Creator Not Null"));
+	}
+	Creator->SpellTimeToReady = Cooldown();
+	GetWorldTimerManager().SetTimer(CooldownHandle, this, &ASpell::Countdown, 1, true);
+}
+
+void ASpell::Deactivate()
+{
+	GetWorldTimerManager().ClearTimer(LifetimeHandle);
+}
+
+float ASpell::Cooldown()
+{
+	return 5.0f;
+}
+
+void ASpell::Countdown()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Countdown"));
+//	ARunningBackPawn* Pawn = static_cast<ARunningBackPawn*>(GetOwner());
+	if (Creator == nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Null Creator"));
+		return;
+	}
+	if (Creator->GetSpellTimeToReady() <= 0)
+	{
+		Creator->SetSpellTimeToReady(0);
+	} else
+	{
+		Creator->SetSpellTimeToReady(Creator->SpellTimeToReady-1);
+	}
+}

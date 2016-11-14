@@ -129,12 +129,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Guns")
 		AAttachable* GetCurrentWeapon();
 
-	UPROPERTY(EditAnywhere, Category = "Projectile")
-		TSubclassOf<class AProjectile> ProjectileClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
-		float fRate;
-
 	//controlls the pawn state
 
 	EPawnState PawnState;
@@ -182,7 +176,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TSubclassOf<AAttachable> WhatToSpawn;
 
-	UPROPERTY(EditAnywhere, Category = "Spells")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spells")
 	TSubclassOf<ASpell> SpellClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
@@ -243,9 +237,15 @@ public:
 	class USoundBase* FireSound;
 	//bool Destroy(bool bNetForce, bool bShouldModifyLevel) override;
 
-	
+	UPROPERTY(BlueprintReadOnly, Category = "Spells")
+	float SpellCooldown;
 
+	UPROPERTY(BlueprintReadOnly, Category = "Spells")
+	float SpellTimeToReady;
 
+	float GetSpellTimeToReady();
+
+	void SetSpellTimeToReady(float TimeLeft);
 
 	//Testing stuff
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Test)
