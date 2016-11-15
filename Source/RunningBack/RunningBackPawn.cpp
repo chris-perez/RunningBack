@@ -50,9 +50,6 @@ const FName ARunningBackPawn::LookRightBinding("LookRight");
 
 ARunningBackPawn::ARunningBackPawn()
 {
-//	ASpell* SpellDefault = SpellClass.GetDefaultObject();
-	SpellCooldown = 5;//SpellDefault->Cooldown();
-	SpellTimeToReady = 5;
 	PrimaryActorTick.bCanEverTick = true;
 	// Car mesh
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/RunningBack/Flying_Car.Flying_Car"));
@@ -371,6 +368,17 @@ void ARunningBackPawn::Tick(float Delta)
 
 void ARunningBackPawn::BeginPlay()
 {
+	ASpell* SpellDefault = SpellClass.GetDefaultObject();
+	if (SpellDefault != nullptr) {
+		SpellCooldown = SpellDefault->Cooldown();
+		SpellDuration = SpellDefault->Duration();
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Null Spell Default"));
+		SpellCooldown = 5;
+		SpellDuration = 0;
+	}
 	if (OnTest) FunctionOnTest();
 
 	PawnState = EPawnState::Active;
@@ -573,6 +581,19 @@ float ARunningBackPawn::GetSpellTimeToReady()
 void ARunningBackPawn::SetSpellTimeToReady(float TimeLeft)
 {
 	SpellTimeToReady = TimeLeft;
+}
+
+void ARunningBackPawn::RechargeSpell()
+{
+	if (SpellTimeToReady <= 0)
+	{
+		SpellTimeToReady = 0;
+	} else
+	{
+		SpellTimeToReady -= 1;
+		GetWorldTimerManager().SetTimer(RechargeHandle, this, &ARunningBackPawn::RechargeSpell, 1);
+	}
+	
 }
 
 float ARunningBackPawn::GetAngleTestYaw()

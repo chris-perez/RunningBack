@@ -18,7 +18,7 @@ void ASpell::BeginPlay()
 	Super::BeginPlay();
 //	Activate();
 	
-	GetWorldTimerManager().SetTimer(LifetimeHandle, this, &ASpell::Kill, Cooldown(), false);
+	GetWorldTimerManager().SetTimer(LifetimeHandle, this, &ASpell::Kill, Duration(), false);
 }
 
 // Called every frame
@@ -53,33 +53,45 @@ void ASpell::Activate()
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Creator Not Null"));
 	}
 	Creator->SpellTimeToReady = Cooldown();
-	GetWorldTimerManager().SetTimer(CooldownHandle, this, &ASpell::Countdown, 1, true);
+	Creator->RechargeSpell();
+	Creator->SpellDurationLeft = Duration();
+
+	float TimeDelay = .1;
+	FTimerDelegate CountdownDelegate;
+	CountdownDelegate.BindUFunction(this, FName("Countdown"), TimeDelay);
+	GetWorldTimerManager().SetTimer(CooldownHandle, CountdownDelegate, TimeDelay, true);
 }
 
 void ASpell::Deactivate()
 {
 	GetWorldTimerManager().ClearTimer(LifetimeHandle);
+	GetWorldTimerManager().ClearTimer(CooldownHandle);
+	Creator->SpellDurationLeft = 0;
 }
 
 float ASpell::Cooldown()
 {
+	return 8.0f;
+}
+
+float ASpell::Duration()
+{
 	return 5.0f;
 }
 
-void ASpell::Countdown()
+void ASpell::Countdown(float TimeDelay)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Countdown"));
-//	ARunningBackPawn* Pawn = static_cast<ARunningBackPawn*>(GetOwner());
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Countdown"));
 	if (Creator == nullptr)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Null Creator"));
 		return;
 	}
-	if (Creator->GetSpellTimeToReady() <= 0)
+	if (Creator->SpellDurationLeft <= 0)
 	{
-		Creator->SetSpellTimeToReady(0);
+		Creator->SpellDurationLeft = 0;
 	} else
 	{
-		Creator->SetSpellTimeToReady(Creator->SpellTimeToReady-1);
+		Creator->SpellDurationLeft -= TimeDelay;
 	}
 }

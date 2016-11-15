@@ -38,5 +38,8 @@ public:
 
 	virtual float Cooldown();
 
-	void Countdown();
+	virtual float Duration();
+
+	UFUNCTION()
+	virtual void Countdown(float TimeDelay);
 };

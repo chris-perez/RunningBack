@@ -14,11 +14,11 @@ class RUNNINGBACK_API AArmorLock : public ASpell
 	GENERATED_BODY()
 
 public:
-	static const float COOLDOWN;
-
 	virtual void Activate() override;
 	
 	virtual void Deactivate() override;
 
 	virtual float Cooldown() override;
+
+	virtual float Duration() override;
 };

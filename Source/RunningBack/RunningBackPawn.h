@@ -241,11 +241,21 @@ public:
 	float SpellCooldown;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Spells")
-	float SpellTimeToReady;
+	float SpellTimeToReady = 0;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Spells")
+		float SpellDuration;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Spells")
+	float SpellDurationLeft = 0;
 
 	float GetSpellTimeToReady();
 
 	void SetSpellTimeToReady(float TimeLeft);
+
+	FTimerHandle RechargeHandle;
+
+	void RechargeSpell();
 
 	//Testing stuff
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Test)
