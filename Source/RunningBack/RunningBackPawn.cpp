@@ -237,7 +237,7 @@ bool ARunningBackPawn::ServerShootStop_Validate() {
 void ARunningBackPawn::CastSpell()
 {
 	UWorld* const World = GetWorld();
-	if (World) {
+	if (World && SpellTimeToReady <= 0) {
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = Instigator;
