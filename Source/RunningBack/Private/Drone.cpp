@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "RunningBack.h"
+#include "DrawDebugHelpers.h"
 #include "Drone.h"
 
 
@@ -10,9 +11,15 @@ void ADrone::Activate()
 	Super::Activate();
 }
 
+void ADrone::Deactivate()
+{
+//	Drone->Destroy();
+	Super::Deactivate();
+}
+
 void ADrone::SpawnDrone()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Drone Spawn Called"));
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Drone Spawn Called"));
 	UWorld* const World = GetWorld();
 	if (World) {
 		FActorSpawnParameters SpawnParams;
@@ -28,8 +35,9 @@ void ADrone::SpawnDrone()
 		SpawnRotation.Pitch = 360.f;
 		SpawnRotation.Roll = 360.f;
 
-		ADroneCharacter* Drone = World->SpawnActor<ADroneCharacter>(DroneCharacterClass, SpawnLocation, SpawnRotation, SpawnParams);
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Drone Spawned"));
+		Drone = World->SpawnActor<ADroneCharacter>(DroneCharacterClass, SpawnLocation, SpawnRotation, SpawnParams);
+		Drone->Creator = Creator;
+//		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Drone Spawned"));
 
 
 		UE_LOG(LogClass, Log, TEXT("Spell spawned succesfully "));

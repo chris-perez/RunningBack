@@ -17,6 +17,14 @@ class RUNNINGBACK_API ADrone : public ASpell
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DroneClass")
 		TSubclassOf<ADroneCharacter> DroneCharacterClass;
+
+	ADroneCharacter* Drone;
+
 	virtual void Activate() override;
+
+	void Deactivate() override;
+
 	void SpawnDrone();
+
+	void Shoot();
 };

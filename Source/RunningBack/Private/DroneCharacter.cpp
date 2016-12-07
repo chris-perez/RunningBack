@@ -3,6 +3,7 @@
 #include "RunningBack.h"
 #include "DroneCharacter.h"
 
+#define COLLISION_WEAPON        ECC_GameTraceChannel1
 
 // Sets default values
 ADroneCharacter::ADroneCharacter()
@@ -16,6 +17,7 @@ ADroneCharacter::ADroneCharacter()
 void ADroneCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	DelayedShoot();
 	
 }
 
@@ -31,5 +33,114 @@ void ADroneCharacter::SetupPlayerInputComponent(class UInputComponent* InputComp
 {
 	Super::SetupPlayerInputComponent(InputComponent);
 
+}
+
+
+void ADroneCharacter::Shoot()
+{
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("MoveToLocation"));
+	//if (Controller && Controller->IsLocalPlayerController()) { // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
+	FVector CamLoc;
+	FRotator CamRot;
+
+	//SpawnedWeapon->GetActorEyesViewPoint(CamLoc, CamRot);
+	AAICharacter* Enemy = FindEnemy();
+	if (Enemy)
+	{
+		const FVector StartTrace = GetActorLocation(); // trace start is the camera location
+		const FVector Direction = Enemy->GetActorLocation();
+		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
+
+																 // Perform trace to retrieve hit info
+		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
+		TraceParams.bTraceAsyncScene = true;
+		TraceParams.bReturnPhysicalMaterial = true;
+
+		FHitResult Hit(ForceInit);
+		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
+
+		/*if (FireSound != nullptr)
+		{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+		}*/
+
+		APawn *ARB = Cast<APawn>(Hit.GetActor());
+
+		if (ARB && ARB != Creator)
+		{
+			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+			ARB->TakeDamage(10, FDamageEvent(), Creator->GetController(), this);
+
+		}
+		else {
+			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+		}
+
+		//automatic fire
+		//	GetWorld()->GetTimerManager().SetTimer(FireRate, this, &AAttachable::Shoot, fRate);
+	}
+}
+
+void ADroneCharacter::DelayedShoot()
+{
+	GetWorldTimerManager().SetTimer(FireDelayHandle, this, &ADroneCharacter::Shoot, 0.5f, true, 0.05f);
+}
+
+AAICharacter* ADroneCharacter::FindEnemy()
+{
+
+	/*The Height of my Sphere starting from the location of the Actor*/
+		float SphereHeight = 200;
+
+	/*The Radius of the sphere trace*/
+		float SphereRadius = 5000;
+
+	/*Sphere segments - used for visualization only*/
+		int32 Segments = 100;
+	/*TArray is the collection that contains all the HitResults*/
+	TArray<FHitResult> HitResults;
+
+	/*The Start location of the sphere*/
+	FVector StartLocation = GetActorLocation();
+
+	/*The End location of the sphere is equal to the default location of the actor plus the height we will enter from the editor
+	To extend this functionality, you can replace the height variable with a FVector*/
+	FVector EndLocation = GetActorLocation();
+	EndLocation.Z += SphereHeight;
+
+	/*Search for static objects only*/
+	ECollisionChannel ECC = ECollisionChannel::ECC_WorldStatic;
+
+	/*Declare the Collision Shape, assign a Sphere shape and set it's radius*/
+	FCollisionShape CollisionShape;
+	CollisionShape.ShapeType = ECollisionShape::Sphere;
+	CollisionShape.SetSphere(SphereRadius);
+
+	/*Perform the actual raycast. This method returns true if there is at least 1 hit.*/
+	bool bHitSomething = GetWorld()->SweepMultiByChannel(HitResults, StartLocation, EndLocation, FQuat::FQuat(), ECC, CollisionShape);
+
+
+	/*In order to draw the sphere of the first image, I will use the DrawDebugSphere function which resides in the DrawDebugHelpers.h
+	This function needs the center of the sphere which in this case is provided by the following equation*/
+	FVector CenterOfSphere = ((EndLocation - StartLocation) / 2) + StartLocation;
+
+	/*Draw the sphere in the viewport*/
+	DrawDebugSphere(GetWorld(), CenterOfSphere, CollisionShape.GetSphereRadius(), Segments, FColor::Green, true, .5f);
+
+	/*If the raycast hit a number of objects, iterate through them and print their name in the console*/
+	if (bHitSomething)
+	{
+		for (auto It = HitResults.CreateIterator(); It; It++)
+		{
+			GLog->Log((*It).Actor->GetName());
+			AActor* HitActor = (*It).Actor.Get();
+			AAICharacter* AICharacter = Cast<AAICharacter>(HitActor);
+			if (AICharacter)
+			{
+				return AICharacter;
+			}
+		}
+	}
+	return nullptr;
 }
 

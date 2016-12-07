@@ -3,6 +3,8 @@
 #pragma once
 
 #include "GameFramework/Character.h"
+#include "RunningBackPawn.h"
+#include "AICharacter.h"
 #include "DroneCharacter.generated.h"
 
 UCLASS()
@@ -11,6 +13,10 @@ class RUNNINGBACK_API ADroneCharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
+	ARunningBackPawn* Creator;
+
+	FTimerHandle FireDelayHandle;
+
 	// Sets default values for this character's properties
 	ADroneCharacter();
 
@@ -23,6 +29,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
+	void Shoot();
+
+	void DelayedShoot();
 	
-	
+	AAICharacter* FindEnemy();
 };
