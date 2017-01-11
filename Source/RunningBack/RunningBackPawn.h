@@ -129,6 +129,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Guns")
 		AAttachable* GetCurrentWeapon();
 
+
+
 	//controlls the pawn state
 
 	EPawnState PawnState;
@@ -178,6 +180,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spells")
 	TSubclassOf<ASpell> SpellClass;
+
+	UPROPERTY()
+	ASpell* CurrentSpell;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
 		FVector GunOffset;

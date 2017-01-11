@@ -2,6 +2,7 @@
 
 #include "RunningBack.h"
 #include "Attachable.h"
+#include "RunningBackPawn.h"
 
 
 // Sets default values
@@ -48,6 +49,12 @@ void AAttachable::Shoot()
 	FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
 	TraceParams.bTraceAsyncScene = true;
 	TraceParams.bReturnPhysicalMaterial = true;
+
+	ARunningBackPawn* RunningBackPawn = Cast<ARunningBackPawn>(Owner); 
+	if (RunningBackPawn && RunningBackPawn->CurrentSpell) 
+	{
+		TraceParams.AddIgnoredActor(RunningBackPawn->CurrentSpell);
+	}
 
 	FHitResult Hit(ForceInit);
 	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function

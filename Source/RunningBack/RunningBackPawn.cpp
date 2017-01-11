@@ -254,6 +254,7 @@ void ARunningBackPawn::CastSpell()
 		
 		Spell->Creator = this;
 		Spell->Activate();
+		CurrentSpell = Spell;
 		
 
 		UE_LOG(LogClass, Log, TEXT("Spell spawned succesfully "));
