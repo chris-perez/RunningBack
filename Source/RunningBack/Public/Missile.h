@@ -15,6 +15,7 @@ class RUNNINGBACK_API AMissile : public ASpell
 
 
 public:
+	AMissile();
 
 	UPROPERTY(Category="Homing", BlueprintReadWrite, EditAnywhere)
 	AActor* Target;
@@ -30,4 +31,11 @@ public:
 	void SetHomingTarget();
 
 	virtual void SetHomingTarget_Implementation();
+
+	UFUNCTION()
+	void OnHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);
+
+	UFUNCTION()
+	void OnBeginOverlap(AActor* Other);
+
 };

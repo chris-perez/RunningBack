@@ -615,6 +615,7 @@ void ARunningBackPawn::changeGun(uint8 index, UStaticMesh* msh)
 {
 	SpawnedWeapon->ChangeMesh(msh);
 }
+
 AAttachable* ARunningBackPawn::GetCurrentWeapon()
 {
 	return SpawnedWeapon;

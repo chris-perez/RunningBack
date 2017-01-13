@@ -6,6 +6,12 @@
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
 
+AMissile::AMissile(): ASpell()
+{
+	OnActorHit.AddDynamic(this, &AMissile::OnHit);
+	OnActorBeginOverlap.AddDynamic(this, &AMissile::OnBeginOverlap);
+}
+
 void AMissile::Activate()
 {
 	Target = FindTarget();
@@ -21,6 +27,7 @@ void AMissile::Activate()
 
 float AMissile::Duration()
 {
+	
 	return 10.0f;
 }
 
@@ -78,3 +85,23 @@ void AMissile::SetHomingTarget_Implementation()
 {
 	//do the rest in blueprint
 }
+
+void AMissile::OnHit(AActor* FirstActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("OnBeginOverlap"));
+	if (OtherActor != Creator /*&& OtherActor != Creator->SpawnedWeapon*/)
+	{
+		Kill();
+	}
+}
+
+void AMissile::OnBeginOverlap(AActor* Other)
+{
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("OnBeginOverlap"));
+	if (Creator && Creator->SpawnedWeapon && Other != Creator && Other != Creator->SpawnedWeapon)
+	{
+		Kill();
+	}
+}
+
+
