@@ -252,9 +252,12 @@ void ARunningBackPawn::CastSpell()
 		
 		ASpell* Spell = World->SpawnActor<ASpell>(SpellClass, SpawnLocation, SpawnRotation, SpawnParams);
 		
-		Spell->Creator = this;
-		Spell->Activate();
-		CurrentSpell = Spell;
+		if (Spell)
+		{
+			Spell->Creator = this;
+			Spell->Activate();
+			CurrentSpell = Spell;
+		}
 		
 
 		UE_LOG(LogClass, Log, TEXT("Spell spawned succesfully "));

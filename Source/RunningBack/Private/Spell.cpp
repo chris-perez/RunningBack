@@ -66,7 +66,10 @@ void ASpell::Deactivate()
 {
 	GetWorldTimerManager().ClearTimer(LifetimeHandle);
 	GetWorldTimerManager().ClearTimer(CooldownHandle);
-	Creator->SpellDurationLeft = 0;
+	if (Creator)
+	{
+		Creator->SpellDurationLeft = 0;
+	}
 }
 
 float ASpell::Cooldown()
