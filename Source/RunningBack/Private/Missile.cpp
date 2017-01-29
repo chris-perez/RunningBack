@@ -3,6 +3,7 @@
 #include "RunningBack.h"
 #include "Missile.h"
 #include "RunningBackPawn.h"
+#include "AICharacter.h"
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
 
@@ -100,6 +101,11 @@ void AMissile::OnBeginOverlap(AActor* Other)
 //	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("OnBeginOverlap"));
 	if (Creator && Creator->SpawnedWeapon && Other != Creator && Other != Creator->SpawnedWeapon)
 	{
+		AAICharacter* AICharacter = Cast<AAICharacter>(Other);
+		if (AICharacter)
+		{
+			AICharacter->Stun();
+		}
 		Kill();
 	}
 }

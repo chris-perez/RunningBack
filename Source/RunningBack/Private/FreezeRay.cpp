@@ -36,7 +36,7 @@ void AFreezeRay::DelayedShoot()
 	if (HitAI)
 	{
 		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
-		HitAI->SlowDown(10);
+		HitAI->SlowDown(10, 1.0f);
 	} else if (ARB && ARB != Owner)
 	{
 	DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
