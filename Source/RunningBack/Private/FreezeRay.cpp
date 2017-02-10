@@ -53,10 +53,21 @@ void AFreezeRay::DelayedShoot()
 void AFreezeRay::Shoot()
 {
 	GetWorldTimerManager().SetTimer(FireDelayHandle, this, &AFreezeRay::DelayedShoot, 0.1f, true, 0.05f);
+//	DelayedShoot();
+	if(SnowParticle)
+	{
+		SnowParticle->Activate();
+	} else
+	{
+		SnowParticle = UGameplayStatics::SpawnEmitterAttached(
+			SnowTemp, GetRootComponent(), NAME_None, FVector(200, 0, 0), FRotator(0, 0, 0), EAttachLocation::SnapToTarget, true);
+	}
+	
 }
 
 void AFreezeRay::ShootStop()
 {
 	GetWorld()->GetTimerManager().ClearTimer(FireDelayHandle);
+	SnowParticle->Deactivate();
 }
 

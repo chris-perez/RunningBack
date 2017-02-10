@@ -12,7 +12,13 @@ UCLASS()
 class RUNNINGBACK_API AFreezeRay : public AAttachable
 {
 	GENERATED_BODY()
-	
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Effects)
+	UParticleSystem* SnowTemp;
+
+	UParticleSystemComponent* SnowParticle;
+
 	UFUNCTION(BlueprintCallable, Category = "Projectile")
 	virtual void Shoot() override;
 

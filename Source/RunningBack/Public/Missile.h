@@ -20,6 +20,14 @@ public:
 	UPROPERTY(Category="Homing", BlueprintReadWrite, EditAnywhere)
 	AActor* Target;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Effects)
+	UParticleSystem* ShockTemp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Effects)
+	UParticleSystem* ShockWaveTemp;
+
+	UParticleSystemComponent* ShockParticle;
+
 	void Activate() override;
 
 
@@ -38,4 +46,6 @@ public:
 	UFUNCTION()
 	void OnBeginOverlap(AActor* Other);
 
+
+	void Deactivate() override;
 };

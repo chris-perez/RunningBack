@@ -105,9 +105,20 @@ void AMissile::OnBeginOverlap(AActor* Other)
 		if (AICharacter)
 		{
 			AICharacter->Stun();
+			ShockParticle = UGameplayStatics::SpawnEmitterAttached(
+				ShockTemp, AICharacter->GetRootComponent(), NAME_None, GetActorLocation(), GetActorRotation(), EAttachLocation::KeepWorldPosition, true);
+
+			UParticleSystemComponent* ShockWaveParticle = UGameplayStatics::SpawnEmitterAttached(
+				ShockWaveTemp, AICharacter->GetRootComponent(), NAME_None, FVector(0, 0, -10), FRotator(0, -10, 0), EAttachLocation::SnapToTarget, true);
+			
 		}
 		Kill();
 	}
 }
 
+void AMissile::Deactivate()
+{
+//	ShockParticle->DeactivateSystem();
+	Super::Deactivate();
+}
 
