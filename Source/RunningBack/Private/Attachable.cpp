@@ -73,7 +73,7 @@ void AAttachable::Shoot()
 
 	}
 	else {
-		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+//		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
 	}
 
 	//automatic fire

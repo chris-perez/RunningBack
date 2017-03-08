@@ -12,6 +12,12 @@ UCLASS()
 class RUNNINGBACK_API ATurretGun : public AAttachable
 {
 	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Effects)
+	UParticleSystem* ProjectileTemp;
+
+	UParticleSystemComponent* ProjectileParticle;
 	
 	UFUNCTION(BlueprintCallable, Category = "Projectile")
 	virtual void Shoot() override;
