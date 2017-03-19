@@ -35,6 +35,9 @@ class ARunningBackPawn : public AWheeledVehicle
 	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* InternalCamera;
 
+	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	bool IsZoomedIn = false;
+
 	/** Text component for the In-Car speed */
 	UPROPERTY(Category = Display, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UTextRenderComponent* InCarSpeed;
@@ -96,6 +99,8 @@ public:
 	void OnHandbrakeReleased();
 	/** Switch between cameras */
 	void OnToggleCamera();
+	void ZoomIn();
+	void ZoomOut();
 	/** Handle reset VR device */
 	void OnResetVR();
 

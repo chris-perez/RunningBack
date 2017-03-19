@@ -175,6 +175,9 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &ARunningBackPawn::OnResetVR);
 
 	InputComponent->BindAction("Instructions", IE_Pressed, this, &ARunningBackPawn::ToggleVisibility);
+
+	InputComponent->BindAction("ZoomIn", IE_Pressed, this, &ARunningBackPawn::ZoomIn);
+	InputComponent->BindAction("ZoomIn", IE_Released, this, &ARunningBackPawn::ZoomOut);
 }
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
@@ -294,6 +297,20 @@ void ARunningBackPawn::OnHandbrakeReleased()
 void ARunningBackPawn::OnToggleCamera()
 {
 	EnableIncarView(!bInCarCameraActive);
+}
+
+void ARunningBackPawn::ZoomIn()
+{
+//	Camera->MoveComponent(FVector(1000, 0, 0), Camera->GetComponentRotation(), false);
+	SpringArm->TargetArmLength -= 2000;
+	IsZoomedIn = true;
+}
+
+void ARunningBackPawn::ZoomOut()
+{
+//	Camera->MoveComponent(FVector(-1000, 0, 0), Camera->GetComponentRotation(), false);
+	SpringArm->TargetArmLength += 2000;
+	IsZoomedIn = false;
 }
 
 void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
@@ -487,7 +504,9 @@ void ARunningBackPawn::SpawnWeapon() {
 
 		SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
 		SpawnedWeapon->Owner = this;
-		SpawnedWeapon->AttachRootComponentTo(GetMesh());
+		SpawnedWeapon->AttachRootComponentTo(GetRootComponent());
+//		SpawnedWeapon->SetActorRelativeLocation(SpawnedWeapon->GetActorLocation() + FVector(3000, 0, -1150));
+
 		
 		SpawnedWeapon->SetActorRotation(GetActorRotation());
 		UE_LOG(LogClass, Log, TEXT("Gun Mesh Spawned succesfully "));
