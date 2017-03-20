@@ -180,7 +180,7 @@ public:
 
 	bool IsCar();
 
-	UPROPERTY(EditAnywhere, Category = "Spawning")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
 	TSubclassOf<AAttachable> WhatToSpawn;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spells")
@@ -197,6 +197,7 @@ public:
 
 	float TurnRate;
 
+	UFUNCTION(BlueprintCallable, Category = "Spawning")
 	void SpawnWeapon();
 
 	void ChangeWeaponLazerGun();

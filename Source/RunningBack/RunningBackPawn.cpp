@@ -189,8 +189,10 @@ void ARunningBackPawn::Shoot() {
 void ARunningBackPawn::ServerShoot_Implementation()
 {
 	//if (Controller && Controller->IsLocalPlayerController()) { // we check the controller becouse we dont want bots to grab the use object and we need a controller for the Getplayerviewpoint function
-		
-	SpawnedWeapon->Shoot();
+
+	if (SpawnedWeapon) {
+		SpawnedWeapon->Shoot();
+	}
 
 }
 	
@@ -225,7 +227,9 @@ float ARunningBackPawn::TakeDamage(float Damage, FDamageEvent const& DamageEvent
 
 
 void ARunningBackPawn::ShootStop() {
-	SpawnedWeapon->ShootStop();
+	if (SpawnedWeapon) {
+		SpawnedWeapon->ShootStop();
+	}
 }
 
 void ARunningBackPawn::ServerShootStop_Implementation()
@@ -493,8 +497,8 @@ void ARunningBackPawn::SpawnWeapon() {
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = Instigator;
-		FVector SpawnLocation = GetActorLocation();
-		SpawnLocation.Z += 170.f;
+		FVector SpawnLocation = FVector(0, 0, 170);
+//		SpawnLocation.Z += 170.f;
 		//SpawnLocation.X += 400.f;
 
 		FRotator SpawnRotation;
@@ -502,13 +506,13 @@ void ARunningBackPawn::SpawnWeapon() {
 		SpawnRotation.Pitch = 360.f;
 		SpawnRotation.Roll = 360.f;
 
-		SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
-		SpawnedWeapon->Owner = this;
-		SpawnedWeapon->AttachRootComponentTo(GetRootComponent());
-//		SpawnedWeapon->SetActorRelativeLocation(SpawnedWeapon->GetActorLocation() + FVector(3000, 0, -1150));
-
-		
-		SpawnedWeapon->SetActorRotation(GetActorRotation());
+		if (WhatToSpawn) {
+			SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
+			SpawnedWeapon->Owner = this;
+			SpawnedWeapon->AttachRootComponentTo(GetRootComponent());
+			//		SpawnedWeapon->SetActorRelativeLocation(SpawnedWeapon->GetActorLocation() + FVector(3000, 0, -1150));
+			SpawnedWeapon->SetActorRotation(GetActorRotation());
+		}
 		UE_LOG(LogClass, Log, TEXT("Gun Mesh Spawned succesfully "));
 
 	}
@@ -516,29 +520,20 @@ void ARunningBackPawn::SpawnWeapon() {
 
 void ARunningBackPawn::ChangeWeaponLazerGun()
 {
-	WhatToSpawn = TSubclassOf<ALazerGun>();
-	SpawnedWeapon->Destroy();
-	SpawnWeapon();
 }
 
 void ARunningBackPawn::ChangeWeaponTurretGun()
 {
-	WhatToSpawn = TSubclassOf<ATurretGun>();
-	SpawnedWeapon->Destroy();
-	SpawnWeapon();
 }
 
 void ARunningBackPawn::ChangeWeaponFreezeRay()
 {
-	WhatToSpawn = TSubclassOf<AFreezeRay>();
-	SpawnedWeapon->Destroy();
-	SpawnWeapon();
 }
 
 void ARunningBackPawn::AddControllerPitchInput(float Val) {
 	//Super::AddControllerPitchInput(Val);
 
-	if (SpawnedWeapon != nullptr)
+	if (SpawnedWeapon)
 	{
 		FRotator MeshRot = GetMesh()->GetComponentRotation();
 		FRotator NewRot = SpringArm->GetComponentRotation();
@@ -553,7 +548,7 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 void ARunningBackPawn::AddControllerYawInput(float Val) {
 	//Super::AddControllerYawInput(Val);
 
-	if (SpawnedWeapon != nullptr)
+	if (SpawnedWeapon)
 	{
 		FRotator MeshRot = GetMesh()->GetComponentRotation();
 		FRotator NewRot = SpringArm->GetComponentRotation();
