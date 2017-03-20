@@ -18,9 +18,10 @@ void ATurretGun::Shoot()
 	}
 	else
 	{
+		
 		ProjectileParticle = UGameplayStatics::SpawnEmitterAttached(
-			ProjectileTemp, GetRootComponent(), TEXT("Barrel"), FVector(0, 0, 0), FRotator(90, 0, 0) , EAttachLocation::SnapToTarget, true);
-		ProjectileParticle->AttachTo(GetRootComponent(), TEXT("Barrel"));
+			ProjectileTemp, GetRootComponent(), TEXT("Barrel"), FVector(0, 0, 0), FRotator(90, 0, 0 /*Owner->GetActorRotation().Yaw * -1*/) , EAttachLocation::SnapToTarget, false);
+//		ProjectileParticle->AttachTo(GetRootComponent(), TEXT("Barrel"));
 	}
 }
 

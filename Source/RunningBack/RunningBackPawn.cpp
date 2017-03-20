@@ -510,6 +510,7 @@ void ARunningBackPawn::SpawnWeapon() {
 			SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
 			SpawnedWeapon->Owner = this;
 			SpawnedWeapon->AttachRootComponentTo(GetRootComponent());
+		
 			//		SpawnedWeapon->SetActorRelativeLocation(SpawnedWeapon->GetActorLocation() + FVector(3000, 0, -1150));
 			SpawnedWeapon->SetActorRotation(GetActorRotation());
 		}
@@ -531,6 +532,7 @@ void ARunningBackPawn::ChangeWeaponFreezeRay()
 }
 
 void ARunningBackPawn::AddControllerPitchInput(float Val) {
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Controller Pitch"));
 	//Super::AddControllerPitchInput(Val);
 
 	if (SpawnedWeapon)
@@ -541,11 +543,12 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 		NewRot += FRotator(-Val, 0, 0);
 		NewRot = NewRot.Clamp();
 		SpringArm->SetWorldRotation(NewRot);
-		SpawnedWeapon->SetActorRotation(NewRot);
+		SpawnedWeapon->SetActorRelativeRotation(NewRot);
 	}
 }
 
 void ARunningBackPawn::AddControllerYawInput(float Val) {
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Controller Yaw"));
 	//Super::AddControllerYawInput(Val);
 
 	if (SpawnedWeapon)
@@ -556,7 +559,7 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 		NewRot += FRotator(0, Val, 0);
 		NewRot = NewRot.Clamp();
 		SpringArm->SetWorldRotation(NewRot);
-		SpawnedWeapon->SetActorRotation(NewRot);
+		SpawnedWeapon->SetActorRelativeRotation(NewRot);
 
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}
