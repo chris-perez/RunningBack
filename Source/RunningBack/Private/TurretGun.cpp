@@ -20,7 +20,8 @@ void ATurretGun::Shoot()
 	{
 		
 		ProjectileParticle = UGameplayStatics::SpawnEmitterAttached(
-			ProjectileTemp, GetRootComponent(), TEXT("Barrel"), FVector(0, 0, 0), FRotator(90, 0, 0 /*Owner->GetActorRotation().Yaw * -1*/) , EAttachLocation::SnapToTarget, false);
+			ProjectileTemp, GetRootComponent(), TEXT("Barrel"), FVector(0, 0, 0), FRotator(0, 0, 0 /*Owner->GetActorRotation().Yaw * -1*/) , EAttachLocation::SnapToTargetIncludingScale, false);
+//		ProjectileParticle = UGameplayStatics::SpawnEmitterAtLocation(this, ProjectileTemp, GetActorLocation());
 //		ProjectileParticle->AttachTo(GetRootComponent(), TEXT("Barrel"));
 	}
 }

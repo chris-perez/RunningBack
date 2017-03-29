@@ -533,21 +533,23 @@ void ARunningBackPawn::ChangeWeaponFreezeRay()
 
 void ARunningBackPawn::AddControllerPitchInput(float Val) {
 //	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Controller Pitch"));
+	Super::AddControllerPitchInput(Val);
 	//Super::AddControllerPitchInput(Val);
 
 	if (SpawnedWeapon)
 	{
 		FRotator MeshRot = GetMesh()->GetComponentRotation();
 		FRotator NewRot = SpringArm->GetComponentRotation();
-		NewRot.Roll = MeshRot.Roll;
-		NewRot += FRotator(-Val, 0, 0);
-		NewRot = NewRot.Clamp();
-		SpringArm->SetWorldRotation(NewRot);
-		SpawnedWeapon->SetActorRelativeRotation(NewRot);
+//		NewRot.Roll = MeshRot.Roll;
+//		NewRot += FRotator(-Val, 0, 0);
+//		NewRot = NewRot.Clamp();
+//		SpringArm->SetWorldRotation(NewRot);
+		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
 
 void ARunningBackPawn::AddControllerYawInput(float Val) {
+	Super::AddControllerYawInput(Val);
 //	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Controller Yaw"));
 	//Super::AddControllerYawInput(Val);
 
@@ -555,11 +557,11 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 	{
 		FRotator MeshRot = GetMesh()->GetComponentRotation();
 		FRotator NewRot = SpringArm->GetComponentRotation();
-		NewRot.Roll = MeshRot.Roll;
-		NewRot += FRotator(0, Val, 0);
-		NewRot = NewRot.Clamp();
-		SpringArm->SetWorldRotation(NewRot);
-		SpawnedWeapon->SetActorRelativeRotation(NewRot);
+//		NewRot.Roll = MeshRot.Roll;
+//		NewRot += FRotator(0, Val, 0);
+//		NewRot = NewRot.Clamp();
+//		SpringArm->SetWorldRotation(NewRot);
+		SpawnedWeapon->SetActorRotation(NewRot);
 
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}
