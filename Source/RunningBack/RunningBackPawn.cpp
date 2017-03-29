@@ -249,13 +249,13 @@ void ARunningBackPawn::CastSpell()
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = Instigator;
 		FVector SpawnLocation = GetActorLocation();
-		SpawnLocation.Z += 370.f;
+//		SpawnLocation.Z += 370.f;
 		//SpawnLocation.X += 400.f;
 
-		FRotator SpawnRotation;
-		SpawnRotation.Yaw = 360.f;
-		SpawnRotation.Pitch = 360.f;
-		SpawnRotation.Roll = 360.f;
+		FRotator SpawnRotation = GetActorRotation();
+//		SpawnRotation.Yaw = 360.f;
+//		SpawnRotation.Pitch = 360.f;
+//		SpawnRotation.Roll = 360.f;
 		
 		ASpell* Spell = World->SpawnActor<ASpell>(SpellClass, SpawnLocation, SpawnRotation, SpawnParams);
 		
