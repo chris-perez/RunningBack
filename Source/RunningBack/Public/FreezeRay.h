@@ -19,6 +19,9 @@ public:
 
 	UParticleSystemComponent* SnowParticle;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile")
+		class USoundBase* FireSoundStart;
+
 	UFUNCTION(BlueprintCallable, Category = "Projectile")
 	virtual void Shoot() override;
 

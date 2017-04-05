@@ -28,7 +28,7 @@ void AFreezeRay::DelayedShoot()
 
 	if (FireSound != nullptr)
 	{
-	UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 	}
 
 	APawn *ARB = Cast<APawn>(Hit.GetActor());
@@ -52,6 +52,11 @@ void AFreezeRay::DelayedShoot()
 
 void AFreezeRay::Shoot()
 {
+	if (FireSoundStart != nullptr)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSoundStart, GetActorLocation());
+	}
+	
 	GetWorldTimerManager().SetTimer(FireDelayHandle, this, &AFreezeRay::DelayedShoot, 0.1f, true, 0.05f);
 //	DelayedShoot();
 	if(SnowParticle)

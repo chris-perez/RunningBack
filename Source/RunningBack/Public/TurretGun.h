@@ -27,5 +27,7 @@ public:
 	void DelayedShoot();
 
 	FTimerHandle FireDelayHandle;
-	
+
+
+	void Tick(float DeltaSeconds) override;
 };
