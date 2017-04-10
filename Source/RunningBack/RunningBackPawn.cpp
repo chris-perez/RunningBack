@@ -388,7 +388,7 @@ void ARunningBackPawn::Tick(float Delta)
 			}
 		}
 
-		
+//		AmbientAudioComponent->SetPitchMultiplier(GetVehicleMovement()->GetForwardSpeed());
 }
 
 void ARunningBackPawn::BeginPlay()

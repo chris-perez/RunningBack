@@ -51,9 +51,13 @@ void AAttachable::Shoot()
 	TraceParams.bReturnPhysicalMaterial = true;
 
 	ARunningBackPawn* RunningBackPawn = Cast<ARunningBackPawn>(Owner); 
-	if (RunningBackPawn && RunningBackPawn->CurrentSpell) 
+	if (RunningBackPawn)
 	{
-		TraceParams.AddIgnoredActor(RunningBackPawn->CurrentSpell);
+		TraceParams.AddIgnoredActor(RunningBackPawn);
+		if (RunningBackPawn->CurrentSpell) 
+		{
+			TraceParams.AddIgnoredActor(RunningBackPawn->CurrentSpell);
+		}
 	}
 
 	FHitResult Hit(ForceInit);
@@ -64,16 +68,19 @@ void AAttachable::Shoot()
 		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 	}
 
-	APawn *ARB = Cast<APawn>(Hit.GetActor());
+	AActor *ARB = Cast<AActor>(Hit.GetActor());
+	if (ARB) {
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, ARB->GetHumanReadableName());
+	}
 
 	if (ARB && ARB != Owner)
 	{
 		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
-		ARB->TakeDamage(10, FDamageEvent(), Owner->GetController(), this);
+//		ARB->TakeDamage(10, FDamageEvent(), Owner->GetController(), this);
 
 	}
 	else {
-//		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
 	}
 
 	//automatic fire
