@@ -146,7 +146,23 @@ ARunningBackPawn::ARunningBackPawn()
 	CollectionSphere->AttachTo(RootComponent);
 	CollectionSphere->SetSphereRadius(150.0f);
 
-
+//	AmbientAudioComponent = UGameplayStatics::SpawnSoundAttached(AmbientHoverSound, GetRootComponent());
+//	AmbientAudioComponent->Activate();
+//	AmbientAudioComponent->Play();
+	
+	
+//	AmbientAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("AmbientAudioComponent"));
+//	AmbientAudioComponent->AttachTo(GetRootComponent());
+//	AmbientAudioComponent->SetSound(AmbientHoverSound);
+//	AmbientAudioComponent->Play();
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Audio Component Set"));
+	/*if (AmbientHoverSound) {
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, AmbientHoverSound->GetName());
+	} else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("No Hover Sound"));
+	}*/
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, AmbientAudioComponent->Sound->GetName());
 }
 
 void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputComponent)
@@ -280,6 +296,9 @@ bool ARunningBackPawn::IsCar()
 void ARunningBackPawn::MoveForward(float Val)
 {
 	GetVehicleMovementComponent()->SetThrottleInput(Val);
+	/*if (GetVehicleMovementComponent()) {
+		AmbientAudioComponent->SetPitchMultiplier(GetVehicleMovementComponent()->GetForwardSpeed());
+	}*/
 }
 
 void ARunningBackPawn::MoveRight(float Val)
@@ -387,8 +406,6 @@ void ARunningBackPawn::Tick(float Delta)
 				InternalCamera->RelativeRotation = HeadRotation;
 			}
 		}
-
-//		AmbientAudioComponent->SetPitchMultiplier(GetVehicleMovement()->GetForwardSpeed());
 }
 
 void ARunningBackPawn::BeginPlay()

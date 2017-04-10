@@ -180,8 +180,11 @@ public:
 
 	bool IsCar();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
+	/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
 	UAudioComponent* AmbientAudioComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
+	USoundCue* AmbientHoverSound;*/
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
 	TSubclassOf<AAttachable> WhatToSpawn;

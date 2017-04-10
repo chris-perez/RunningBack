@@ -68,16 +68,15 @@ void AAttachable::Shoot()
 		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 	}
 
-	AActor *ARB = Cast<AActor>(Hit.GetActor());
-	if (ARB) {
+	APawn *ARB = Cast<APawn>(Hit.GetActor());
+	/*if (ARB) {
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, ARB->GetHumanReadableName());
-	}
+	}*/
 
 	if (ARB && ARB != Owner)
 	{
 		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
-//		ARB->TakeDamage(10, FDamageEvent(), Owner->GetController(), this);
-
+		ARB->TakeDamage(10, FDamageEvent(), Owner->GetController(), this);
 	}
 	else {
 		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
