@@ -2,6 +2,7 @@
 
 #include "RunningBack.h"
 #include "ShootingAI.h"
+#include "Kismet/KismetMathLibrary.h"
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
 
@@ -45,7 +46,13 @@ void AShootingAI::Shoot()
 	ARunningBackPawn* Enemy = FindEnemy();
 	if (Enemy)
 	{
-		const FVector StartTrace = GetActorLocation(); // trace start is the camera location
+		UStaticMeshComponent* TurretGunMesh = static_cast<UStaticMeshComponent*>(GetMesh()->GetChildComponent(0));
+		FVector StartTrace = GetActorLocation(); // trace start is the camera location
+		if (TurretGunMesh)
+		{
+			StartTrace = TurretGunMesh->GetComponentLocation() + FVector(0, 0, 100); // trace start is the camera location
+		}
+		
 		const FVector Direction = Enemy->GetActorLocation();
 		const FVector EndTrace = Direction; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
 
@@ -57,15 +64,20 @@ void AShootingAI::Shoot()
 		FHitResult Hit(ForceInit);
 		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
 
-																										/*if (FireSound != nullptr)
-																										{
-																										UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-																										}*/
+		/*if (FireSound != nullptr)
+		{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+		}*/
 
 		APawn *ARB = Cast<APawn>(Hit.GetActor());
 
 		if (ARB && ARB != this)
-		{
+		{			
+			FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), ARB->GetActorLocation());
+			TurretGunMesh->SetWorldRotation(LookAtRotation + FRotator(-2 * LookAtRotation.Pitch, 180, 0));
+			
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TurretGunMesh->GetName());
+
 			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
 //			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Player Shot"));
@@ -91,9 +103,6 @@ ARunningBackPawn* AShootingAI::FindEnemy()
 	/*The Height of my Sphere starting from the location of the Actor*/
 	float SphereHeight = 200;
 
-	/*The Radius of the sphere trace*/
-	float SphereRadius = 10000;
-
 	/*Sphere segments - used for visualization only*/
 	int32 Segments = 100;
 	/*TArray is the collection that contains all the HitResults*/
@@ -113,7 +122,7 @@ ARunningBackPawn* AShootingAI::FindEnemy()
 	/*Declare the Collision Shape, assign a Sphere shape and set it's radius*/
 	FCollisionShape CollisionShape;
 	CollisionShape.ShapeType = ECollisionShape::Sphere;
-	CollisionShape.SetSphere(SphereRadius);
+	CollisionShape.SetSphere(SearchRadius);
 
 	/*Perform the actual raycast. This method returns true if there is at least 1 hit.*/
 	bool bHitSomething = GetWorld()->SweepMultiByChannel(HitResults, StartLocation, EndLocation, FQuat::FQuat(), ECC, CollisionShape);

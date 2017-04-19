@@ -15,6 +15,9 @@ class RUNNINGBACK_API AShootingAI : public AAICharacter
 public:
 	FTimerHandle FireDelayHandle;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shooting")
+	float SearchRadius = 7500;
+
 	// Sets default values for this character's properties
 	AShootingAI();
 
