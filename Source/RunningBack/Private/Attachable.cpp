@@ -75,11 +75,11 @@ void AAttachable::Shoot()
 
 	if (ARB && ARB != Owner)
 	{
-		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+//		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
 		ARB->TakeDamage(10, FDamageEvent(), Owner->GetController(), this);
 	}
 	else {
-		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+//		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
 	}
 
 	//automatic fire
