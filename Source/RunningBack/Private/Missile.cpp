@@ -10,7 +10,7 @@
 AMissile::AMissile(): ASpell()
 {
 	OnActorHit.AddDynamic(this, &AMissile::OnHit);
-	OnActorBeginOverlap.AddDynamic(this, &AMissile::OnBeginOverlap);
+//	OnActorBeginOverlap.AddDynamic(this, &AMissile::OnBeginOverlap);
 }
 
 void AMissile::Activate()

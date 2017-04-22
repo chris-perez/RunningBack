@@ -31,7 +31,7 @@
 #include "Camera/CameraComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/InputComponent.h"
-#include "Vehicles/WheeledVehicleMovementComponent4W.h"
+#include "WheeledVehicleMovementComponent4W.h"
 #include "Engine/SkeletalMesh.h"
 #include "Engine.h"
 #include "TurretGun.h"
@@ -83,7 +83,8 @@ ARunningBackPawn::ARunningBackPawn()
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm0"));
 //	SpringArm->TargetOffset = FVector(500.f, 0.f, 0.f);
 //	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
-	SpringArm->AttachTo(GetMesh());
+//	SpringArm->AttachTo(GetMesh());
+	SpringArm->SetupAttachment(GetRootComponent());
 	SpringArm->TargetArmLength = 1000.0f;
 //	SpringArm->bEnableCameraRotationLag = true;
 //	SpringArm->CameraRotationLagSpeed = 7.f;
@@ -93,19 +94,22 @@ ARunningBackPawn::ARunningBackPawn()
 
 	// Create camera component 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
+	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 
-	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
+//	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = true;
 	Camera->FieldOfView = 90.f;
 
 	// Create In-Car camera component 
 	InternalCameraOrigin = FVector(8.0f, -40.0f, 130.0f);
 	InternalCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("InternalCamera"));
-	InternalCamera->AttachTo(SpringArm, USpringArmComponent::SocketName);
+//	InternalCamera->AttachTo(SpringArm, USpringArmComponent::SocketName);
+	
 	InternalCamera->bUsePawnControlRotation = true;
 	InternalCamera->FieldOfView = 90.f;
 	InternalCamera->SetRelativeLocation(InternalCameraOrigin);
-	InternalCamera->AttachTo(GetMesh());
+//	InternalCamera->AttachTo(GetMesh());
+	InternalCamera->SetupAttachment(GetMesh());
 
 	// Create text render component for in car speed display
 	InCarSpeed = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarSpeed"));
@@ -357,7 +361,7 @@ void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
 		APlayerController* PlayerController = Cast<APlayerController>(GetController());
 		if ((PlayerController != nullptr) && (PlayerController->PlayerCameraManager != nullptr))
 		{
-			PlayerController->PlayerCameraManager->bFollowHmdOrientation = true;
+//			PlayerController->PlayerCameraManager->bFollowHmdOrientation = true;
 		}
 
 		InCarSpeed->SetVisibility(bInCarCameraActive);

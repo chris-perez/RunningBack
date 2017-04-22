@@ -1,6 +1,7 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 #pragma once
-#include "GameFramework/WheeledVehicle.h"
+
+#include "WheeledVehicle.h"
 #include "public/Attachable.h"
 #include "public/Projectile.h"
 #include "SpellComponent.h"
@@ -8,7 +9,7 @@
 #include "RunningBackPawn.generated.h"
 
 UENUM(BlueprintType)
-enum class EPawnState {
+enum class EPawnState : uint8 {
 	Active,
 	Inactive,
 	Unknown

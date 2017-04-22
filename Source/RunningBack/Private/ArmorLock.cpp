@@ -16,8 +16,10 @@ void AArmorLock::Activate()
 	}
 	Creator->SpellTimeToReady = Cooldown();
 	
-	static_cast<ARunningBackPawn*>(GetOwner())->GetVehicleMovementComponent()->RecreatePhysicsState();
-	static_cast<ARunningBackPawn*>(GetOwner())->GetVehicleMovementComponent()->SetHandbrakeInput(true);
+//	static_cast<ARunningBackPawn*>(GetOwner())->GetVehicleMovementComponent()->RecreatePhysicsState();
+//	static_cast<ARunningBackPawn*>(GetOwner())->GetVehicleMovementComponent();
+
+//	static_cast<ARunningBackPawn*>(GetOwner())->GetVehicleMovementComponent()->SetHandbrakeInput(true);
 
 	Creator->SpellDurationLeft = Duration();
 
@@ -29,7 +31,7 @@ void AArmorLock::Activate()
 
 void AArmorLock::Deactivate()
 {
-	static_cast<ARunningBackPawn*>(GetOwner())->GetVehicleMovementComponent()->SetHandbrakeInput(false);
+//	static_cast<ARunningBackPawn*>(GetOwner())->GetVehicleMovementComponent()->SetHandbrakeInput(false);
 	Creator->RechargeSpell();
 	Super::Deactivate();
 }

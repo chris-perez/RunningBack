@@ -4,7 +4,8 @@
 #include "RBAIController.h"
 #include "VisualLogger.h"
 #include "Stats2.h"
-#include "Private/AIModulePrivate.h"
+//#include "Private/AIModulePrivate.h"
+#include "Private/AIModuleLog.h"
 
 DEFINE_LOG_CATEGORY(LogAINavigation);
 
