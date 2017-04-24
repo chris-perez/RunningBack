@@ -12,8 +12,8 @@ float ABubbleShield::Duration()
 void ABubbleShield::BeginPlay()
 {
 	Super::BeginPlay();
-	/*FVector Location = GetActorLocation();
+	FVector Location = GetActorLocation();
 	
 	Location.AddBounded(FVector(100, 0, 0));
-	SetActorLocation(Location);*/
+	SetActorLocation(Location);
 }

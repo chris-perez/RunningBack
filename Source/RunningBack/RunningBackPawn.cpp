@@ -38,7 +38,7 @@
 #include "LazerGun.h"
 #include "FreezeRay.h"
 
-#ifdef HMD_INTGERATION
+#ifdef HMD_MODULE_INCLUDED
 // Needed for VR Headset
 #include "IHeadMountedDisplay.h"
 #endif // HMD_INTGERATION
@@ -50,7 +50,7 @@ const FName ARunningBackPawn::LookRightBinding("LookRight");
 
 ARunningBackPawn::ARunningBackPawn()
 {
-	PrimaryActorTick.bCanEverTick = true;
+//	PrimaryActorTick.bCanEverTick = true;
 	// Car mesh
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicle/RunningBack/Flying_Car.Flying_Car"));
 	GetMesh()->SetSkeletalMesh(CarMesh.Object);
@@ -82,26 +82,35 @@ ARunningBackPawn::ARunningBackPawn()
 	// Create a spring arm component
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm0"));
 //	SpringArm->TargetOffset = FVector(500.f, 0.f, 0.f);
-//	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
+	SpringArm->TargetOffset = FVector(0.f, 0.f, 200.f);
+	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 //	SpringArm->AttachTo(GetMesh());
-	SpringArm->SetupAttachment(GetRootComponent());
+	SpringArm->SetupAttachment(RootComponent);
 	SpringArm->TargetArmLength = 1000.0f;
-//	SpringArm->bEnableCameraRotationLag = true;
-//	SpringArm->CameraRotationLagSpeed = 7.f;
-	SpringArm->bInheritPitch = true;
-	SpringArm->bInheritRoll = true;
-
+	SpringArm->bEnableCameraRotationLag = true;
+	SpringArm->CameraRotationLagSpeed = 7.f;
+//	SpringArm->bInheritPitch = true;
+//	SpringArm->bInheritRoll = true;
+	SpringArm->bInheritPitch = false;
+	SpringArm->bInheritRoll = false;
 
 	// Create camera component 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 
 //	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
-	Camera->bUsePawnControlRotation = true;
+//	Camera->bUsePawnControlRotation = true;
+	Camera->bUsePawnControlRotation = false;
 	Camera->FieldOfView = 90.f;
 
 	// Create In-Car camera component 
-	InternalCameraOrigin = FVector(8.0f, -40.0f, 130.0f);
+//	InternalCameraOrigin = FVector(8.0f, -40.0f, 130.0f);
+	InternalCameraOrigin = FVector(0.0f, -40.0f, 120.0f);
+
+	InternalCameraBase = CreateDefaultSubobject<USceneComponent>(TEXT("InternalCameraBase"));
+	InternalCameraBase->SetRelativeLocation(InternalCameraOrigin);
+	InternalCameraBase->SetupAttachment(GetMesh());
+
 	InternalCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("InternalCamera"));
 //	InternalCamera->AttachTo(SpringArm, USpringArmComponent::SocketName);
 	
@@ -109,13 +118,13 @@ ARunningBackPawn::ARunningBackPawn()
 	InternalCamera->FieldOfView = 90.f;
 	InternalCamera->SetRelativeLocation(InternalCameraOrigin);
 //	InternalCamera->AttachTo(GetMesh());
-	InternalCamera->SetupAttachment(GetMesh());
+	InternalCamera->SetupAttachment(InternalCameraBase);
 
 	// Create text render component for in car speed display
 	InCarSpeed = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarSpeed"));
 	InCarSpeed->SetRelativeLocation(FVector(70.0f, -75.0f, 99.0f));
 	InCarSpeed->SetRelativeRotation(FRotator(18.0f, 180.0f, 0.0f));
-	InCarSpeed->AttachTo(GetMesh());
+	InCarSpeed->SetupAttachment(GetMesh());
 	InCarSpeed->SetRelativeScale3D(FVector(1.0f, 0.4f, 0.4f));
 
 	// Create text render component for in car gear display
@@ -123,7 +132,7 @@ ARunningBackPawn::ARunningBackPawn()
 	InCarGear->SetRelativeLocation(FVector(66.0f, -9.0f, 95.0f));
 	InCarGear->SetRelativeRotation(FRotator(25.0f, 180.0f, 0.0f));
 	InCarGear->SetRelativeScale3D(FVector(1.0f, 0.4f, 0.4f));
-	InCarGear->AttachTo(GetMesh());
+	InCarGear->SetupAttachment(GetMesh());
 
 	// Colors for the incar gear display. One for normal one for reverse
 	GearDisplayReverseColor = FColor(255, 0, 0, 255);
@@ -146,9 +155,9 @@ ARunningBackPawn::ARunningBackPawn()
 	GunOffset = FVector(100.0f, 30.0f, 40.0f);
 
 	//Collection SPhere stuff
-	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
-	CollectionSphere->AttachTo(RootComponent);
-	CollectionSphere->SetSphereRadius(150.0f);
+	/*CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
+	CollectionSphere->SetupAttachment(RootComponent);
+	CollectionSphere->SetSphereRadius(150.0f);*/
 
 //	AmbientAudioComponent = UGameplayStatics::SpawnSoundAttached(AmbientHoverSound, GetRootComponent());
 //	AmbientAudioComponent->Activate();
@@ -160,12 +169,12 @@ ARunningBackPawn::ARunningBackPawn()
 //	AmbientAudioComponent->SetSound(AmbientHoverSound);
 //	AmbientAudioComponent->Play();
 //	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Audio Component Set"));
-	/*if (AmbientHoverSound) {
+	if (AmbientHoverSound) {
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, AmbientHoverSound->GetName());
 	} else
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("No Hover Sound"));
-	}*/
+	}
 //	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, AmbientAudioComponent->Sound->GetName());
 }
 
@@ -176,8 +185,10 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 
 	InputComponent->BindAxis("MoveForward", this, &ARunningBackPawn::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &ARunningBackPawn::MoveRight);
-	InputComponent->BindAxis("LookUp", this, &ARunningBackPawn::AddControllerPitchInput);
-	InputComponent->BindAxis("LookRight", this, &ARunningBackPawn::AddControllerYawInput);
+//	InputComponent->BindAxis("LookUp", this, &ARunningBackPawn::AddControllerPitchInput);
+//	InputComponent->BindAxis("LookRight", this, &ARunningBackPawn::AddControllerYawInput);
+	InputComponent->BindAxis("LookUp");
+	InputComponent->BindAxis("LookRight");
 
 	InputComponent->BindAction("Handbrake", IE_Pressed, this, &ARunningBackPawn::OnHandbrakePressed);
 	InputComponent->BindAction("Handbrake", IE_Released, this, &ARunningBackPawn::OnHandbrakeReleased);
@@ -358,11 +369,13 @@ void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
 			Camera->Activate();
 		}
 
+/*
 		APlayerController* PlayerController = Cast<APlayerController>(GetController());
 		if ((PlayerController != nullptr) && (PlayerController->PlayerCameraManager != nullptr))
 		{
 //			PlayerController->PlayerCameraManager->bFollowHmdOrientation = true;
 		}
+*/
 
 		InCarSpeed->SetVisibility(bInCarCameraActive);
 		InCarGear->SetVisibility(bInCarCameraActive);
@@ -371,6 +384,7 @@ void ARunningBackPawn::EnableIncarView(const bool bState, const bool bForce)
 
 void ARunningBackPawn::Tick(float Delta)
 {
+	Super::Tick(Delta);
 	if (LifePoints <= 0)
 	{
 		PawnState = EPawnState::Inactive;
@@ -394,7 +408,7 @@ void ARunningBackPawn::Tick(float Delta)
 		
 
 		bool bHMDActive = false;
-#ifdef HMD_INTGERATION
+#ifdef HMD_MODULE_INCLUDED
 		if ((GEngine->HMDDevice.IsValid() == true) && ((GEngine->HMDDevice->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
 		{
 			bHMDActive = true;
@@ -414,7 +428,8 @@ void ARunningBackPawn::Tick(float Delta)
 
 void ARunningBackPawn::BeginPlay()
 {
-	ASpell* SpellDefault = SpellClass.GetDefaultObject();
+	Super::BeginPlay();
+	/*ASpell* SpellDefault = SpellClass.GetDefaultObject();
 	if (SpellDefault != nullptr) {
 		SpellCooldown = SpellDefault->Cooldown();
 		SpellDuration = SpellDefault->Duration();
@@ -428,21 +443,21 @@ void ARunningBackPawn::BeginPlay()
 	if (OnTest) FunctionOnTest();
 
 	PawnState = EPawnState::Active;
-	SpawnWeapon();
+//	SpawnWeapon();
 	if (SpawnedWeapon)
 	{
 		//SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
-	}
+	}*/
 	bool bEnableInCar = false;
-#ifdef HMD_INTGERATION
-	bEnableInCar = GEngine->HMDDevice.IsValid();
+#ifdef HMD_MODULE_INCLUDED
+	bEnableInCar = UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled();
 #endif // HMD_INTGERATION
 	EnableIncarView(bEnableInCar, true);
 }
 
 void ARunningBackPawn::OnResetVR()
 {
-#ifdef HMD_INTGERATION
+#ifdef HMD_MODULE_INCLUDED
 	if (GEngine->HMDDevice.IsValid())
 	{
 		GEngine->HMDDevice->ResetOrientationAndPosition();
@@ -490,7 +505,6 @@ void ARunningBackPawn::SetupInCarHUD()
 		}
 	}
 }
-
 void ARunningBackPawn::LookUp()
 {
 	//CurrentWeapon->SetActorRotation(this->GetCamera()->GetComponentRotation());
@@ -564,8 +578,8 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 //		NewRot.Roll = MeshRot.Roll;
 //		NewRot += FRotator(-Val, 0, 0);
 //		NewRot = NewRot.Clamp();
-//		SpringArm->SetWorldRotation(NewRot);
-		SpawnedWeapon->SetActorRotation(NewRot);
+//		SpringArm->SetWorldRotation(NewRot);	
+		/*SpawnedWeapon->SetActorRotation(NewRot);*/
 	}
 }
 
@@ -582,7 +596,7 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 //		NewRot += FRotator(0, Val, 0);
 //		NewRot = NewRot.Clamp();
 //		SpringArm->SetWorldRotation(NewRot);
-		SpawnedWeapon->SetActorRotation(NewRot);
+		/*SpawnedWeapon->SetActorRotation(NewRot);*/
 
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}

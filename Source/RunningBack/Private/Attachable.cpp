@@ -31,7 +31,6 @@ void AAttachable::BeginPlay()
 }
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
-
 void AAttachable::Shoot()
 {
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("MoveToLocation"));

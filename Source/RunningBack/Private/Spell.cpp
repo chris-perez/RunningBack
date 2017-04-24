@@ -38,7 +38,6 @@ void ASpell::Kill()
 	Deactivate();
 	Destroy();
 }
-
 void ASpell::Activate()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Spell Activate"));

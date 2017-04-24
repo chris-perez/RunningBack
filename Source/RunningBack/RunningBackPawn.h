@@ -32,6 +32,10 @@ class ARunningBackPawn : public AWheeledVehicle
 	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* Camera;
 
+	/** SCene component for the In-Car view origin */
+	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	class USceneComponent* InternalCameraBase;
+
 	/** Camera component for the In-Car view */
 	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* InternalCamera;
@@ -82,6 +86,7 @@ public:
 
 	// Begin Actor interface
 	virtual void Tick(float Delta) override;
+
 	virtual void BeginPlay() override;
 	// End Actor interface
 
@@ -181,11 +186,11 @@ public:
 
 	bool IsCar();
 
-	/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
 	UAudioComponent* AmbientAudioComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
-	USoundCue* AmbientHoverSound;*/
+	USoundCue* AmbientHoverSound;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
 	TSubclassOf<AAttachable> WhatToSpawn;
@@ -290,7 +295,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Customization")
 		void changeGun(uint8 index, UStaticMesh* msh);
-
 
 
 
