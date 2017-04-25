@@ -87,8 +87,8 @@ ARunningBackPawn::ARunningBackPawn()
 //	SpringArm->AttachTo(GetMesh());
 	SpringArm->SetupAttachment(RootComponent);
 	SpringArm->TargetArmLength = 1000.0f;
-	SpringArm->bEnableCameraRotationLag = true;
-	SpringArm->CameraRotationLagSpeed = 7.f;
+	SpringArm->bEnableCameraRotationLag = false;
+	SpringArm->CameraRotationLagSpeed = 0.f;
 //	SpringArm->bInheritPitch = true;
 //	SpringArm->bInheritRoll = true;
 	SpringArm->bInheritPitch = false;
@@ -170,10 +170,10 @@ ARunningBackPawn::ARunningBackPawn()
 //	AmbientAudioComponent->Play();
 //	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Audio Component Set"));
 	if (AmbientHoverSound) {
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, AmbientHoverSound->GetName());
+		/*GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, AmbientHoverSound->GetName());*/
 	} else
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("No Hover Sound"));
+		/*GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("No Hover Sound"));*/
 	}
 //	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, AmbientAudioComponent->Sound->GetName());
 }
@@ -185,8 +185,8 @@ void ARunningBackPawn::SetupPlayerInputComponent(class UInputComponent* InputCom
 
 	InputComponent->BindAxis("MoveForward", this, &ARunningBackPawn::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &ARunningBackPawn::MoveRight);
-//	InputComponent->BindAxis("LookUp", this, &ARunningBackPawn::AddControllerPitchInput);
-//	InputComponent->BindAxis("LookRight", this, &ARunningBackPawn::AddControllerYawInput);
+	InputComponent->BindAxis("LookUp", this, &ARunningBackPawn::AddControllerPitchInput);
+	InputComponent->BindAxis("LookRight", this, &ARunningBackPawn::AddControllerYawInput);
 	InputComponent->BindAxis("LookUp");
 	InputComponent->BindAxis("LookRight");
 
@@ -429,7 +429,7 @@ void ARunningBackPawn::Tick(float Delta)
 void ARunningBackPawn::BeginPlay()
 {
 	Super::BeginPlay();
-	/*ASpell* SpellDefault = SpellClass.GetDefaultObject();
+	ASpell* SpellDefault = SpellClass.GetDefaultObject();
 	if (SpellDefault != nullptr) {
 		SpellCooldown = SpellDefault->Cooldown();
 		SpellDuration = SpellDefault->Duration();
@@ -443,11 +443,11 @@ void ARunningBackPawn::BeginPlay()
 	if (OnTest) FunctionOnTest();
 
 	PawnState = EPawnState::Active;
-//	SpawnWeapon();
+	SpawnWeapon();
 	if (SpawnedWeapon)
 	{
 		//SpringArm->AttachTo(SpawnedWeapon->WeaponSubObj);
-	}*/
+	}
 	bool bEnableInCar = false;
 #ifdef HMD_MODULE_INCLUDED
 	bEnableInCar = UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled();
@@ -532,7 +532,7 @@ void ARunningBackPawn::SpawnWeapon() {
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = Instigator;
-		FVector SpawnLocation = FVector(0, 0, 170);
+		FVector SpawnLocation = FVector(0, 0, 420);
 //		SpawnLocation.Z += 170.f;
 		//SpawnLocation.X += 400.f;
 
@@ -544,7 +544,7 @@ void ARunningBackPawn::SpawnWeapon() {
 		if (WhatToSpawn) {
 			SpawnedWeapon = World->SpawnActor<AAttachable>(WhatToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
 			SpawnedWeapon->Owner = this;
-			SpawnedWeapon->AttachRootComponentTo(GetRootComponent());
+			SpawnedWeapon->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
 		
 			//		SpawnedWeapon->SetActorRelativeLocation(SpawnedWeapon->GetActorLocation() + FVector(3000, 0, -1150));
 			SpawnedWeapon->SetActorRotation(GetActorRotation());
@@ -579,7 +579,7 @@ void ARunningBackPawn::AddControllerPitchInput(float Val) {
 //		NewRot += FRotator(-Val, 0, 0);
 //		NewRot = NewRot.Clamp();
 //		SpringArm->SetWorldRotation(NewRot);	
-		/*SpawnedWeapon->SetActorRotation(NewRot);*/
+		SpawnedWeapon->SetActorRotation(NewRot);
 	}
 }
 
@@ -596,7 +596,7 @@ void ARunningBackPawn::AddControllerYawInput(float Val) {
 //		NewRot += FRotator(0, Val, 0);
 //		NewRot = NewRot.Clamp();
 //		SpringArm->SetWorldRotation(NewRot);
-		/*SpawnedWeapon->SetActorRotation(NewRot);*/
+		SpawnedWeapon->SetActorRotation(NewRot);
 
 		//SpawnedWeapon->AddActorLocalRotation(FRotator(0, Val, 0));		
 	}

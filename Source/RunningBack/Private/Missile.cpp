@@ -89,27 +89,30 @@ void AMissile::SetHomingTarget_Implementation()
 
 void AMissile::OnHit(AActor* FirstActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("OnBeginOverlap"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("OnHit"));
 	if (OtherActor != Creator /*&& OtherActor != Creator->SpawnedWeapon*/)
 	{
-		Kill();
+//		OnBeginOverlap(OtherActor);
+//		Kill();
 	}
 }
 
-void AMissile::OnBeginOverlap(AActor* Other)
+void AMissile::NotifyActorBeginOverlap(AActor* Other)
 {
-//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("OnBeginOverlap"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("OnBeginOverlap"));
 	if (Creator && Creator->SpawnedWeapon && Other != Creator && Other != Creator->SpawnedWeapon)
 	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("Other not creator"));
 		AAICharacter* AICharacter = Cast<AAICharacter>(Other);
 		if (AICharacter)
 		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("AI Stun"));
 			AICharacter->Stun();
 			ShockParticle = UGameplayStatics::SpawnEmitterAttached(
 				ShockTemp, AICharacter->GetRootComponent(), NAME_None, GetActorLocation(), GetActorRotation(), EAttachLocation::KeepWorldPosition, true);
 
 			UParticleSystemComponent* ShockWaveParticle = UGameplayStatics::SpawnEmitterAttached(
-				ShockWaveTemp, AICharacter->GetRootComponent(), NAME_None, FVector(0, 0, -10), FRotator(0, -10, 0), EAttachLocation::SnapToTarget, true);
+				ShockWaveTemp, AICharacter->GetRootComponent(), NAME_None, FVector(0, -10, -10), FRotator(0, -10, 0), EAttachLocation::KeepRelativeOffset, true);
 			
 		}
 		Kill();

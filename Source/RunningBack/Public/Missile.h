@@ -43,9 +43,11 @@ public:
 	UFUNCTION()
 	void OnHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);
 
-	UFUNCTION()
-	void OnBeginOverlap(AActor* Other);
+//	UFUNCTION()
+//	void OnBeginOverlap(AActor* Other);
 
+	UFUNCTION()
+	void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
 	void Deactivate() override;
 };

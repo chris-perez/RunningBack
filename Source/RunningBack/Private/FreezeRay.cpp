@@ -68,7 +68,7 @@ void AFreezeRay::Shoot()
 //			SnowTemp, GetRootComponent(), NAME_None, FVector(200, 0, 0), FRotator(0, 0, 0), EAttachLocation::SnapToTarget, true);
 
 		SnowParticle = UGameplayStatics::SpawnEmitterAttached(
-			SnowTemp, Owner->GetRootComponent(), NAME_None, FVector(200, 0, 200), FRotator(0, 0, 0), EAttachLocation::SnapToTarget, true);
+			SnowTemp, Owner->GetRootComponent(), NAME_None, FVector(200, 0, 450), FRotator(0, 0, 0), EAttachLocation::SnapToTarget, true);
 	}
 	
 }

@@ -16,7 +16,7 @@ void ALazerGun::DelayedShoot()
 //			ProjectileTemp, GetRootComponent(), TEXT("Barrel"), FVector(0, 0, 0), FRotator(90, 0, 0), EAttachLocation::SnapToTarget, true);
 
 		ProjectileParticle = UGameplayStatics::SpawnEmitterAttached(
-			ProjectileTemp, Owner->GetRootComponent(), NAME_None, FVector(0, 0, 200), FRotator(90, 0, 0), EAttachLocation::SnapToTarget, true);
+			ProjectileTemp, Owner->GetRootComponent(), NAME_None, FVector(0, 0, 450), FRotator(90, 0, 0), EAttachLocation::SnapToTarget, true);
 
 		
 		//		ProjectileParticle->AttachTo(GetRootComponent(), TEXT("Barrel"));
