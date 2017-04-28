@@ -26,7 +26,7 @@ void ADrone::SpawnDrone()
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = Instigator;
 		FVector SpawnLocation = this->GetActorLocation();
-//		SpawnLocation.Z += 370.f;
+		SpawnLocation.Z += 770.f;
 		SpawnLocation.X -= 600.f;
 		SpawnLocation.Y += 600.f;
 
@@ -36,7 +36,9 @@ void ADrone::SpawnDrone()
 		SpawnRotation.Roll = 360.f;
 
 		Drone = World->SpawnActor<ADroneCharacter>(DroneCharacterClass, SpawnLocation, SpawnRotation, SpawnParams);
-		Drone->Creator = Creator;
+		if (Drone && Creator) {
+			Drone->Creator = Creator;
+		}
 //		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Drone Spawned"));
 
 

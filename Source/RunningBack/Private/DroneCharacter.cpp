@@ -132,12 +132,14 @@ AAICharacter* ADroneCharacter::FindEnemy()
 	{
 		for (auto It = HitResults.CreateIterator(); It; It++)
 		{
-			GLog->Log((*It).Actor->GetName());
-			AActor* HitActor = (*It).Actor.Get();
-			AAICharacter* AICharacter = Cast<AAICharacter>(HitActor);
-			if (AICharacter)
-			{
-				return AICharacter;
+			if ((*It).Actor != nullptr) {
+				GLog->Log((*It).Actor->GetName());
+				AActor* HitActor = (*It).Actor.Get();
+				AAICharacter* AICharacter = Cast<AAICharacter>(HitActor);
+				if (AICharacter)
+				{
+					return AICharacter;
+				}
 			}
 		}
 	}

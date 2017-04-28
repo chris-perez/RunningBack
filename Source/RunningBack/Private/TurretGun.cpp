@@ -57,5 +57,5 @@ void ATurretGun::Shoot()
 void ATurretGun::ShootStop()
 {
 	GetWorld()->GetTimerManager().ClearTimer(FireDelayHandle);
-	ProjectileParticle->Deactivate();
+	if (ProjectileParticle) ProjectileParticle->Deactivate();
 }
