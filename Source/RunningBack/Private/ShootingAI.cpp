@@ -53,7 +53,7 @@ void AShootingAI::Shoot()
 			StartTrace = TurretGunMesh->GetComponentLocation() + FVector(0, 0, 100); // trace start is the camera location
 		}
 		
-		const FVector Direction = Enemy->GetActorLocation();
+		const FVector Direction = Enemy->GetActorLocation() + FVector(0, 0, 250);
 		const FVector EndTrace = Direction; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
 
 																 // Perform trace to retrieve hit info
