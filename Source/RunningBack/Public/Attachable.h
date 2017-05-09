@@ -21,6 +21,9 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
+	float WeaponDamage = 10;
+
+	UPROPERTY(EditAnywhere, Category = "Weapons", BlueprintReadWrite)
 		FString WeaponName;
 
 	APawn* Owner;

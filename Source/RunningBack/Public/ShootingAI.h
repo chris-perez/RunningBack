@@ -18,6 +18,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shooting")
 	float SearchRadius = 7500;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Effects)
+		UParticleSystem* ProjectileTemp;
+
+	UParticleSystemComponent* ProjectileParticle;
+
 	// Sets default values for this character's properties
 	AShootingAI();
 

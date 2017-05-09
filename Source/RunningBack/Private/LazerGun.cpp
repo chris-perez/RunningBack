@@ -8,6 +8,7 @@ void ALazerGun::DelayedShoot()
 	Super::Shoot();
 	if (ProjectileParticle)
 	{
+		ProjectileParticle->Deactivate();
 		ProjectileParticle->Activate();
 	}
 	else

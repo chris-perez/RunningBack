@@ -60,6 +60,8 @@ void AShootingAI::Shoot()
 		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
 		TraceParams.bTraceAsyncScene = true;
 		TraceParams.bReturnPhysicalMaterial = true;
+		TraceParams.AddIgnoredActor(this);
+		TraceParams.AddIgnoredActor(GetAttachParentActor());
 
 		FHitResult Hit(ForceInit);
 		GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams); // simple trace function
@@ -69,18 +71,32 @@ void AShootingAI::Shoot()
 		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 		}*/
 
-		APawn *ARB = Cast<APawn>(Hit.GetActor());
+		ARunningBackPawn *ARB = Cast<ARunningBackPawn>(Hit.GetActor());
 
-		if (ARB && ARB != this)
+		if (ARB)
 		{			
 			FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), ARB->GetActorLocation());
-			TurretGunMesh->SetWorldRotation(LookAtRotation + FRotator(-2 * LookAtRotation.Pitch, 180, 0));
+//			TurretGunMesh->SetWorldRotation(LookAtRotation + FRotator(-2 * LookAtRotation.Pitch, 180, 0));
 			
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TurretGunMesh->GetName());
 
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
-//			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
+//			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+			ARB->TakeDamage(10, FDamageEvent(), GetController(), this);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Player Shot"));
+
+			if (ProjectileParticle)
+			{
+				ProjectileParticle->Deactivate();
+				ProjectileParticle->SetWorldRotation(LookAtRotation + FRotator(90, 0, 0));
+				ProjectileParticle->Activate();
+				
+			}
+			else
+			{
+				FRotator Rotation = (GetActorLocation() - EndTrace).Rotation();
+					ProjectileParticle = UGameplayStatics::SpawnEmitterAttached(
+						ProjectileTemp, GetRootComponent(), NAME_None, GetActorLocation(), LookAtRotation + FRotator(90, 0, 0), EAttachLocation::KeepWorldPosition, true);
+			}
 
 		}
 		else {

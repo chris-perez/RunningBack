@@ -2,6 +2,7 @@
 
 #include "RunningBack.h"
 #include "DroneCharacter.h"
+#include "Kismet/KismetMathLibrary.h"
 
 #define COLLISION_WEAPON        ECC_GameTraceChannel1
 
@@ -47,10 +48,10 @@ void ADroneCharacter::Shoot()
 	AAICharacter* Enemy = FindEnemy();
 	if (Enemy)
 	{
-		const FVector StartTrace = GetActorLocation(); // trace start is the camera location
-		const FVector Direction = Enemy->GetActorLocation();
-		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
-
+		const FVector StartTrace = GetMesh()->GetComponentLocation(); // trace start is the camera location
+		const FVector Direction = Enemy->GetActorLocation() + FVector(0, 0, 100);
+//		const FVector EndTrace = StartTrace + Direction * 10000; // and trace end is the camera location + an offset in the direction you are looking, the 200 is the distance at wich it checks
+		const FVector EndTrace = Direction;
 																 // Perform trace to retrieve hit info
 		FCollisionQueryParams TraceParams(FName(TEXT("WeaponTrace")), true, this);
 		TraceParams.bTraceAsyncScene = true;
@@ -64,13 +65,28 @@ void ADroneCharacter::Shoot()
 		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 		}*/
 
-		APawn *ARB = Cast<APawn>(Hit.GetActor());
+//		APawn *ARB = Cast<APawn>(Hit.GetActor());
+		APawn *ARB = (Enemy);
 
 		if (ARB && ARB != Creator)
 		{
 			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
-			ARB->TakeDamage(10, FDamageEvent(), Creator->GetController(), this);
 
+			ARB->TakeDamage(10, FDamageEvent(), Creator->GetController(), this);
+			FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(StartTrace, Direction);
+			if (ProjectileParticle)
+			{
+				ProjectileParticle->Deactivate();
+				ProjectileParticle->SetWorldRotation(LookAtRotation + FRotator(90, 0, 0));
+				ProjectileParticle->Activate();
+
+			}
+			else
+			{
+				FRotator Rotation = (GetActorLocation() - EndTrace).Rotation();
+				ProjectileParticle = UGameplayStatics::SpawnEmitterAttached(
+					ProjectileTemp, GetRootComponent(), NAME_None, StartTrace, LookAtRotation + FRotator(90, 0, 0), EAttachLocation::KeepWorldPosition, true);
+			}
 		}
 		else {
 			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
