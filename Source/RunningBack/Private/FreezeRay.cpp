@@ -35,16 +35,16 @@ void AFreezeRay::DelayedShoot()
 	AAICharacter *HitAI = Cast<AAICharacter>(Hit.GetActor());
 	if (HitAI)
 	{
-		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+//		DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
 		HitAI->SlowDown(10, 1.0f);
 	} else if (ARB && ARB != Owner)
 	{
-	DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+//	DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
 	ARB->TakeDamage(10, FDamageEvent(), Owner->GetController(), this);
 
 	}
 	else {
-	DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+//	DisplayDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
 	}
 	
 //	Super::Shoot();

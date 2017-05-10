@@ -69,12 +69,12 @@ AActor* AMissile::FindTarget()
 
 	if (ARB && ARB != Creator)
 	{
-		DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+//		DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
 //		ARB->TakeDamage(10, FDamageEvent(), Creator->GetController(), this);
 		return ARB;
 	}
 	else {
-		DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+//		DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
 		return nullptr;
 	}
 

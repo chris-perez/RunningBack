@@ -70,7 +70,7 @@ void ADroneCharacter::Shoot()
 
 		if (ARB && ARB != Creator)
 		{
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
+//			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(0, 255, 0), true, 1.0f, 0, 10);
 
 			ARB->TakeDamage(10, FDamageEvent(), Creator->GetController(), this);
 			FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(StartTrace, Direction);
@@ -89,7 +89,7 @@ void ADroneCharacter::Shoot()
 			}
 		}
 		else {
-			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
+//			DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor(255, 0, 0), true, 1.0f, 0, 10);
 		}
 
 		//automatic fire
@@ -141,7 +141,7 @@ AAICharacter* ADroneCharacter::FindEnemy()
 	FVector CenterOfSphere = ((EndLocation - StartLocation) / 2) + StartLocation;
 
 	/*Draw the sphere in the viewport*/
-	DrawDebugSphere(GetWorld(), CenterOfSphere, CollisionShape.GetSphereRadius(), Segments, FColor::Green, true, .5f);
+//	DrawDebugSphere(GetWorld(), CenterOfSphere, CollisionShape.GetSphereRadius(), Segments, FColor::Green, true, .5f);
 
 	/*If the raycast hit a number of objects, iterate through them and print their name in the console*/
 	if (bHitSomething)

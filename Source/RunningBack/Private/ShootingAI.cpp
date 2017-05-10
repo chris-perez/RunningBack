@@ -149,7 +149,7 @@ ARunningBackPawn* AShootingAI::FindEnemy()
 	FVector CenterOfSphere = ((EndLocation - StartLocation) / 2) + StartLocation;
 
 	/*Draw the sphere in the viewport*/
-	DrawDebugSphere(GetWorld(), CenterOfSphere, CollisionShape.GetSphereRadius(), Segments, FColor::Green, true, .5f);
+//	DrawDebugSphere(GetWorld(), CenterOfSphere, CollisionShape.GetSphereRadius(), Segments, FColor::Green, true, .5f);
 
 	/*If the raycast hit a number of objects, iterate through them and print their name in the console*/
 	if (bHitSomething)
